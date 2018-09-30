@@ -1,6 +1,13 @@
 # GIGA-BASIC
 
-Disaseembly of GIGA-BASIC file: "blink_bin", with DISA 3E05
+Disassembly of GIGA-BASIC file: "blink_bin", with DISA 3E05
+
+File description:
+
+GB_blink_bin  : Binary assembley langauage file
+GB_blink_idx  : DISA index file
+GB_blink_dis  : DISA Disassemlby file
+GB_boot       : GIGA-BASIC boot file
 
 Quote from GIGA-BASIC Manual
 
