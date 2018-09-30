@@ -1,0 +1,6934 @@
+; 
+;  DISA-Listing: win1_GB_blink_dis      filetype  0
+        section disa
+        data    0
+start   equ     *
+        lea     L0034(pc),a1
+        movea.w $00000110,a2    ; BP_INIT
+        jsr     (a2)
+        bsr     L14D0
+        bsr     L281E
+        lea     L0882(pc),a0
+        move.l  a4,(a0)
+        bsr     L37EC
+        lea     L0860(pc),a2
+        move.b  #$00,(a2)
+        bsr     L2876
+        lea     L0860(pc),a2
+        move.b  #-$01,(a2)
+        moveq   #$00,d0
+        rts
+; 
+L0034   dc.w    $004A
+        dc.w    L032E-*
+        dc.b    $06,'SCREEN',$00
+        dc.w    L0354-*
+        dc.b    $03,'CAT'
+        dc.w    L036C-*
+        dc.b    $05,'PAINT'
+        dc.w    L0B4A-*
+        dc.b    $06,'ACLOCK',$00
+        dc.w    L0BB2-*
+        dc.b    $06,'DCLOCK',$00
+        dc.w    L03A6-*
+        dc.b    $04,'DUMP',$00
+        dc.w    L03B8-*
+        dc.b    $07,'HRDCOPY'
+        dc.w    L1888-*
+        dc.b    $07,'JOB_INF'
+        dc.w    L184E-*
+        dc.b    $08,'KILL_JOB',$00
+        dc.w    L185A-*
+        dc.b    $07,'REL_JOB'
+        dc.w    L1854-*
+        dc.b    $07,'SUS_JOB'
+        dc.w    L1860-*
+        dc.b    $09,'PRIOR_JOB'
+        dc.w    L21CA-*
+        dc.b    $03,'GET'
+        dc.w    L2262-*
+        dc.b    $03,'PUT'
+        dc.w    L2226-*
+        dc.b    $04,'BGET',$00
+        dc.w    L229A-*
+        dc.b    $04,'BPUT',$00
+        dc.w    L22C2-*
+        dc.b    $0B,'SET_POINTER'
+        dc.w    L1574-*
+        dc.b    $04,'KEYS',$00
+        dc.w    L150E-*
+        dc.b    $03,'KEY'
+        dc.w    L14CA-*
+        dc.b    $06,'KEYSON',$00
+        dc.w    L14F2-*
+        dc.b    $07,'KEYSOFF'
+        dc.w    L19B4-*
+        dc.b    $06,'SYSTEM',$00
+        dc.w    L03D8-*
+        dc.b    $08,'COMMANDS',$00
+        dc.w    L03EA-*
+        dc.b    $06,'SPRDIM',$00
+        dc.w    L0406-*
+        dc.b    $07,'INVMASK'
+        dc.w    L0418-*
+        dc.b    $0B,'SPRDEFBLOCK'
+        dc.w    L0422-*
+        dc.b    $03,'SD4'
+        dc.w    L0436-*
+        dc.b    $03,'SD8'
+        dc.w    L044A-*
+        dc.b    $06,'SPRCLR',$00
+        dc.w    L0454-*
+        dc.b    $05,'SPRON'
+        dc.w    L045E-*
+        dc.b    $06,'SPROFF',$00
+        dc.w    L0468-*
+        dc.b    $07,'MOVESPR'
+        dc.w    L0494-*
+        dc.b    $07,'REFRESH'
+        dc.w    L049E-*
+        dc.b    $0A,'SETANIMATE',$00
+        dc.w    L04BA-*
+        dc.b    $0A,'STEPSPRITE',$00
+        dc.w    L04CE-*
+        dc.b    $0A,'CLRANIMATE',$00
+        dc.w    L04C4-*
+        dc.b    $07,'ANIMATE'
+        dc.w    L0504-*
+        dc.b    $07,'SPRLOAD'
+        dc.w    L050C-*
+        dc.b    $07,'SPRSAVE'
+        dc.w    L0532-*
+        dc.b    $09,'INVSPRITE'
+        dc.w    L0574-*
+        dc.b    $07,'MENUDIM'
+        dc.w    L0598-*
+        dc.b    $09,'MENUBLOCK'
+        dc.w    L058E-*
+        dc.b    $07,'MENUCLR'
+        dc.w    L05AA-*
+        dc.b    $06,'MENUPR',$00
+        dc.w    L0602-*
+        dc.b    $04,'ICON',$00
+        dc.w    L0614-*
+        dc.b    $08,'INVBLOCK',$00
+        dc.w    L0648-*
+        dc.b    $08,'CLRBLOCK',$00
+        dc.w    L0656-*
+        dc.b    $04,'MENU',$00
+        dc.w    L069A-*
+        dc.b    $07,'SETMENU'
+        dc.w    L06B8-*
+        dc.b    $07,'GETMENU'
+        dc.w    L06CE-*
+        dc.b    $06,'ACTIVE',$00
+        dc.w    L06F8-*
+        dc.b    $06,'SETMON',$00
+        dc.w    L06FE-*
+        dc.b    $05,'SETTV'
+        dc.w    L072E-*
+        dc.b    $06,'MONSCR',$00
+        dc.w    L0740-*
+        dc.b    $05,'TVSCR'
+        dc.w    L0752-*
+        dc.b    $07,'SETFONT'
+        dc.w    L0798-*
+        dc.b    $07,'SETMDEV'
+        dc.w    L07A4-*
+        dc.b    $08,'SCRSTORE',$00
+        dc.w    L07B8-*
+        dc.b    $07,'SCRLOAD'
+        dc.w    L07AE-*
+        dc.b    $08,'SCRCLEAR',$00
+        dc.w    $0000
+        dc.w    $0015
+        dc.w    L0622-*
+        dc.b    $05,'MOUSE'
+        dc.w    L2002-*
+        dc.b    $04,'CHEX',$00
+        dc.w    L2164-*
+        dc.b    $05,'CHEX$'
+        dc.w    L205A-*
+        dc.b    $04,'CBIN',$00
+        dc.w    L211C-*
+        dc.b    $05,'CBIN$'
+        dc.w    L22DE-*
+        dc.b    $0B,'GET_POINTER'
+        dc.w    L1A6A-*
+        dc.b    $04,'FREE',$00
+        dc.w    L04D8-*
+        dc.b    $07,'SPRXPOS'
+        dc.w    L04E6-*
+        dc.b    $07,'SPRYPOS'
+        dc.w    L04F6-*
+        dc.b    $09,'COLLISION'
+        dc.w    L053C-*
+        dc.b    $09,'SPRACTIVE'
+        dc.w    L06E8-*
+        dc.b    $05,'VMENU'
+        dc.w    L06DA-*
+        dc.b    $05,'HMENU'
+        dc.w    L055A-*
+        dc.b    $07,'GETMODE'
+        dc.w    L054A-*
+        dc.b    $09,'SPRBLKADR'
+        dc.w    L077A-*
+        dc.b    $05,'MXPOS'
+        dc.w    L0788-*
+        dc.b    $05,'MYPOS'
+        dc.w    $0000
+;       BASIC - Procedure 'SCREEN'
+L032E   moveq   #$02,d6
+        bsr     L26A6
+        bsr     L2688
+          bne.s L034C
+        lea     L034E(pc),a2
+        moveq   #$02,d7
+        bsr     L07F6
+        move.w  (a2)+,d0
+        move.w  (a2)+,d1
+        bsr     L29E4
+L034C   rts
+; 
+L034E   dc.w    $0001,$0003,$0000
+;       BASIC - Procedure 'CAT'
+L0354   moveq   #$01,d6
+        bsr     L26A6
+          bne.s L036A
+        cmpa.l  a3,a5
+          beq.s L0364
+        moveq   #-$0F,d0        ; ERR_BP
+        bra.s   L036A
+L0364   move.b  d6,d1
+        bsr     L12B4
+L036A   rts
+; 
+;       BASIC - Procedure 'PAINT'
+L036C   bsr     L270E
+        moveq   #-$01,d3
+        movea.w $00000114,a2    ; CA_GTFP
+        jsr     (a2)
+          bne.s L03A4
+        cmpi.w  #$0002,d3
+          beq.s L0384
+        moveq   #-$0F,d0        ; ERR_BP
+        bra.s   L03A4
+L0384   bsr     L2768
+        move.b  $0046(a0),d2
+        ext.w   d2
+        ext.l   d2
+        move.w  $0018(a0),d3
+        move.w  $001A(a0),d4
+        move.w  $001C(a0),d5
+        move.w  $001E(a0),d6
+        bsr     L0886
+L03A4   rts
+; 
+;       BASIC - Procedure 'DUMP'
+L03A6   bsr     L270E
+          bne.s L03B6
+        cmpa.l  a3,a5
+          bne.s L03B6
+        bsr     L0F5C
+        moveq   #$00,d0
+L03B6   rts
+; 
+;       BASIC - Procedure 'HRDCOPY'
+L03B8   movea.w $00000112,a2    ; CA_GTINT
+        jsr     (a2)
+        cmpi.b  #$01,d3
+          bhi.s L03D4
+        move.w  $00(a6,a1.l),d0
+        tst.b   d3
+          bne.s L03CE
+        moveq   #$00,d0
+L03CE   bsr     L1B18
+        bra.s   L03D6
+L03D4   moveq   #-$0F,d0        ; ERR_BP
+L03D6   rts
+; 
+;       BASIC - Procedure 'COMMANDS'
+L03D8   bsr     L270E
+          bne   L0834
+        cmpa.l  a3,a5
+          bne   L0834
+        bra     L119A
+; 
+;       BASIC - Procedure 'SPRDIM'
+L03EA   moveq   #$03,d7
+        lea     L0400(pc),a2
+        bsr     L07F6
+        move.w  (a2)+,d0
+        move.w  (a2)+,d1
+        move.w  (a2)+,d2
+        bsr     L3868
+        rts
+; 
+L0400   dc.w    $000A,$000A,$0002
+;       BASIC - Procedure 'INVMASK'
+L0406   bsr     L270E
+          bne.s L0416
+        moveq   #$03,d0
+        bsr     L07C2
+        bra     L39B4
+; 
+L0416   rts
+; 
+;       BASIC - Procedure 'SPRDEFBLOCK'
+L0418   moveq   #$01,d0
+        bsr     L07C2
+        bra     L3A48
+; 
+;       BASIC - Procedure 'SD4'
+L0422   movea.w $00000116,a2    ; CA_GTSTR
+        jsr     (a2)
+        cmpi.w  #$0001,d3
+          bne   L0834
+        adda.l  a6,a1
+        bra     L3A7C
+; 
+;       BASIC - Procedure 'SD8'
+L0436   movea.w $00000116,a2    ; CA_GTSTR
+        jsr     (a2)
+        cmpi.w  #$0001,d3
+          bne   L0834
+        adda.l  a6,a1
+        bra     L3ACA
+; 
+;       BASIC - Procedure 'SPRCLR'
+L044A   cmpa.l  a3,a5
+          bne   L0834
+        bra     L3BAC
+; 
+;       BASIC - Procedure 'SPRON'
+L0454   moveq   #$02,d0
+        bsr     L07C2
+        bra     L3BC2
+; 
+;       BASIC - Procedure 'SPROFF'
+L045E   moveq   #$01,d0
+        bsr     L07C2
+        bra     L3BF6
+; 
+;       BASIC - Procedure 'MOVESPR'
+L0468   movea.w $00000112,a2    ; CA_GTINT
+        jsr     (a2)
+        cmpi.w  #$0003,d3
+          bne.s L0478
+        moveq   #-$01,d3
+        bra.s   L0484
+L0478   cmpi.w  #$0004,d3
+          bne   L0834
+        move.w  $06(a6,a1.l),d3
+L0484   move.w  $00(a6,a1.l),d0
+        move.w  $02(a6,a1.l),d1
+        move.w  $04(a6,a1.l),d2
+        bra     L3C4E
+; 
+;       BASIC - Procedure 'REFRESH'
+L0494   cmpa.l  a3,a5
+          bne   L0834
+        bra     L3D9A
+; 
+;       BASIC - Procedure 'SETANIMATE'
+L049E   movea.w $00000112,a2    ; CA_GTINT
+        jsr     (a2)
+        cmpi.w  #$0001,d3
+          beq   L0834
+        adda.l  a6,a1
+        move.w  (a1)+,d0
+        move.w  d3,d1
+        subq.w  #$01,d1
+        movea.l a1,a0
+        bra     L3E04
+; 
+;       BASIC - Procedure 'STEPSPRITE'
+L04BA   moveq   #$05,d0
+        bsr     L07C2
+        bra     L3FE0
+; 
+;       BASIC - Procedure 'ANIMATE'
+L04C4   cmpa.l  a3,a5
+          bne   L0834
+        bra     L3E88
+; 
+;       BASIC - Procedure 'CLRANIMATE'
+L04CE   moveq   #$01,d0
+        bsr     L07C2
+        bra     L4054
+; 
+;       BASIC - Function  'SPRXPOS'
+L04D8   moveq   #$01,d0
+        bsr     L07C2
+        bsr     L4008
+        bra     L0838
+; 
+;       BASIC - Function  'SPRYPOS'
+L04E6   moveq   #$01,d0
+        bsr     L07C2
+        bsr     L4008
+        move.w  d2,d1
+        bra     L0838
+; 
+;       BASIC - Function  'COLLISION'
+L04F6   moveq   #$01,d0
+        bsr     L07C2
+        bsr     L409E
+        bra     L0838
+; 
+;       BASIC - Procedure 'SPRLOAD'
+L0504   bsr     L0514
+        bra     L412C
+; 
+;       BASIC - Procedure 'SPRSAVE'
+L050C   bsr     L0514
+        bra     L4104
+; 
+L0514   movea.w $00000116,a2    ; CA_GTSTR
+        jsr     (a2)
+        addq.l  #$08,a3
+        cmpa.l  a3,a5
+          bne.s L052C
+        cmpi.w  #$0001,d3
+          bne.s L052C
+        movea.l a1,a0
+        adda.l  a6,a0
+        rts
+; 
+L052C   addq.l  #$04,a7
+        bra     L0834
+; 
+;       BASIC - Procedure 'INVSPRITE'
+L0532   moveq   #$01,d0
+        bsr     L07C2
+        bra     L3DD8
+; 
+;       BASIC - Function  'SPRACTIVE'
+L053C   moveq   #$01,d0
+        bsr     L07C2
+        bsr     L417E
+        bra     L0838
+; 
+;       BASIC - Function  'SPRBLKADR'
+L054A   moveq   #$01,d0
+        bsr     L07C2
+        bsr     L4034
+        move.l  a0,d1
+        bra     L084A
+; 
+;       BASIC - Function  'GETMODE'
+L055A   cmpa.l  a3,a5
+          bne   L0834
+        moveq   #$10,d0         ; MT_DMODE
+        moveq   #-$01,d1
+        moveq   #-$01,d2
+        trap    #$01
+        ext.w   d1
+        tst.w   d1
+          bne.s L0570
+        moveq   #$04,d1
+L0570   bra     L0838
+; 
+;       BASIC - Procedure 'MENUDIM'
+L0574   moveq   #$02,d7
+        lea     L058A(pc),a2
+        bsr     L07F6
+        move.w  (a2)+,d0
+        addi.w  #$0013,d0
+        move.w  (a2)+,d1
+        bra     L4316
+; 
+L058A   ori.b   #$00,(a6)+
+;       BASIC - Procedure 'MENUCLR'
+L058E   cmpa.l  a3,a5
+          bne   L0834
+        bra     L42F0
+; 
+;       BASIC - Procedure 'MENUBLOCK'
+L0598   bsr     L270E
+        moveq   #$05,d0
+        bsr     L07C2
+        addi.w  #$0013,d0
+        bra     L43E2
+; 
+;       BASIC - Procedure 'MENUPR'
+L05AA   bsr     L270E
+        movea.l a0,a4
+        move.l  a5,-(a7)
+        movea.l a3,a5
+        addq.l  #$08,a5
+        move.l  a5,-(a7)
+        movea.w $00000112,a2    ; CA_GTINT
+        jsr     (a2)
+        movea.l (a7)+,a3
+        movea.l (a7)+,a5
+          bne   L0834
+        move.w  $00(a6,a1.l),d7
+        addi.w  #$0013,d7
+        swap    d7
+        move.b  $01(a6,a3.l),d7
+        bsr     L0514
+        movea.l a0,a1
+        movea.l a4,a0
+        andi.b  #$F0,d7
+          beq.s L05EC
+        cmpi.b  #$20,d7
+          bne   L0834
+        bra.s   L05F8
+L05EC   addq.w  #$01,(a1)
+        movea.w (a1),a2
+        addq.w  #$01,a2
+        adda.l  a1,a2
+        move.b  #$0A,(a2)
+L05F8   swap    d7
+        move.w  d7,d0
+        move.w  (a1)+,d1
+        bra     L44AE
+; 
+;       BASIC - Procedure 'ICON'
+L0602   bsr     L270E
+        moveq   #$04,d0
+        bsr     L07C2
+        addi.w  #$0013,d0
+        bra     L4582
+; 
+;       BASIC - Procedure 'INVBLOCK'
+L0614   moveq   #$01,d0
+        bsr     L07C2
+        addi.w  #$0013,d0
+        bra     L4450
+; 
+;       BASIC - Function  'MOUSE'
+L0622   moveq   #$02,d7
+        lea     L0644(pc),a2
+        bsr     L07F6
+        move.w  (a2)+,d1
+        move.w  (a2)+,d2
+        bsr     L45DA
+        move.w  d3,d1
+        cmpi.w  #$FFFF,d1
+          beq.s L0640
+        subi.w  #$0013,d1
+L0640   bra     L0838
+; 
+L0644   dc.w    $0100,$0064
+;       BASIC - Procedure 'CLRBLOCK'
+L0648   moveq   #$01,d0
+        bsr     L07C2
+        addi.w  #$0013,d0
+        bra     L453C
+; 
+;       BASIC - Procedure 'MENU'
+L0656   move.l  a5,-(a7)
+        movea.l a3,a5
+        adda.w  #$0018,a5
+        move.l  a5,-(a7)
+        movea.w $00000112,a2    ; CA_GTINT
+        jsr     (a2)
+          bne.s L0694
+        cmpi.w  #$0003,d3
+          bne.s L0694
+        movea.l (a7)+,a3
+        movea.l (a7)+,a5
+        pea     $00(a6,a1.l)
+        movea.w $00000116,a2    ; CA_GTSTR
+        jsr     (a2)
+        lea     $00(a6,a1.l),a0
+        movea.l (a7)+,a1
+        addq.w  #$08,a3
+        cmpa.w  a3,a5
+          bne   L0834
+        move.w  (a1)+,d0
+        move.w  (a1)+,d1
+        move.w  (a1)+,d2
+        bra     L493C
+; 
+L0694   addq.l  #$08,a7
+        bra     L0834
+; 
+;       BASIC - Procedure 'SETMENU'
+L069A   moveq   #$04,d7
+        lea     L06B0(pc),a2
+        bsr     L07F6
+        move.w  (a2)+,d0
+        move.w  (a2)+,d1
+        move.w  (a2)+,d2
+        move.w  (a2)+,d3
+        bra     L49C8
+; 
+L06B0   dc.w    $00FF,$0007,$0000,$0005
+;       BASIC - Procedure 'GETMENU'
+L06B8   moveq   #$02,d7
+        lea     L06CA(pc),a2
+        bsr     L07F6
+        move.w  (a2)+,d0
+        move.w  (a2)+,d1
+        bra     L4CF4
+; 
+L06CA   dc.w    $0100,$0064
+;       BASIC - Procedure 'ACTIVE'
+L06CE   move.w  #$0003,d0
+        bsr     L07C2
+        bra     L4DA8
+; 
+;       BASIC - Function  'HMENU'
+L06DA   cmpa.l  a3,a5
+          bne   L0834
+        bsr     L4D92
+        bra     L0838
+; 
+;       BASIC - Function  'VMENU'
+L06E8   cmpa.l  a3,a5
+          bne   L0834
+        bsr     L4D92
+        move.w  d2,d1
+        bra     L0838
+; 
+;       BASIC - Procedure 'SETMON'
+L06F8   bsr.s   L0704
+        bra     L23A2
+; 
+;       BASIC - Procedure 'SETTV'
+L06FE   bsr.s   L0704
+        bra     L23E2
+; 
+L0704   moveq   #$01,d6
+        bsr     L26A6
+        move.w  d6,-(a7)
+        moveq   #$09,d7
+        lea     L071C(pc),a2
+        bsr     L07F6
+        movea.l a2,a1
+        move.w  (a7)+,d0
+        rts
+; 
+L071C   dc.l    $01C000C8,$00200010,$00020002,$00070000
+        dc.w    $0000
+;       BASIC - Procedure 'MONSCR'
+L072E   moveq   #$01,d7
+        lea     L073E(pc),a2
+        bsr     L07F6
+        move.w  (a2),d0
+        bra     L23EC
+; 
+L073E   dc.w    $0004
+;       BASIC - Procedure 'TVSCR'
+L0740   moveq   #$01,d7
+        lea     L0750(pc),a2
+        bsr     L07F6
+        move.w  (a2),d0
+        bra     L23FA
+; 
+L0750   dc.w    $0008
+;       BASIC - Procedure 'SETFONT'
+L0752   bsr     L270E
+        movea.w $00000118,a2    ; CA_GTLIN
+        jsr     (a2)
+        adda.w  #$0010,a3
+        cmpa.l  a3,a5
+          bne   L0834
+        cmpi.w  #$0002,d3
+          bne   L0834
+        movea.l $04(a6,a1.l),a2
+        movea.l $00(a6,a1.l),a1
+        bra     L2838
+; 
+;       BASIC - Function  'MXPOS'
+L077A   cmpa.l  a3,a5
+          bne   L0834
+        bsr     L4708
+        bra     L0838
+; 
+;       BASIC - Function  'MYPOS'
+L0788   cmpa.l  a3,a5
+          bne   L0834
+        bsr     L4708
+        move.w  d2,d1
+        bra     L0838
+; 
+;       BASIC - Procedure 'SETMDEV'
+L0798   moveq   #$01,d0
+        bsr     L07C2
+        move.w  d0,d1
+        bra     L4828
+; 
+;       BASIC - Procedure 'SCRSTORE'
+L07A4   moveq   #$05,d0
+        bsr     L07C2
+        bra     L5162
+; 
+;       BASIC - Procedure 'SCRCLEAR'
+L07AE   moveq   #$01,d0
+        bsr     L07C2
+        bra     L5188
+; 
+;       BASIC - Procedure 'SCRLOAD'
+L07B8   moveq   #$01,d0
+        bsr     L07C2
+        bra     L517A
+; 
+L07C2   move.b  L0860(pc),d1
+        cmpi.b  #$FF,d1
+          bne.s L07C2
+        move.w  d0,d7
+        movea.w $00000112,a2    ; CA_GTINT
+        jsr     (a2)
+          bne.s L07F0
+        cmp.w   d3,d7
+          bne.s L07F0
+        move.w  $00(a6,a1.l),d0
+        move.w  $02(a6,a1.l),d1
+        move.w  $04(a6,a1.l),d2
+        move.w  $06(a6,a1.l),d3
+        move.w  $08(a6,a1.l),d4
+        rts
+; 
+L07F0   moveq   #-$0F,d0        ; ERR_BP
+        addq.l  #$04,a7
+        rts
+; 
+L07F6   move.l  a2,-(a7)
+        movea.l $0058(a6),a1    ; SV_BTBAS
+        movea.w $00000112,a2    ; CA_GTINT
+        jsr     (a2)
+        cmp.b   d7,d3
+          bhi.s L082A
+        movea.l (a7)+,a2
+        move.l  a0,-(a7)
+        lea     L0862(pc),a0
+        subq.w  #$01,d7
+L0810   move.w  (a2)+,(a0)+
+        dbf     d7,L0810
+        lea     $00(a6,a1.l),a2
+        lea     L0862(pc),a0
+        bra.s   L0822
+L0820   move.w  (a2)+,(a0)+
+L0822   dbf     d3,L0820
+        movea.l (a7)+,a0
+        bra.s   L082E
+L082A   moveq   #-$0F,d0        ; ERR_BP
+        addq.l  #$04,a7
+L082E   lea     L0862(pc),a2
+        rts
+; 
+L0834   moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+L0838   movea.l $0058(a6),a1    ; SV_BTBAS
+        subq.l  #$02,a1
+        move.w  d1,$00(a6,a1.l)
+        move.l  a1,$0058(a6)    ; SV_BTBAS
+        moveq   #$03,d4
+        rts
+; 
+L084A   movea.l $0058(a6),a1    ; SV_BTBAS
+        subq.l  #$04,a1
+        move.l  d1,$00(a6,a1.l)
+        bsr     L258E
+        move.l  a1,$0058(a6)    ; SV_BTBAS
+        moveq   #$02,d4
+        rts
+; 
+L0860   dc.w    $0000
+L0862   dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+L0882   dc.w    $0000,$0000
+L0886   movem.l d7/a0-a5,-(a7)
+        lea     L0B30(pc),a1
+        move.w  d3,(a1)+
+        move.w  d4,(a1)+
+        add.w   d3,d5
+        subq.w  #$01,d5
+        move.w  d5,(a1)+
+        add.w   d4,d6
+        subq.w  #$01,d6
+        move.w  d6,(a1)+
+        andi.w  #$0007,d2
+        bsr     L26E4
+          beq.s L08AC
+        lsr.w   #$01,d0
+        bra.s   L08AE
+L08AC   lsr.w   #$01,d2
+L08AE   lea     $00020000,a4
+        bsr     L0AB0
+        move.b  d4,d7
+        ext.w   d7
+        cmp.b   d4,d2
+          beq.s L08F0
+        move.w  d0,-(a7)
+        move.w  d1,-(a7)
+        move.w  d2,-(a7)
+        move.l  #$00002710,d1
+        bsr     L26DA
+        movea.l a0,a3
+        adda.w  d1,a3
+        move.w  (a7)+,d2
+        move.w  (a7)+,d1
+        move.w  (a7)+,d0
+        movea.l a0,a2
+        move.l  a0,-(a7)
+        move.w  d0,(a2)+
+        move.w  d1,(a2)+
+        moveq   #$01,d6
+        bsr     L08F8
+        movea.l (a7)+,a0
+        moveq   #$00,d2
+        moveq   #$19,d0         ; MT_RECHP
+        trap    #$01
+L08F0   moveq   #$00,d0
+        movem.l (a7)+,d7/a0-a5
+        rts
+; 
+L08F8   bclr    #$00,d5
+        bclr    #$01,d5
+        tst.w   d6
+          beq.s L0948
+        move.w  -(a2),d1
+        move.w  -(a2),d0
+        subq.w  #$01,d6
+        bsr     L0AB0
+          bne.s L08F8
+        bsr     L09C8
+        bsr     L094A
+        addq.w  #$01,d0
+        move.w  d0,-(a7)
+        move.w  d1,-(a7)
+        subq.w  #$01,d0
+L0920   subq.w  #$01,d0
+        bsr     L0AB0
+          bne.s L0932
+        bsr     L09C8
+        bsr     L094A
+        bra.s   L0920
+L0932   move.w  (a7)+,d1
+        move.w  (a7)+,d0
+L0936   bsr     L0AB0
+          bne.s L08F8
+        bsr     L09C8
+        bsr     L094A
+        addq.w  #$01,d0
+        bra.s   L0936
+L0948   rts
+; 
+L094A   movem.w d0-d1,-(a7)
+        suba.w  #$0080,a5
+        subq.w  #$01,d1
+        bsr     L0AF0
+          bne.s L0984
+        moveq   #$00,d4
+        btst    #$02,d5
+          bne.s L0968
+        bsr     L0AC2
+        bra.s   L096C
+L0968   bsr     L0AD4
+L096C     bne.s L0984
+        btst    #$00,d5
+          bne.s L0988
+        bset    #$00,d5
+        cmpa.l  a2,a3
+          bls.s L0988
+        move.w  d0,(a2)+
+        move.w  d1,(a2)+
+        addq.w  #$01,d6
+        bra.s   L0988
+L0984   bclr    #$00,d5
+L0988   adda.w  #$0100,a5
+        addq.w  #$02,d1
+        bsr     L0AF0
+          bne.s L09BE
+        moveq   #$00,d4
+        btst    #$02,d5
+          bne.s L09A2
+        bsr     L0AC2
+        bra.s   L09A6
+L09A2   bsr     L0AD4
+L09A6     bne.s L09BE
+        btst    #$01,d5
+          bne.s L09C2
+        bset    #$01,d5
+        cmpa.l  a2,a3
+          bls.s L09C2
+        move.w  d0,(a2)+
+        move.w  d1,(a2)+
+        addq.w  #$01,d6
+        bra.s   L09C2
+L09BE   bclr    #$01,d5
+L09C2   movem.w (a7)+,d0-d1
+        rts
+; 
+L09C8   btst    #$02,d5
+          beq   L09D4
+        bra     L0A0A
+; 
+L09D4   lsl.w   #$01,d2
+        jmp     L09DA(pc,d2.w)
+; 
+L09DA   bra.s   L09E2
+        bra.s   L09EC
+        bra.s   L09F6
+        bra.s   L0A00
+L09E2   bclr    d3,(a5)
+        bclr    d3,$0001(a5)
+        lsr.b   #$01,d2
+        rts
+; 
+L09EC   bclr    d3,(a5)
+        bset    d3,$0001(a5)
+        lsr.b   #$01,d2
+        rts
+; 
+L09F6   bset    d3,(a5)
+        bclr    d3,$0001(a5)
+        lsr.b   #$01,d2
+        rts
+; 
+L0A00   bset    d3,(a5)
+        bset    d3,$0001(a5)
+        lsr.b   #$01,d2
+        rts
+; 
+L0A0A   lsl.b   #$02,d2
+        jmp     L0A10(pc,d2.w)
+; 
+L0A10   bra     L0A30
+; 
+        bra     L0A40
+; 
+        bra     L0A50
+; 
+        bra     L0A60
+; 
+        bra     L0A70
+; 
+        bra     L0A80
+; 
+        bra     L0A90
+; 
+        bra     L0AA0
+; 
+L0A30   addq.b  #$01,d3
+        bclr    d3,(a5)+
+        bclr    d3,(a5)
+        subq.b  #$01,d3
+        bclr    d3,(a5)
+        subq.w  #$01,a5
+        lsr.b   #$02,d2
+        rts
+; 
+L0A40   addq.b  #$01,d3
+        bclr    d3,(a5)+
+        bclr    d3,(a5)
+        subq.b  #$01,d3
+        bset    d3,(a5)
+        subq.w  #$01,a5
+        lsr.b   #$02,d2
+        rts
+; 
+L0A50   addq.b  #$01,d3
+        bclr    d3,(a5)+
+        bset    d3,(a5)
+        subq.b  #$01,d3
+        bclr    d3,(a5)
+        subq.w  #$01,a5
+        lsr.b   #$02,d2
+        rts
+; 
+L0A60   addq.b  #$01,d3
+        bclr    d3,(a5)+
+        bset    d3,(a5)
+        subq.b  #$01,d3
+        bset    d3,(a5)
+        subq.w  #$01,a5
+        lsr.b   #$02,d2
+        rts
+; 
+L0A70   addq.b  #$01,d3
+        bset    d3,(a5)+
+        bclr    d3,(a5)
+        subq.b  #$01,d3
+        bclr    d3,(a5)
+        subq.w  #$01,a5
+        lsr.b   #$02,d2
+        rts
+; 
+L0A80   addq.b  #$01,d3
+        bset    d3,(a5)+
+        bclr    d3,(a5)
+        subq.b  #$01,d3
+        bset    d3,(a5)
+        subq.w  #$01,a5
+        lsr.b   #$02,d2
+        rts
+; 
+L0A90   addq.b  #$01,d3
+        bset    d3,(a5)+
+        bset    d3,(a5)
+        subq.b  #$01,d3
+        bclr    d3,(a5)
+        subq.w  #$01,a5
+        lsr.b   #$02,d2
+        rts
+; 
+L0AA0   addq.b  #$01,d3
+        bset    d3,(a5)+
+        bset    d3,(a5)
+        subq.b  #$01,d3
+        bset    d3,(a5)
+        subq.w  #$01,a5
+        lsr.b   #$02,d2
+        rts
+; 
+L0AB0   bsr     L0AF0
+          bne.s L0AD2
+        bsr     L24CE
+        moveq   #$00,d4
+        btst    #$02,d5
+          bne.s L0AD4
+L0AC2   btst    d3,(a5)
+          beq.s L0AC8
+        addq.b  #$02,d4
+L0AC8   btst    d3,$0001(a5)
+          beq.s L0AD0
+        addq.b  #$01,d4
+L0AD0   cmp.b   d4,d7
+L0AD2   rts
+; 
+L0AD4   addq.b  #$01,d3
+        btst    d3,(a5)+
+          beq.s L0ADC
+        addq.b  #$04,d4
+L0ADC   btst    d3,(a5)
+          beq.s L0AE2
+        addq.b  #$02,d4
+L0AE2   subq.b  #$01,d3
+        btst    d3,(a5)
+          beq.s L0AEA
+        addq.b  #$01,d4
+L0AEA   subq.w  #$01,a5
+        cmp.b   d4,d7
+        rts
+; 
+L0AF0   btst    #$02,d5
+          beq.s L0B0C
+        move.w  L0B30(pc),d4
+        lsr.w   #$01,d4
+        cmp.w   d0,d4
+          bgt.s L0B2E
+        move.w  L0B34(pc),d4
+        lsr.w   #$01,d4
+        cmp.w   d0,d4
+          blt.s L0B2E
+        bra.s   L0B1C
+L0B0C   move.w  L0B30(pc),d4
+        cmp.w   d0,d4
+          bgt.s L0B2E
+        move.w  L0B34(pc),d4
+        cmp.w   d0,d4
+          blt.s L0B2E
+L0B1C   move.w  L0B32(pc),d4
+        cmp.w   d1,d4
+          bgt.s L0B2E
+        move.w  L0B36(pc),d4
+        cmp.w   d1,d4
+          blt.s L0B2E
+        moveq   #$00,d4
+L0B2E   rts
+; 
+L0B30   dc.w    $0000
+L0B32   dc.w    $0000
+L0B34   dc.w    $0000
+L0B36   dc.w    $0000
+        lea     L0F28(pc),a2
+        moveq   #-$01,d0        ; ERR_NC
+        move.l  d0,(a2)
+        lea     L0F2C(pc),a2
+        move.l  d0,(a2)
+        moveq   #$00,d0
+        rts
+; 
+;       BASIC - Procedure 'ACLOCK'
+L0B4A   lea     L0F0A(pc),a2
+        moveq   #$09,d7
+        bsr     L07F6
+        movea.l a2,a0
+        lea     L0F2C(pc),a1
+        tst.w   (a0)+
+          beq   L0C36
+        lea     L0DB4(pc),a2
+        move.w  (a0)+,d0
+        move.w  d0,$0008(a2)
+        move.w  (a0)+,d1
+        move.w  d1,$000A(a2)
+        move.w  (a0)+,d3
+        move.w  d3,$0006(a2)
+        move.w  d3,d2
+        lsr.w   #$01,d2
+        add.w   d3,d2
+        move.w  d2,$0004(a2)
+        add.w   d0,d2
+        cmpi.w  #$01FF,d2
+          bhi.s L0BAE
+        add.w   d1,d3
+        cmpi.w  #$00FF,d3
+          bhi.s L0BAE
+        move.w  (a0)+,d0
+        move.b  d0,$0002(a2)
+        lea     L0F02(pc),a2
+        move.w  (a0)+,(a2)+
+        move.w  (a0)+,(a2)+
+        move.w  (a0)+,(a2)+
+        move.w  (a0),(a2)
+        move.w  #$023A,d2
+        lea     L0CE6(pc),a2
+        movea.l a1,a3
+        bra.s   L0C0C
+L0BAE   moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+;       BASIC - Procedure 'DCLOCK'
+L0BB2   lea     L0F1C(pc),a2
+        moveq   #$06,d7
+        bsr     L07F6
+        movea.l a2,a0
+        lea     L0F28(pc),a1
+        tst.w   (a0)+
+          beq   L0C36
+        lea     L0CAE(pc),a2
+        move.w  (a0)+,d0
+        move.w  d0,$0008(a2)
+        move.w  (a0)+,d1
+        move.w  d1,$000A(a2)
+        addi.w  #$00A0,d0
+        cmpi.w  #$01FF,d0
+          bhi.s L0C08
+        addi.w  #$000C,d1
+        cmpi.w  #$00FF,d1
+          bhi.s L0C08
+        move.w  (a0)+,d0
+        move.b  d0,$0002(a2)
+        move.w  (a0)+,d0
+        move.b  d0,$0003(a2)
+        move.w  (a0)+,d0
+        move.b  d0,(a2)
+        move.w  #$012C,d2
+        lea     L0C4C(pc),a2
+        movea.l a1,a3
+        bra.s   L0C0C
+L0C08   moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+L0C0C   tst.l   (a3)
+          bpl.s L0C32
+        ext.l   d2
+        moveq   #$01,d0         ; MT_CJOB
+        moveq   #$00,d1
+        moveq   #$64,d3
+        suba.l  a1,a1
+        trap    #$01
+        tst.l   d0
+          bne.s L0C34
+        move.l  d1,(a3)
+L0C22   move.b  (a2)+,(a0)+
+        dbf     d2,L0C22
+        moveq   #$28,d2
+        moveq   #$0A,d0         ; MT_ACTIV
+        moveq   #$00,d3
+        trap    #$01
+        rts
+; 
+L0C32   moveq   #-$08,d0        ; ERR_EX
+L0C34   rts
+; 
+L0C36   tst.l   (a1)
+          bmi.s L0C48
+        move.l  (a1),d1
+        move.l  #-$00000001,(a1)
+        moveq   #$00,d3
+        moveq   #$05,d0         ; MT_FRJOB
+        trap    #$01
+L0C48   moveq   #$00,d0
+        rts
+; 
+;       Job Header
+L0C4C   bra.s   L0C64
+        dc.w    $0000,$0000,$4AFB
+        dc.w    $000D
+        dc.b    'Digital-Clock',$00
+L0C64   suba.l  a6,a6
+        moveq   #-$01,d1
+        moveq   #$7F,d2
+        moveq   #$0B,d0         ; MT_PRIOR
+        trap    #$01
+        lea     L0CAE(pc),a1
+        movea.w $000000C8,a2    ; UT_SCR
+        jsr     (a2)
+        movea.l a0,a5
+        lea     L0CE6(pc),a4
+L0C7E   moveq   #$20,d0         ; SD_CLEAR
+        movea.l a5,a0
+        moveq   #-$01,d3
+        trap    #$03
+        moveq   #$11,d0         ; SD_TAB
+        moveq   #-$01,d3
+        moveq   #$03,d1
+        trap    #$03
+        moveq   #$13,d0         ; MT_RCLCK
+        trap    #$01
+        movea.l a4,a1
+        movea.w $000000EC,a2    ; CN_DATE
+        jsr     (a2)
+        movea.l a5,a0
+        movea.w $000000D0,a2    ; UT_MTEXT
+        jsr     (a2)
+        moveq   #$08,d0         ; MT_SUSJB
+        moveq   #-$01,d1
+        moveq   #$32,d3
+        suba.l  a1,a1
+        trap    #$01
+        bra.s   L0C7E
+L0CAE   dc.w    $0401,$0207,$00A0,$000C,$0154,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000
+;       Job Header
+L0CE6   bra.s   L0CFE
+        dc.w    $0000,$0000,$4AFB
+        dc.w    $000F
+        dc.b    'Analogue-Clock'
+L0CFE   dc.b    $9D,$CE
+        moveq   #$0B,d0         ; MT_PRIOR
+        moveq   #-$01,d1
+        moveq   #$01,d2
+        trap    #$01
+        movea.w $000000C8,a2    ; UT_SCR
+        lea     L0DB4(pc),a1
+        jsr     (a2)
+        move.l  a0,-(a7)
+        lea     L0EF0(pc),a1
+        lea     L0DD8(pc),a3
+        lea     L0F02(pc),a4
+        moveq   #$34,d7
+        bsr.s   L0D9E
+L0D24   moveq   #$08,d0         ; MT_SUSJB
+        moveq   #-$01,d1
+        moveq   #$0A,d3
+        suba.l  a1,a1
+        trap    #$01
+        moveq   #$13,d0         ; MT_RCLCK
+        trap    #$01
+        lsr.l   #$01,d1
+        cmp.l   d1,d4
+          beq.s L0D24
+        move.l  d1,d4
+        divu.w  #$5460,d1
+        swap    d1
+        moveq   #$00,d6
+        move.w  d1,d6
+        moveq   #$20,d0         ; SD_CLEAR
+        bsr.s   L0DAA
+        moveq   #$29,d0         ; SD_SETIN
+        move.w  L0F02(pc),d1
+        bsr.s   L0DAA
+        moveq   #$33,d7
+        lea     L0EF0(pc),a1
+        lea     L0DDF(pc),a3
+        bsr.s   L0D9E
+        moveq   #$06,d5
+        moveq   #$31,d7
+        lea     L0DE5(pc),a3
+        lea     L0DC0(pc),a5
+        lea     L0F04(pc),a2
+        move.l  a2,d2
+L0D6E   moveq   #$29,d0         ; SD_SETIN
+        movea.l d2,a2
+        move.w  (a2),d1
+        addq.l  #$02,d2
+        bsr.s   L0DAA
+        lea     L0EF0(pc),a1
+        clr.w   -(a1)
+        move.l  (a5)+,-(a1)
+        move.w  d6,-(a1)
+        moveq   #$08,d0
+        move.l  d2,-(a7)
+        movea.w $0000011C,a2    ; RI_EXEC
+        jsr     (a2)
+        move.l  (a7)+,d2
+        divu.w  (a5)+,d6
+        clr.w   d6
+        swap    d6
+        move.w  (a5)+,-(a1)
+        bsr.s   L0D9E
+        subq.w  #$02,d5
+          bgt.s L0D6E
+        bra.s   L0D24
+L0D9E   move.l  d2,-(a7)
+        movea.w $0000011E,a2    ; RI_EXECB
+        jsr     (a2)
+        move.l  d7,d0
+        move.l  (a7)+,d2
+L0DAA   moveq   #-$01,d3
+        movea.l $0004(a7),a0
+        trap    #$03
+        rts
+; 
+L0DB4   dc.b    $00,$00,$00,$00,$00,'(',$00,$1E,$00
+        dc.b    $0A,$00,$00
+L0DC0   dc.b    $08,$00,'`',$00,$07,$08,'T`',$08,$00
+        dc.b    'p',$00,$00,$1E,$07,$08,$08,$01,'@',$00
+        dc.b    $00,$01,$00,$1E
+L0DD8   dc.b    $EE,$EE,$0A,$EE,$14,$16,$00
+L0DDF   dc.b    $FA,$FA,$EE,$EE,$FA,$00
+L0DE5   dc.b    $08,$10,$F4,$0E,$E2,$1A,$E8,$0E,$E2,$18,$E8,$0E
+        dc.b    $FA,$FA,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00
+L0EF0   dc.b    $08,$01,'@',$00,$00,$00,$08,$03,'d',$87,$ED,'Q',$00
+        dc.b    $00,$00,$00,$00,$00
+L0F02   dc.b    $00,$00
+L0F04   dc.b    $00,$00,$00,$00,$00,$00
+L0F0A   dc.b    $00,$01,$00,$00,$00,$00,$00,'(',$00
+        dc.b    $00,$00,$02,$00,$02,$00,$04,$00,$06
+L0F1C   dc.b    $00,$01,$01,'T',$00,$00,$00,$02,$00
+        dc.b    $07,$00,$04
+L0F28   dc.b    $FF,$FF,$FF,$FF
+L0F2C   dc.b    $FF,$FF,$FF,$FF,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00
+L0F3C   lea     L11D8(pc),a1
+        move.l  a0,(a1)
+        lea     L11D4(pc),a1
+        move.l  a6,(a1)
+        movea.l a6,a2
+        adda.l  $0018(a6),a2    ; SV_TRNFR
+        movea.l a6,a3
+        adda.l  $001C(a6),a3    ; SV_RESPR
+        movea.l a6,a4
+        adda.l  $0028(a6),a4
+        rts
+; 
+L0F5C   bsr.s   L0F3C
+L0F5E   move.w  (a2),d0
+        bsr     L0FD0
+        jmp     L0F68(pc,d1.w)
+; 
+L0F68   bsr     L0FE8
+        bra     L0FBC
+; 
+        bsr     L101C
+        bra     L0FBC
+; 
+        bsr     L105C
+        bra     L0FBC
+; 
+        bsr     L1098
+        bra     L0FBC
+; 
+        bsr     L10A0
+        bra     L0FBC
+; 
+        bsr     L10A8
+        bra     L0FBC
+; 
+        bsr     L10B0
+        bra     L0FBC
+; 
+        bsr     L10BC
+        bra     L0FBC
+; 
+        bsr     L10C8
+        bra     L0FBC
+; 
+        bsr     L10D2
+        bra     L0FBC
+; 
+        bra     L0FC6
+; 
+L0FBC   moveq   #$0A,d1
+        movea.l L11D8(pc),a0
+        bsr     L2516
+L0FC6   addq.l  #$08,a2
+        cmpa.l  a2,a3
+          bhi.s L0F5E
+        moveq   #$00,d0
+        rts
+; 
+L0FD0   moveq   #$00,d1
+        lea     L12A0(pc),a0
+L0FD6   cmp.w   (a0)+,d0
+          beq.s L0FE2
+        addq.b  #$01,d1
+        cmpi.b  #$0A,d1
+          bne.s L0FD6
+L0FE2   move.w  d1,d0
+        lsl.w   #$03,d1
+        rts
+; 
+L0FE8   movem.l a2-a4,-(a7)
+        lea     L11E0(pc),a1
+        bsr     L10DC
+        adda.l  $0004(a2),a4
+        tst.l   $0004(a2)
+          bpl.s L100A
+        movea.l L11D8(pc),a0
+        moveq   #$2A,d1
+        bsr     L2516
+        bra.s   L1016
+L100A   movea.l a4,a1
+        movea.l L11D8(pc),a0
+        movea.w $000000D0,a2    ; UT_MTEXT
+        jsr     (a2)
+L1016   movem.l (a7)+,a2-a4
+        rts
+; 
+L101C   movem.l a2-a4,-(a7)
+        lea     L11F0(pc),a1
+        bsr     L10DC
+        bsr     L1134
+        adda.l  $0004(a2),a4
+        tst.l   $0004(a2)
+          bpl.s L1042
+        moveq   #$2A,d1
+        movea.l L11D8(pc),a0
+        bsr     L2516
+        bra.s   L1056
+L1042   subq.l  #$06,a1
+        move.l  (a4)+,$00(a6,a1.l)
+        move.w  (a4),$04(a6,a1.l)
+        movea.w $000000F0,a2    ; CN_FTOD
+        jsr     (a2)
+        bsr     L111C
+L1056   movem.l (a7)+,a2-a4
+        rts
+; 
+L105C   movem.l a2-a4,-(a7)
+        lea     L1200(pc),a1
+        bsr     L10DC
+        bsr     L1134
+        adda.l  $0004(a2),a4
+        tst.l   $0004(a2)
+          bpl.s L1082
+        moveq   #$2A,d1
+        movea.l L11D8(pc),a0
+        bsr     L2516
+        bra.s   L1092
+L1082   subq.l  #$02,a1
+        move.w  (a4),$00(a6,a1.l)
+        movea.w $000000F2,a2    ; CN_ITOD
+        jsr     (a2)
+        bsr     L111C
+L1092   movem.l (a7)+,a2-a4
+        rts
+; 
+L1098   lea     L1210(pc),a1
+        bsr.s   L10DC
+        rts
+; 
+L10A0   lea     L1220(pc),a1
+        bsr.s   L10DC
+        rts
+; 
+L10A8   lea     L1230(pc),a1
+        bsr.s   L10DC
+        rts
+; 
+L10B0   lea     L1240(pc),a1
+        bsr.s   L10DC
+        bsr     L1142
+        rts
+; 
+L10BC   lea     L1250(pc),a1
+        bsr.s   L10DC
+        bsr     L1142
+        rts
+; 
+L10C8   lea     L1260(pc),a1
+        bsr.s   L10DC
+        bsr.s   L1142
+        rts
+; 
+L10D2   lea     L1270(pc),a1
+        bsr.s   L10DC
+        bsr.s   L1142
+        rts
+; 
+L10DC   move.l  a5,-(a7)
+        move.l  a1,-(a7)
+        movea.l $0020(a6),a1    ; SV_RAMT
+        adda.l  a6,a1
+        adda.w  $0002(a2),a1
+        move.b  (a1)+,d2
+        ext.w   d2
+        cmpi.b  #$12,d2
+          bls.s L10F6
+        moveq   #$12,d2
+L10F6   move.w  d2,-(a7)
+        movea.l L11D8(pc),a0
+        moveq   #-$01,d3
+        moveq   #$07,d0         ; IO_SSTRG
+        trap    #$03
+        move.w  (a7)+,d2
+        moveq   #$14,d7
+        sub.w   d2,d7
+L1108   moveq   #$20,d1
+        bsr     L2516
+        dbf     d7,L1108
+        movea.l (a7)+,a1
+        bsr     L2524
+        movea.l (a7)+,a5
+        rts
+; 
+L111C   move.l  a0,d2
+        sub.l   L11DC(pc),d2
+        movea.l L11DC(pc),a1
+        adda.l  a6,a1
+        movea.l L11D8(pc),a0
+        moveq   #-$01,d3
+        moveq   #$07,d0         ; IO_SSTRG
+        trap    #$03
+        rts
+; 
+L1134   movea.l (a6),a0
+        movea.l $0058(a6),a1    ; SV_BTBAS
+        lea     L11DC(pc),a5
+        move.l  a0,(a5)
+        rts
+; 
+L1142   movem.l a2-a4,-(a7)
+        bsr.s   L1134
+        subq.l  #$02,a1
+        move.w  $0004(a2),$00(a6,a1.l)
+        movea.w $000000F2,a2    ; CN_ITOD
+        jsr     (a2)
+        bsr.s   L111C
+        movem.l (a7)+,a2-a4
+        rts
+; 
+L115E   movem.l a2-a4,-(a7)
+        moveq   #$24,d1
+        bsr     L2516
+        bsr.s   L1134
+        subq.l  #$04,a1
+        move.l  $0004(a2),$00(a6,a1.l)
+        movea.w $000000FE,a2    ; CN_ITOHL
+        jsr     (a2)
+        bsr.s   L111C
+        moveq   #$0A,d1
+        bsr     L2516
+        movem.l (a7)+,a2-a4
+        rts
+; 
+L1186   move.l  $0004(a2),d0
+        cmpi.l  #$0000C000,d0
+          bhi.s L1194
+        rts
+; 
+L1194   move.w  #$0004,ccr
+        rts
+; 
+L119A   bsr     L0F3C
+L119E   move.w  (a2),d0
+        cmpi.w  #$0800,d0
+          beq.s L11BC
+        cmpi.w  #$0900,d0
+          bne.s L11CA
+        bsr.s   L1186
+          bne.s L11CA
+        lea     L1280(pc),a1
+        bsr     L10DC
+        bsr.s   L115E
+        bra.s   L11CA
+L11BC   bsr.s   L1186
+          bne.s L11CA
+        lea     L1290(pc),a1
+        bsr     L10DC
+        bsr.s   L115E
+L11CA   addq.l  #$08,a2
+        cmpa.l  a2,a3
+          bhi.s L119E
+        moveq   #$00,d0
+        rts
+; 
+L11D4   dc.w    $0000,$0000
+L11D8   dc.w    $0000,$0000
+L11DC   dc.w    $0000,$0000
+L11E0   dc.b    ' STR_VAR       ',$00
+L11F0   dc.b    ' FLP_VAR       ',$00
+L1200   dc.b    ' INT_VAR       ',$00
+L1210   dc.b    ' STR_ARRAY     ',$00
+L1220   dc.b    ' FLP_ARRAY     ',$00
+L1230   dc.b    ' INT_ARRAY     ',$00
+L1240   dc.b    ' SB_PROCEDURE  ',$00
+L1250   dc.b    ' SB_STR_FUNC   ',$00
+L1260   dc.b    ' SB_FLP_FUNC   ',$00
+L1270   dc.b    ' SB_INT_FUNC   ',$00
+L1280   dc.b    ' MC_FUNCTION   ',$00
+L1290   dc.b    ' MC_PROCEDURE  ',$00
+L12A0   andi.b  #$02,d1
+        andi.b  #$01,d3
+        btst    d1,d2
+        btst    d1,d3
+        subi.b  #$01,d2
+        btst    d2,d2
+        btst    d2,d3
+L12B4   move.l  a5,-(a7)
+        andi.w  #$0007,d1
+        addi.b  #$30,d1
+        lea     L142B(pc),a0
+        move.b  d1,(a0)
+        moveq   #$03,d5
+        clr.b   d6
+        moveq   #-$01,d1
+        moveq   #$04,d3
+        lea     L1426(pc),a0
+        moveq   #$01,d0         ; IO_OPEN
+        trap    #$02
+        tst.l   d0
+          bne   L140A
+        move.l  a0,-(a7)
+        lea     L142E(pc),a1
+        movea.w $000000C8,a4    ; UT_SCR
+        jsr     (a4)
+        moveq   #$03,d1
+        moveq   #$00,d2
+        bsr     L266C
+        movea.l (a7)+,a4
+        movea.l a0,a5
+        move.w  #-$0001,d3
+        movea.l a4,a0
+        lea     L1476(pc),a1
+        moveq   #$45,d0         ; FS_MDINF
+        trap    #$03
+        move.l  d1,d4
+        movea.l a5,a0
+        move.l  a5,-(a7)
+        lea     L143A(pc),a1
+        bsr     L2524
+        move.w  #$000A,d2
+        lea     L1476(pc),a1
+        moveq   #$07,d0         ; IO_SSTRG
+        trap    #$03
+        movea.l (a7)+,a5
+        tst.l   d0
+          bne   L140A
+        move.b  #$0A,d1
+        bsr     L2516
+        move.l  a5,-(a7)
+        lea     L144E(pc),a1
+        bsr     L2524
+        move.l  d4,d1
+        swap    d1
+        movea.w $000000CE,a2    ; UT_MINT
+        jsr     (a2)
+        moveq   #$0A,d1
+        bsr     L2516
+        lea     L1462(pc),a1
+        bsr     L2524
+        move.w  d4,d1
+        movea.w $000000CE,a2    ; UT_MINT
+        jsr     (a2)
+        moveq   #$0A,d1
+        bsr     L2516
+        bsr     L2674
+        bsr     L1418
+        moveq   #$0A,d1
+        bsr     L2516
+        moveq   #$0A,d1
+        bsr     L2516
+        movea.l (a7)+,a5
+L1370   movea.l a4,a0
+        moveq   #$00,d0         ; IO_PEND
+        trap    #$03
+        tst.l   d0
+          bne   L13FC
+        moveq   #$40,d2
+        lea     L1476(pc),a1
+        moveq   #$03,d0         ; IO_FSTRG
+        trap    #$03
+        tst.l   d0
+          bne   L140A
+        lea     L1476(pc),a1
+        tst.l   (a1)
+          beq.s L1370
+        tst.w   $000E(a1)
+          beq.s L1370
+        movea.l a5,a0
+        move.w  d5,d1
+        bsr     L2680
+        move.l  (a1),d1
+        divu.w  #$0200,d1
+        swap    d1
+        tst.w   d1
+          beq.s L13B4
+        addi.l  #$00010000,d1
+L13B4   swap    d1
+        movea.w $000000CE,a2    ; UT_MINT
+        jsr     (a2)
+        tst.l   d0
+          bne   L140A
+        addq.w  #$04,d5
+        move.w  d5,d1
+        bsr     L2680
+        lea     L1476(pc),a1
+        move.w  $000E(a1),d2
+        adda.w  #$0010,a1
+        moveq   #$07,d0         ; IO_SSTRG
+        trap    #$03
+        addi.w  #$0011,d5
+        addq.b  #$01,d6
+        cmpi.b  #$04,d6
+          bne   L13F8
+        moveq   #$03,d5
+        clr.b   d6
+        moveq   #$0A,d1
+        bsr     L2516
+        moveq   #$0A,d1
+        bsr     L2516
+L13F8   bra     L1370
+; 
+L13FC   clr.l   d0
+        movea.l a5,a0
+        move.b  #$0A,d1
+        bsr     L2516
+        bsr.s   L1418
+L140A   moveq   #$02,d0         ; IO_CLOSE
+        trap    #$02
+        movea.l a4,a0
+        moveq   #$02,d0         ; IO_CLOSE
+        trap    #$02
+        movea.l (a7)+,a5
+        rts
+; 
+L1418   moveq   #$53,d4
+L141A   moveq   #$2D,d1
+        bsr     L2516
+        dbf     d4,L141A
+        rts
+; 
+L1426   dc.w    $0005
+        dc.b    'mdv'
+L142B   dc.b    '1_',$00
+L142E   dc.b    'z',$02,$02,$06,$02,$00,$00,$CA,$00
+        dc.b    $00,$00,$00
+L143A   dc.b    '  Medium Name    : ',$00
+L144E   dc.b    '  Free Sectors   : ',$00
+L1462   dc.b    '  Good'
+        dc.b    ' Sectors   : ',$00
+L1476   dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$06,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00
+;       BASIC - Procedure 'KEYSON'
+L14CA   cmpa.l  a3,a5
+          bne   L0834
+L14D0   lea     L1804(pc),a0
+        tst.b   (a0)
+          bne.s L14EE
+        st      (a0)
+        lea     L164C(pc),a1
+        lea     L1842(pc),a0
+        move.l  a1,$0004(a0)
+        moveq   #$1C,d0         ; MT_LPOLL
+        trap    #$01
+        moveq   #$00,d0
+        rts
+; 
+L14EE   moveq   #-$08,d0        ; ERR_EX
+        rts
+; 
+;       BASIC - Procedure 'KEYSOFF'
+L14F2   cmpa.l  a3,a5
+          bne   L0834
+        lea     L1804(pc),a0
+        tst.b   (a0)
+          beq.s L150C
+        sf      (a0)
+        lea     L1842(pc),a0
+        moveq   #$1D,d0         ; MT_RPOLL
+        trap    #$01
+        moveq   #$00,d0
+L150C   rts
+; 
+;       BASIC - Procedure 'KEY'
+L150E   subq.l  #$08,a5
+        movea.w $00000112,a2    ; CA_GTINT
+        jsr     (a2)
+          bne.s L1568
+        cmpi.w  #$0001,d3
+          bne.s L1568
+        move.w  $00(a6,a1.l),-(a7)
+        movea.l a5,a3
+        addq.l  #$08,a5
+        movea.w $00000116,a2    ; CA_GTSTR
+        jsr     (a2)
+          bne.s L1568
+        cmpi.w  #$0001,d3
+          bne.s L1568
+        move.w  (a7)+,d1
+        cmpi.w  #$000A,d1
+          bhi.s L156C
+        subq.w  #$01,d1
+        lea     L16C2(pc),a2
+        lsl.w   #$05,d1
+        adda.l  d1,a2
+        lea     $0002(a2),a3
+        lea     $02(a6,a1.l),a4
+        move.w  $00(a6,a1.l),d3
+        cmpi.w  #$001E,d3
+          bhi.s L1570
+        bra.s   L155C
+L155A   move.b  (a4)+,(a3)+
+L155C   dbf     d3,L155A
+        move.w  $00(a6,a1.l),(a2)
+        moveq   #$00,d0
+        rts
+; 
+L1568   moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+L156C   moveq   #-$04,d0        ; ERR_OR
+        rts
+; 
+L1570   moveq   #-$05,d0        ; ERR_BO
+        rts
+; 
+;       BASIC - Procedure 'KEYS'
+L1574   moveq   #$01,d6
+        bsr     L26A6
+        bsr     L2688
+          bne   L1630
+        lea     L1806(pc),a1
+        bsr     L2524
+        moveq   #$01,d7
+        lea     L16C2(pc),a4
+L1590   moveq   #$46,d1
+        bsr     L2516
+        move.w  d7,d1
+        movea.w $000000CE,a2    ; UT_MINT
+        jsr     (a2)
+        moveq   #$20,d1
+        bsr     L2516
+        cmpi.w  #$0009,d7
+          bhi.s L15B0
+        moveq   #$20,d1
+        bsr     L2516
+L15B0   movea.w a4,a3
+        move.w  (a3)+,d6
+        tst.w   d6
+          beq.s L15C2
+        subq.w  #$01,d6
+        move.b  (a3)+,d4
+        bsr.s   L1634
+          bne.s L15F2
+        bra.s   L15D2
+L15C2   move.b  (a3)+,d4
+        bsr.s   L1634
+          bne.s L15E2
+        tst.b   d5
+          beq.s L15D8
+        moveq   #$26,d1
+        bsr     L2516
+L15D2   moveq   #$27,d1
+        bsr     L2516
+L15D8   move.b  d4,d1
+        moveq   #$00,d5
+        bsr     L2516
+        bra.s   L160A
+L15E2   tst.b   d5
+          bne.s L15EC
+        moveq   #$27,d1
+        bsr     L2516
+L15EC   moveq   #$26,d1
+        bsr     L2516
+L15F2   lea     L182A(pc),a1
+        bsr     L2524
+        move.b  d4,d1
+        movea.w $000000CE,a2    ; UT_MINT
+        jsr     (a2)
+        moveq   #$29,d1
+        bsr     L2516
+        moveq   #-$01,d5
+L160A   dbf     d6,L15C2
+        tst.b   d5
+          bne.s L1618
+        moveq   #$27,d1
+        bsr     L2516
+L1618   moveq   #$0A,d1
+        bsr     L2516
+        adda.w  #$0020,a4
+        addq.w  #$01,d7
+        cmpi.w  #$000B,d7
+          bne   L1590
+        moveq   #$00,d0
+        rts
+; 
+L1630   moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+L1634   cmpi.b  #$1F,d4
+          bls.s L1646
+        cmpi.b  #$BF,d4
+          bhi.s L1646
+        move.w  #$0004,ccr
+        bra.s   L164A
+L1646   move.w  #$0000,ccr
+L164A   rts
+; 
+L164C   lea     L1802(pc),a4
+        moveq   #$11,d0         ; MT_IPCOM
+        lea     L1832(pc),a3
+        trap    #$01
+        andi.b  #$3B,d1
+          beq.s L16BE
+        tst.b   (a4)
+          bne.s L16C0
+        st      (a4)
+        moveq   #$00,d2
+        btst    #$00,d1
+          beq.s L166E
+        moveq   #$03,d2
+L166E   btst    #$03,d1
+          beq.s L1676
+        moveq   #$01,d2
+L1676   btst    #$04,d1
+          beq.s L167E
+        moveq   #$02,d2
+L167E   btst    #$05,d1
+          beq.s L1686
+        moveq   #$04,d2
+L1686   move.l  d2,-(a7)
+        moveq   #$11,d0         ; MT_IPCOM
+        lea     L183A(pc),a3
+        trap    #$01
+        move.l  (a7)+,d2
+        cmpi.b  #$01,d1
+          bgt.s L16C0
+          bne.s L169C
+        addq.w  #$05,d2
+L169C   lea     L16C2(pc),a1
+        mulu.w  #$0020,d2
+        adda.l  d2,a1
+        move.w  (a1)+,d3
+        movea.l $0002804C,a2    ; SV_KEYQ
+L16AE   tst.w   d3
+          beq.s L16C0
+        move.b  (a1)+,d1
+        movea.w $000000E0,a4    ; IO_QIN
+        jsr     (a4)
+        subq.w  #$01,d3
+        bra.s   L16AE
+L16BE   sf      (a4)
+L16C0   rts
+; 
+L16C2   dc.w    $0005
+        dc.b    'KEYS',$0A,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00
+        dc.w    $0004
+        dc.b    'RUN',$0A
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00
+        dc.w    $000D
+        dc.b    'CLEAR',$0A,'SCREEN',$0A,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00
+        dc.w    $0007
+        dc.b    'MONSCR',$0A,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00
+        dc.w    $0004
+        dc.b    'CAT',$0A
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00
+        dc.w    $0008
+        dc.b    'JOB_INF',$0A
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00
+        dc.w    $000A
+        dc.b    'LRUN mdv1_'
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00
+        dc.w    $000D
+        dc.b    'CLEAR',$0A,'SCREEN ',$00
+        ori.b   #$00,d0
+        ori.b   #$00,d0
+        ori.b   #$00,d0
+        ori.b   #$00,d0
+        dc.w    $0006
+        dc.b    'TVSCR',$0A
+        ori.b   #$00,d0
+        ori.b   #$00,d0
+        ori.b   #$00,d0
+        ori.b   #$00,d0
+        ori.b   #$00,d0
+        ori.b   #$00,d0
+        dc.w    $0007
+        dc.b    'CAT #2',$0A,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00
+L1802   dc.b    $00,$00
+L1804   dc.b    $00,$00
+L1806   dc.b    'Functionkeys   ',$0A
+        dc.b    '---------------',$0A
+        dc.b    $00,$00,$00,$00
+L182A   dc.b    'CHR$(',$00,$00,$00
+L1832   dc.b    $09,$01,$00,$00,$00,$00,$00,$02
+L183A   dc.b    $09,$01,$00,$00,$00,$00,$07,$02
+L1842   dc.b    $00,$00,' a',$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00
+;       BASIC - Procedure 'KILL_JOB'
+L184E   moveq   #$05,d4
+        moveq   #$02,d5
+        bra.s   L1864
+;       BASIC - Procedure 'SUS_JOB'
+L1854   moveq   #$08,d4
+        moveq   #$03,d5
+        bra.s   L1864
+;       BASIC - Procedure 'REL_JOB'
+L185A   moveq   #$09,d4
+        moveq   #$02,d5
+        bra.s   L1864
+;       BASIC - Procedure 'PRIOR_JOB'
+L1860   moveq   #$0B,d4
+        moveq   #$03,d5
+L1864   movea.w $00000112,a2    ; CA_GTINT
+        jsr     (a2)
+          bne.s L1886
+        cmp.l   d5,d3
+          bne.s L1884
+        move.l  $00(a6,a1.l),d1
+        swap    d1
+        move.w  $04(a6,a1.l),d3
+        move.w  d3,d2
+        move.l  d4,d0
+        suba.l  a1,a1
+        trap    #$01
+        bra.s   L1886
+L1884   moveq   #-$0F,d0        ; ERR_BP
+L1886   rts
+; 
+;       BASIC - Procedure 'JOB_INF'
+L1888   moveq   #$01,d6
+        bsr     L26A6
+        bsr     L2688
+          bne.s L18C4
+        cmpa.w  a3,a5
+          bne.s L18C4
+        lea     L196A(pc),a1
+        bsr     L2524
+        movea.l a0,a4
+        moveq   #$00,d1
+L18A4   move.l  d1,d4
+        moveq   #$02,d0         ; MT_JINF
+        moveq   #$00,d2
+        trap    #$01
+        tst.l   d0
+          bne.s L18C6
+        move.l  d1,d5
+        bsr.s   L18C8
+          bne.s L18C6
+        move.l  d5,d1
+          bne.s L18A4
+        moveq   #$00,d0
+        moveq   #$0A,d1
+        bsr     L2516
+        bra.s   L18C6
+L18C4   moveq   #-$0F,d0        ; ERR_BP
+L18C6   rts
+; 
+L18C8   move.l  d2,d6
+        move.l  d3,d7
+        move.l  a0,-(a7)
+        movea.l (a6),a0
+        addq.l  #$04,a0
+        movea.l a0,a1
+        movea.l a0,a5
+        move.w  d4,d1
+        addq.l  #$06,a5
+        bsr.s   L1950
+        move.l  d4,d1
+        swap    d1
+        addq.l  #$06,a5
+        bsr.s   L1950
+        move.w  d6,d1
+        addq.l  #$06,a5
+        bsr.s   L1950
+        tst.l   d7
+          bpl.s L18F4
+        move.b  #$53,-$01(a6,a0.l)
+L18F4   moveq   #$00,d1
+        move.b  d7,d1
+        addq.l  #$08,a5
+        addq.l  #$01,a5
+        bsr.s   L1950
+        move.b  #$24,$00(a6,a0.l)
+        addq.l  #$01,a0
+        subq.l  #$04,a1
+        move.l  (a7),$00(a6,a1.l)
+        movea.w $000000FE,a2    ; CN_ITOHL
+        jsr     (a2)
+        moveq   #$25,d2
+        movea.l (a7)+,a2
+        addq.w  #$06,a2
+        cmpi.w  #$4AFB,(a2)+
+          bne.s L1934
+        move.w  (a2)+,d1
+        cmpi.w  #$003C,d1
+          bhi.s L1934
+        add.w   d1,d2
+        bra.s   L1930
+L192A   move.b  (a2)+,$00(a6,a0.l)
+        addq.l  #$01,a0
+L1930   dbf     d1,L192A
+L1934   move.b  #$0A,$00(a6,a0.l)
+        movea.l a4,a0
+        moveq   #$20,d1
+        bsr     L2516
+        trap    #$04
+        moveq   #$07,d0         ; IO_SSTRG
+        moveq   #-$01,d3
+        movea.l a4,a0
+        trap    #$03
+        tst.l   d0
+        rts
+; 
+L1950   subq.l  #$02,a1
+        move.w  d1,$00(a6,a1.l)
+        movea.w $000000F2,a2    ; CN_ITOD
+        jsr     (a2)
+L195C   move.b  #$20,$00(a6,a0.l)
+        addq.l  #$01,a0
+        cmpa.l  a0,a5
+          bhi.s L195C
+        rts
+; 
+L196A   dc.b    'JOB   TAG   OWNER PRIORITY ADRESS',$0A
+        dc.b    '------------------------------------',$0A
+        dc.b    $00,$00,$00
+;       BASIC - Procedure 'SYSTEM'
+L19B4   bsr     L270E
+        lea     L1AF6(pc),a1
+        bsr     L2524
+        lea     $0002800C,a2    ; SV_FREE
+        move.l  (a2)+,d0
+        lea     L1ACC(pc),a1
+        bsr.s   L1A24
+        move.l  (a2)+,d0
+        lea     L1AC2(pc),a1
+        bsr.s   L1A24
+        move.l  (a2)+,d0
+        lea     L1AB8(pc),a1
+        bsr.s   L1A24
+        move.l  (a2)+,d0
+        lea     L1AAE(pc),a1
+        bsr.s   L1A24
+        move.l  (a2)+,d0
+        lea     L1AA4(pc),a1
+        bsr.s   L1A24
+        move.l  (a2)+,d0
+        lea     L1A9A(pc),a1
+        bsr.s   L1A24
+        move.l  $0014(a6),d0    ; SV_TRNSP
+        sub.l   $0010(a6),d0    ; SV_BASIC
+        lea     L1AD6(pc),a1
+        bsr.s   L1A24
+        move.l  $002C(a6),d0
+        sub.l   $0028(a6),d0
+        lea     L1ADE(pc),a1
+        bsr.s   L1A24
+        move.l  $0024(a6),d0
+        sub.l   $0020(a6),d0    ; SV_RAMT
+        lea     L1AEA(pc),a1
+        bsr.s   L1A24
+        moveq   #$00,d0
+        rts
+; 
+L1A24   move.l  d7,-(a7)
+        move.l  a2,-(a7)
+        move.l  d0,-(a7)
+        moveq   #$0A,d7
+        sub.w   (a1),d7
+        movea.w $000000D0,a2    ; UT_MTEXT
+        jsr     (a2)
+        move.w  d7,d0
+        bsr     L2544
+        moveq   #$3A,d1
+        bsr     L2516
+        moveq   #$20,d1
+        bsr     L2516
+        moveq   #$24,d1
+        bsr     L2516
+        move.l  (a7),d0
+        bsr     L25B8
+        moveq   #$02,d0
+        bsr     L2544
+        move.l  (a7)+,d0
+        bsr     L2650
+        moveq   #$0A,d1
+        bsr     L2516
+        movea.l (a7)+,a2
+        move.l  (a7)+,d7
+        rts
+; 
+;       BASIC - Function  'FREE'
+L1A6A   cmpa.l  a3,a5
+          bne.s L1A96
+        lea     $0002800C,a2    ; SV_FREE
+        lea     $00028010,a4    ; SV_BASIC
+        move.l  (a4),d0
+        sub.l   (a2),d0
+        movea.l $0058(a6),a1    ; SV_BTBAS
+        subq.l  #$04,a1
+        move.l  d0,$00(a6,a1.l)
+        bsr     L258E
+        move.l  a1,$0058(a6)    ; SV_BTBAS
+        moveq   #$02,d4
+        moveq   #$00,d0
+        bra.s   L1A98
+L1A96   moveq   #-$0F,d0        ; ERR_BP
+L1A98   rts
+; 
+L1A9A   dc.w    $0007
+        dc.b    'SV_RAMT',$00
+L1AA4   dc.w    $0008
+        dc.b    'SV_RESPR'
+L1AAE   dc.w    $0008
+        dc.b    'SV_TRNSP'
+L1AB8   dc.w    $0008
+        dc.b    'SV_BASIC'
+L1AC2   dc.w    $0007
+        dc.b    'SV_FREE',$00
+L1ACC   dc.w    $0007
+        dc.b    'SV_HEAP',$00
+L1AD6   dc.w    $0005
+        dc.b    'BASIC',$00
+L1ADE   dc.w    $0009
+        dc.b    'VARIABLES',$00
+L1AEA   dc.w    $0009
+        dc.b    'NAMETABLE',$00
+L1AF6   dc.b    'Systemvalues :'
+        dc.b    $0A,'--------------',$0A
+        dc.b    $00,$00,$00,$00
+L1B18   movem.l d3-d5/a3-a5,-(a7)
+        lea     L1BD7(pc),a1
+        move.b  d0,(a1)
+        moveq   #$01,d0         ; IO_OPEN
+        moveq   #-$01,d1
+        moveq   #$00,d3
+        lea     L1BC6(pc),a0
+        trap    #$02
+        tst.l   d0
+          bne   L1BB6
+        lea     L1BCE(pc),a1
+        moveq   #$07,d0         ; IO_SSTRG
+        moveq   #$03,d2
+        move.w  #$01F4,d3
+        trap    #$03
+        tst.l   d0
+          bne.s L1BB6
+        move.l  #$00020004,d4
+L1B4C   movea.l d4,a3
+        bsr     L1BDC
+        lea     L1BD1(pc),a1
+        moveq   #$07,d0         ; IO_SSTRG
+        moveq   #$04,d2
+        move.w  #$01F4,d3
+        trap    #$03
+        tst.l   d0
+          bne.s L1BB6
+        lea     L1C40(pc),a1
+        moveq   #$07,d0         ; IO_SSTRG
+        move.w  #$03C0,d2
+        move.w  #$01F4,d3
+        trap    #$03
+        tst.l   d0
+          bne.s L1BB6
+        lea     L1BD5(pc),a1
+        moveq   #$07,d0         ; IO_SSTRG
+        moveq   #$02,d2
+        move.w  #$01F4,d3
+        trap    #$03
+        tst.l   d0
+          bne.s L1BB6
+L1B8A   move.l  a0,d7
+        suba.l  a0,a0
+        moveq   #$00,d3
+        moveq   #$01,d0         ; IO_FBYTE
+        trap    #$03
+        movea.l d7,a0
+        tst.l   d0
+          bne.s L1BA4
+        cmpi.b  #$1B,d1
+          bne.s L1B8A
+        moveq   #$1B,d7
+        bra.s   L1BBC
+L1BA4   addi.l  #$00000200,d4
+        cmpi.l  #$00027F04,d4
+          blt.s L1B4C
+        clr.l   d7
+        bra.s   L1BBC
+L1BB6   move.l  #$00008301,d7
+L1BBC   moveq   #$02,d0         ; IO_CLOSE
+        trap    #$02
+        movem.l (a7)+,d3-d5/a3-a5
+        rts
+; 
+L1BC6   dc.w    $0006
+        dc.b    'SER1HR'
+L1BCE   dc.b    $1B,'A',$08
+L1BD1   dc.b    $1B,'L',$C0,$03
+L1BD5   dc.b    $0A,$00
+L1BD7   dc.b    $00,$00,$00,$00,$00
+L1BDC   movem.l d3-d5,-(a7)
+        lea     L1C40(pc),a4
+        moveq   #$3B,d2
+L1BE6   moveq   #$07,d5
+L1BE8   move.w  #$0180,d4
+        moveq   #$03,d3
+        clr.b   d0
+        clr.b   d1
+L1BF2   clr.b   d6
+        clr.b   d7
+        btst    d5,$00(a3,d4.w)
+          beq.s L1C04
+        move.b  #-$56,d6
+        move.b  #$55,d7
+L1C04   btst    d5,$01(a3,d4.w)
+          beq.s L1C10
+        or.b    d7,d6
+        ori.b   #$AA,d7
+L1C10   and.b   d3,d6
+        or.b    d6,d0
+        and.b   d3,d7
+        or.b    d7,d1
+        roxl.b  #$02,d3
+        subi.w  #$0080,d4
+          bpl.s L1BF2
+        lea     L1BD7(pc),a5
+        tst.b   (a5)
+          beq.s L1C2C
+        not.b   d0
+        not.b   d1
+L1C2C   move.b  d0,(a4)+
+        move.b  d1,(a4)+
+        dbf     d5,L1BE8
+        addq.l  #$02,a3
+        dbf     d2,L1BE6
+        movem.l (a7)+,d3-d5
+        rts
+; 
+L1C40   dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000
+;       BASIC - Function  'CHEX'
+L2002   moveq   #$08,d0
+        bsr     L2096
+          bne.s L2056
+        move.w  d1,d7
+        subq.w  #$01,d7
+L200E   move.b  $00(a6,a1.l),d1
+        addq.w  #$01,a1
+        cmpi.b  #$60,d1
+          bls.s L2024
+        cmpi.b  #$66,d1
+          bhi.s L2024
+        subi.b  #$20,d1
+L2024   subi.b  #$30,d1
+        cmpi.b  #$09,d1
+          bls.s L2036
+        subq.b  #$07,d1
+        cmpi.b  #$0F,d1
+          bhi.s L203E
+L2036   lsl.l   #$04,d0
+        add.b   d1,d0
+        dbf     d7,L200E
+L203E   moveq   #$14,d1
+        bsr     L219C
+        subq.l  #$04,a1
+        move.l  d0,$00(a6,a1.l)
+        bsr.s   L20C4
+        move.l  a1,$0058(a6)    ; SV_BTBAS
+        moveq   #$02,d4
+        moveq   #$00,d0
+        bra.s   L2058
+L2056   moveq   #-$0F,d0        ; ERR_BP
+L2058   rts
+; 
+;       BASIC - Function  'CBIN'
+L205A   moveq   #$20,d0
+        bsr.s   L2096
+          bne.s L2092
+        subq.w  #$01,d1
+L2062   move.b  $00(a6,a1.l),d2
+        addq.w  #$01,a1
+        subi.b  #$30,d2
+        cmpi.b  #$01,d2
+          bhi.s L207A
+        lsl.l   #$01,d0
+        add.b   d2,d0
+        dbf     d1,L2062
+L207A   moveq   #$14,d1
+        bsr     L219C
+        subq.l  #$04,a1
+        move.l  d0,$00(a6,a1.l)
+        bsr.s   L20C4
+        move.l  a1,$0058(a6)    ; SV_BTBAS
+        moveq   #$02,d4
+        moveq   #$00,d0
+        bra.s   L2094
+L2092   moveq   #-$0F,d0        ; ERR_BP
+L2094   rts
+; 
+L2096   movem.l d2/d7/a2,-(a7)
+        move.l  d0,d7
+        movea.w $00000116,a2    ; CA_GTSTR
+        jsr     (a2)
+          bne.s L20BC
+        addq.l  #$08,a3
+        cmpa.w  a3,a5
+          bne.s L20BC
+        move.w  $00(a6,a1.l),d1
+          beq.s L20BC
+        cmp.w   d7,d1
+          bls.s L20B6
+        move.w  d7,d1
+L20B6   addq.l  #$02,a1
+        moveq   #$00,d0
+        bra.s   L20BE
+L20BC   moveq   #-$0F,d0        ; ERR_BP
+L20BE   movem.l (a7)+,d2/d7/a2
+        rts
+; 
+L20C4   move.l  a3,-(a7)
+        move.l  $00(a6,a1.l),d6
+        swap    d6
+        move.l  d6,$00(a6,a1.l)
+        moveq   #$08,d0
+        movea.w $0000011C,a2    ; RI_EXEC
+        moveq   #$00,d7
+        jsr     (a2)
+        swap    d6
+        tst.w   d6
+          bpl.s L20F8
+        subq.l  #$06,a1
+        lea     L21C4(pc),a2
+        move.l  (a2)+,$00(a6,a1.l)
+        move.w  (a2),$04(a6,a1.l)
+        moveq   #$0A,d0
+        moveq   #$00,d7
+        movea.w $0000011C,a2    ; RI_EXEC
+        jsr     (a2)
+L20F8   lea     L21BE(pc),a2
+        move.l  $00(a6,a1.l),(a2)+
+        move.w  $04(a6,a1.l),(a2)
+        addq.l  #$06,a1
+        lea     L21CA(pc),a4
+        lea     L21B8(pc),a3
+        suba.l  a6,a4
+        moveq   #$00,d7
+        movea.w $0000011E,a2    ; RI_EXECB
+        jsr     (a2)
+        movea.l (a7)+,a3
+        rts
+; 
+;       BASIC - Function  'CBIN$'
+L211C   movea.w $00000118,a2    ; CA_GTLIN
+        jsr     (a2)
+          bne.s L2160
+        addq.l  #$08,a3
+        cmpa.l  a3,a5
+          bne.s L2160
+        move.l  $00(a6,a1.l),d0
+        addq.l  #$04,a1
+        moveq   #$28,d1
+        bsr     L219C
+        suba.w  #$0022,a1
+        move.w  #$0020,$00(a6,a1.l)
+        moveq   #$1F,d7
+        lea     $02(a6,a1.l),a4
+L2146   moveq   #$00,d6
+        lsl.l   #$01,d0
+        roxl.b  #$01,d6
+        addi.b  #$30,d6
+        move.b  d6,(a4)+
+        dbf     d7,L2146
+        moveq   #$00,d0
+        moveq   #$01,d4
+        move.l  a1,$0058(a6)    ; SV_BTBAS
+        bra.s   L2162
+L2160   moveq   #-$0F,d0        ; ERR_BP
+L2162   rts
+; 
+;       BASIC - Function  'CHEX$'
+L2164   movea.w $00000118,a2    ; CA_GTLIN
+        jsr     (a2)
+          bne.s L2198
+        addq.l  #$08,a3
+        cmpa.w  a3,a5
+          bne.s L2198
+        moveq   #$14,d1
+        bsr     L219C
+        movea.l a1,a0
+        subq.l  #$08,a0
+        movea.l a0,a5
+        movea.w $000000FE,a2    ; CN_ITOHL
+        jsr     (a2)
+        movea.l a5,a1
+        subq.l  #$02,a1
+        move.w  #$0008,$00(a6,a1.l)
+        moveq   #$00,d0
+        moveq   #$01,d4
+        move.l  a1,$0058(a6)    ; SV_BTBAS
+        bra.s   L219A
+L2198   moveq   #-$0F,d0        ; ERR_BP
+L219A   rts
+; 
+L219C   movem.l d0/d2-d3/a2,-(a7)
+        addq.l  #$02,d1
+        movea.w $0000011A,a2    ; BV_CHRIX
+        jsr     (a2)
+        move.l  a1,d2
+        btst    #$00,d2
+          beq.s L21B2
+        subq.w  #$01,a1
+L21B2   movem.l (a7)+,d0/d2-d3/a2
+        rts
+; 
+L21B8   dc.w    $08FA,$0EF4,$0A00
+L21BE   dc.w    $0000,$0000,$0000
+L21C4   dc.w    $0811,$4000,$0000
+;       BASIC - Procedure 'GET'
+L21CA   bsr     L2358
+L21CE   bsr     L236A
+        bsr     L2378
+          bgt.s L220A
+          beq.s L220E
+        moveq   #$02,d2
+        bsr     L233E
+          bne   L232E
+        move.w  $00(a6,a1.l),d4
+        moveq   #$00,d1
+        move.w  d4,d1
+        addq.w  #$01,d1
+        bclr    #$00,d1
+        move.l  d1,d5
+        bsr     L236C
+        suba.w  d5,a1
+        move.w  d4,$00(a6,a1.l)
+        addq.l  #$02,a1
+        move.w  d4,d2
+        bsr     L2340
+        subq.l  #$02,a1
+        bra.s   L2214
+L220A   moveq   #$02,d2
+        bra.s   L2210
+L220E   moveq   #$06,d2
+L2210   bsr     L233E
+L2214     bne   L232E
+        move.l  a1,$0058(a6)    ; SV_BTBAS
+        movea.w $00000120,a2    ; BP_LET
+        jsr     (a2)
+        addq.l  #$08,a3
+        bra.s   L21CE
+;       BASIC - Procedure 'BGET'
+L2226   bsr     L2358
+L222A   bsr     L236A
+        bsr     L2378
+          blt   L232C
+        move.b  d1,d6
+        moveq   #$01,d2
+        bsr     L233E
+          bne   L232E
+        subq.l  #$01,a1
+        clr.b   $00(a6,a1.l)
+        tst.b   d6
+          bgt.s L2254
+        moveq   #$08,d0
+        movea.w $0000011C,a2    ; RI_EXEC
+        jsr     (a2)
+L2254   move.l  a1,$0058(a6)    ; SV_BTBAS
+        movea.w $00000120,a2    ; BP_LET
+        jsr     (a2)
+        addq.l  #$08,a3
+        bra.s   L222A
+;       BASIC - Procedure 'PUT'
+L2262   bsr     L2358
+L2266   bsr     L2378
+          beq.s L227E
+          bgt.s L228A
+        movea.w $00000116,a2    ; CA_GTSTR
+        bsr     L2332
+        move.w  $00(a6,a1.l),d2
+        addq.w  #$02,d2
+        bra.s   L2294
+L227E   movea.w $00000114,a2    ; CA_GTFP
+        bsr     L2332
+        moveq   #$06,d2
+        bra.s   L2294
+L228A   movea.w $00000112,a2    ; CA_GTINT
+        bsr     L2332
+        moveq   #$02,d2
+L2294   bsr     L2344
+        bra.s   L2266
+;       BASIC - Procedure 'BPUT'
+L229A   bsr     L2358
+L229E   cmpa.l  $0004(a7),a3
+          beq   L232E
+        movea.w $00000112,a2    ; CA_GTINT
+        bsr     L2332
+        tst.b   $00(a6,a1.l)
+          beq.s L22B8
+        moveq   #-$12,d0        ; ERR_OV
+        bra.s   L232E
+L22B8   addq.l  #$01,a1
+        moveq   #$01,d2
+        bsr     L2344
+        bra.s   L229E
+;       BASIC - Procedure 'SET_POINTER'
+L22C2   bsr     L2358
+        movea.w $00000118,a2    ; CA_GTLIN
+        jsr     (a2)
+        subq.w  #$01,d3
+          bne.s L232C
+        move.l  $00(a6,a1.l),d1
+        moveq   #$42,d0         ; FS_POSAB
+        moveq   #$00,d3
+        movea.l (a7),a0
+        trap    #$03
+        bra.s   L2318
+;       BASIC - Function  'GET_POINTER'
+L22DE   bsr.s   L2358
+        cmpa.l  a3,a5
+          bne.s L232C
+        bsr     L236A
+        movea.l a1,a4
+        moveq   #$43,d0         ; FS_POSRE
+        moveq   #$00,d1
+        moveq   #$00,d3
+        movea.l (a7),a0
+        trap    #$03
+        movea.l a4,a1
+        subq.l  #$06,a1
+        clr.w   $00(a6,a1.l)
+        move.w  #$0820,d4
+L2300   subq.w  #$01,d4
+        asl.l   #$01,d1
+          beq.s L230E
+          bvc.s L2300
+        roxr.l  #$01,d1
+        move.w  d4,$00(a6,a1.l)
+L230E   move.l  d1,$02(a6,a1.l)
+        move.l  a1,$0058(a6)    ; SV_BTBAS
+        moveq   #$02,d4
+L2318   tst.l   d0
+          beq.s L232E
+        moveq   #-$01,d1
+        cmp.l   d1,d0
+          beq.s L2328
+        moveq   #-$0A,d1
+        cmp.l   d1,d0
+          bne.s L232E
+L2328   moveq   #$00,d0
+        bra.s   L232E
+L232C   moveq   #-$0F,d0        ; ERR_BP
+L232E   addq.l  #$08,a7
+        rts
+; 
+L2332   lea     $0008(a3),a5
+        jsr     (a2)
+        movea.l a5,a3
+          bne.s L2380
+        rts
+; 
+L233E   suba.w  d2,a1
+L2340   moveq   #$03,d0         ; IO_FSTRG
+        bra.s   L2346
+L2344   moveq   #$07,d0         ; IO_SSTRG
+L2346   trap    #$04
+        moveq   #-$01,d3
+        movea.l $0004(a7),a0
+        trap    #$03
+        suba.w  d1,a1
+        tst.l   d0
+          bne.s L2380
+        rts
+; 
+L2358   bsr     L270E
+          bne.s L2366
+        movea.l (a7),a1
+        move.l  a5,(a7)
+        move.l  a0,-(a7)
+        jmp     (a1)
+; 
+L2366   addq.l  #$04,a7
+        rts
+; 
+L236A   moveq   #$06,d1
+L236C   movea.w $0000011A,a2    ; BV_CHRIX
+        jsr     (a2)
+        movea.l $0058(a6),a1    ; SV_BTBAS
+        rts
+; 
+L2378   cmpa.l  $0008(a7),a3
+          blt.s L2384
+        moveq   #$00,d0
+L2380   addq.l  #$04,a7
+        bra.s   L232E
+L2384   move.b  $00(a6,a3.l),d1
+        move.w  #$00C5,d2
+        btst    d1,d2
+          beq.s L239C
+        moveq   #$0F,d1
+        and.b   $01(a6,a3.l),d1
+          beq.s L239C
+        subq.b  #$02,d1
+        rts
+; 
+L239C   addq.l  #$04,a7
+        moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+L23A2   cmpi.w  #$0002,d0
+          bhi.s L23DE
+L23A8   lea     L247A(pc),a2
+        mulu.w  #$000E,d0
+        adda.w  d0,a2
+        move.w  (a1),d0
+        add.w   $0004(a1),d0
+        cmpi.w  #$0200,d0
+          bhi.s L23DE
+        move.w  $0002(a1),d0
+        add.w   $0006(a1),d0
+        cmpi.w  #$0100,d0
+          bhi.s L23DE
+        move.l  (a1)+,(a2)+
+        move.l  (a1)+,(a2)+
+        moveq   #$04,d0
+L23D2   move.w  (a1)+,d1
+        move.b  d1,(a2)+
+        dbf     d0,L23D2
+        moveq   #$00,d0
+        rts
+; 
+L23DE   moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+L23E2   cmpi.w  #$0002,d0
+          bhi.s L23DE
+        addq.w  #$03,d0
+        bra.s   L23A8
+L23EC   moveq   #$00,d2
+        bsr     L240C
+        lea     L247A(pc),a2
+        bra     L2424
+; 
+L23FA   moveq   #$01,d2
+        bsr     L240C
+        lea     L247A(pc),a2
+        adda.w  #$002A,a2
+        bra     L2424
+; 
+L240C   cmpi.w  #$0004,d0
+          beq.s L241C
+        cmpi.w  #$0100,d0
+          beq.s L241C
+        moveq   #$08,d1
+        bra.s   L241E
+L241C   moveq   #$00,d1
+L241E   moveq   #$10,d0         ; MT_DMODE
+        trap    #$01
+        rts
+; 
+L2424   lea     $00020000,a1
+        move.w  #$1FFF,d0
+L242E   clr.l   (a1)+
+        dbf     d0,L242E
+        moveq   #$00,d7
+L2436   move.w  d7,d6
+        bsr     L2688
+        move.b  $000C(a2),d1
+        move.b  $000B(a2),d2
+        ext.w   d2
+        moveq   #-$01,d3
+        movea.l a2,a1
+        moveq   #$0D,d0         ; SD_WDEF
+        trap    #$03
+        move.b  $0008(a2),d1
+        moveq   #$27,d0         ; SD_SETPA
+        trap    #$03
+        move.b  $0009(a2),d1
+        moveq   #$28,d0         ; SD_SETST
+        trap    #$03
+        move.b  $000A(a2),d1
+        moveq   #$29,d0         ; SD_SETIN
+        trap    #$03
+        moveq   #$20,d0         ; SD_CLEAR
+        trap    #$03
+        adda.w  #$000E,a2
+        addq.w  #$01,d7
+        cmpi.w  #$0003,d7
+          bne.s L2436
+        moveq   #$00,d0
+        rts
+; 
+L247A   dc.b    $02,$00,$00,'2',$00,$00,$00,$CE,$00
+        dc.b    $00,$04,$00,$00,$00,$01,$00,$00,$CA,$01,$00
+        dc.b    $00,$00,$02,$02,$07,$01,$F6,$00,$01,$00
+        dc.b    $00,$CA,$00,$00,$00,$00,$07,$07,$02,$01,$F6,$00
+        dc.b    $01,$C0,$00,'(',$00,' ',$00,$D8,$00
+        dc.b    $00,$07,$00,$00,$00,$01,$C0,$00,$C8,$00
+        dc.b    ' ',$00,$10,$02,$02,$07,$00,$00,$00
+        dc.b    $01,$C0,$00,$C8,$00,' ',$00,$10,$01,$01,$07,$00
+        dc.b    $00,$00
+L24CE   btst    #$02,d5
+          bne.s L24F4
+        move.w  d0,-(a7)
+        move.w  d1,-(a7)
+        lsl.w   #$07,d1
+        movea.w d1,a5
+        adda.l  a4,a5
+        move.b  d0,d1
+        andi.b  #$07,d1
+        lsr.w   #$03,d0
+        lsl.w   #$01,d0
+        adda.w  d0,a5
+        moveq   #$07,d3
+        sub.b   d1,d3
+        move.w  (a7)+,d1
+        move.w  (a7)+,d0
+        rts
+; 
+L24F4   move.w  d0,-(a7)
+        move.w  d1,-(a7)
+        lsl.w   #$07,d1
+        movea.w d1,a5
+        adda.l  a4,a5
+        move.b  d0,d1
+        andi.b  #$03,d1
+        lsr.w   #$02,d0
+        lsl.w   #$01,d0
+        adda.w  d0,a5
+        moveq   #$03,d3
+        sub.b   d1,d3
+        lsl.b   #$01,d3
+        move.w  (a7)+,d1
+        move.w  (a7)+,d0
+        rts
+; 
+L2516   moveq   #-$01,d3
+        move.l  a1,-(a7)
+        moveq   #$05,d0         ; IO_SBYTE
+        trap    #$03
+        movea.l (a7)+,a1
+        tst.l   d0
+        rts
+; 
+L2524   move.b  (a1)+,d1
+          beq.s L252E
+        bsr.s   L2516
+          bne.s L252E
+        bra.s   L2524
+L252E   rts
+; 
+        move.l  d1,-(a7)
+        move.l  d2,-(a7)
+        move.w  (a1)+,d2
+        moveq   #-$01,d3
+        moveq   #$07,d0         ; IO_SSTRG
+        trap    #$03
+        move.l  (a7)+,d2
+        move.l  (a7)+,d1
+        tst.l   d0
+        rts
+; 
+L2544   move.l  d1,-(a7)
+        move.l  d3,-(a7)
+        move.l  a1,-(a7)
+        tst.w   d0
+          beq.s L255C
+        subq.w  #$01,d0
+L2550   moveq   #$20,d1
+        move.w  d0,-(a7)
+        bsr.s   L2516
+        move.w  (a7)+,d0
+        dbf     d0,L2550
+L255C   movea.l (a7)+,a1
+        move.l  (a7)+,d3
+        move.l  (a7)+,d1
+        rts
+; 
+L2564   move.l  d1,-(a7)
+        move.l  d2,-(a7)
+        move.l  d3,-(a7)
+        move.l  a2,-(a7)
+        move.l  a3,-(a7)
+        movea.l a1,a0
+        subq.l  #$08,a0
+        movea.w $000000FE,a2    ; CN_ITOHL
+        jsr     (a2)
+        subq.l  #$08,a0
+        subq.l  #$02,a0
+        move.w  #$0008,$00(a6,a0.l)
+        movea.l (a7)+,a3
+        movea.l (a7)+,a2
+        move.l  (a7)+,d3
+        move.l  (a7)+,d2
+        move.l  (a7)+,d1
+        rts
+; 
+L258E   move.l  d0,-(a7)
+        move.l  d1,-(a7)
+        move.l  $00(a6,a1.l),d0
+        subq.l  #$02,a1
+        move.w  #$0820,d1
+        clr.w   $00(a6,a1.l)
+L25A0   subq.w  #$01,d1
+        asl.l   #$01,d0
+          beq.s L25AE
+          bvc.s L25A0
+        roxr.l  #$01,d0
+        move.w  d1,$00(a6,a1.l)
+L25AE   move.l  d0,$02(a6,a1.l)
+        move.l  (a7)+,d1
+        move.l  (a7)+,d0
+        rts
+; 
+L25B8   move.l  a0,-(a7)
+        movea.l $0058(a6),a1    ; SV_BTBAS
+        subq.l  #$04,a1
+        move.l  d0,$00(a6,a1.l)
+        bsr.s   L2564
+        adda.l  a6,a0
+        movea.l a0,a1
+        movea.l (a7)+,a0
+        movea.w $000000D0,a2    ; UT_MTEXT
+        jsr     (a2)
+        rts
+; 
+L25D4   move.l  d4,-(a7)
+        move.l  d0,d2
+        move.l  d0,d4
+        moveq   #$00,d0
+        clr.w   d2
+        swap    d2
+        divu.w  d1,d2
+        move.w  d2,d0
+        swap    d0
+        clr.w   d2
+        move.w  d4,d2
+        divu.w  d1,d2
+        move.w  d2,d0
+        clr.w   d2
+        swap    d2
+        move.l  (a7)+,d4
+        rts
+; 
+L25F6   move.l  d1,-(a7)
+        move.l  d2,-(a7)
+        move.l  d3,-(a7)
+        move.l  d4,-(a7)
+        move.l  a3,-(a7)
+        move.l  $00(a6,a1.l),d0
+        movea.l a1,a0
+        addq.l  #$04,a1
+        moveq   #$0A,d1
+        moveq   #$00,d3
+L260C   bsr.s   L25D4
+        addq.w  #$01,d3
+        subq.l  #$01,a0
+        addi.b  #$30,d2
+        move.b  d2,$00(a6,a0.l)
+        tst.l   d0
+          bne.s L260C
+        move.l  a0,d0
+        btst    #$00,d0
+          beq.s L263E
+        move.w  d3,d4
+        movea.l a0,a3
+        subq.l  #$01,d4
+L262C   move.b  $00(a6,a0.l),-$01(a6,a3.l)
+        addq.l  #$01,a0
+        addq.l  #$01,a3
+        dbf     d4,L262C
+        suba.l  d3,a0
+        subq.l  #$01,a0
+L263E   subq.l  #$02,a0
+        move.w  d3,$00(a6,a0.l)
+        movea.l (a7)+,a3
+        move.l  (a7)+,d4
+        move.l  (a7)+,d3
+        move.l  (a7)+,d2
+        move.l  (a7)+,d1
+        rts
+; 
+L2650   move.l  a0,-(a7)
+        movea.l $0058(a6),a1    ; SV_BTBAS
+        subq.l  #$04,a1
+        move.l  d0,$00(a6,a1.l)
+        bsr.s   L25F6
+        adda.l  a6,a0
+        movea.l a0,a1
+        movea.l (a7)+,a0
+        movea.w $000000D0,a2    ; UT_MTEXT
+        jsr     (a2)
+        rts
+; 
+L266C   moveq   #$2D,d0         ; SD_SETSZ
+        moveq   #-$01,d3
+        trap    #$03
+        rts
+; 
+L2674   moveq   #$2D,d0         ; SD_SETSZ
+        moveq   #$00,d1
+        moveq   #$00,d2
+        moveq   #-$01,d3
+        trap    #$03
+        rts
+; 
+L2680   moveq   #-$01,d3
+        moveq   #$11,d0         ; SD_TAB
+        trap    #$03
+        rts
+; 
+L2688   mulu.w  #$0028,d6
+        add.l   $0030(a6),d6    ; SV_POLLM
+        cmp.l   $0034(a6),d6    ; SV_MCSTA
+          bge.s L26A2
+        movea.l $00(a6,d6.l),a0
+        move.w  a0,d0
+          bmi.s L26A2
+        moveq   #$00,d0
+        bra.s   L26A4
+L26A2   moveq   #-$06,d0        ; ERR_NO
+L26A4   rts
+; 
+L26A6   move.l  a0,-(a7)
+        move.l  a1,-(a7)
+        move.l  a2,-(a7)
+        cmpa.l  a3,a5
+          beq.s L26D2
+        btst    #$07,$01(a6,a3.l)
+          beq.s L26D2
+        move.l  a5,-(a7)
+        movea.l a3,a5
+        addq.l  #$08,a5
+        move.l  a5,-(a7)
+        movea.w $00000112,a2    ; CA_GTINT
+        jsr     (a2)
+        movea.l (a7)+,a3
+        movea.l (a7)+,a5
+          bne.s L26D2
+        move.w  $00(a6,a1.l),d6
+        moveq   #$00,d0
+L26D2   movea.l (a7)+,a2
+        movea.l (a7)+,a1
+        movea.l (a7)+,a0
+        rts
+; 
+L26DA   ext.l   d1
+        moveq   #$00,d2
+        moveq   #$18,d0         ; MT_ALCHP
+        trap    #$01
+        rts
+; 
+L26E4   move.w  d0,-(a7)
+        move.w  d1,-(a7)
+        move.w  d2,-(a7)
+        move.l  a4,-(a7)
+        moveq   #-$01,d1
+        moveq   #-$01,d2
+        moveq   #$10,d0         ; MT_DMODE
+        trap    #$01
+        moveq   #$00,d5
+        move.b  d1,d7
+        movea.l (a7)+,a4
+        move.w  (a7)+,d2
+        move.w  (a7)+,d1
+        move.w  (a7)+,d0
+        tst.b   d7
+          beq.s L270C
+        bset    #$02,d5
+        move.w  #$0000,ccr
+L270C   rts
+; 
+L270E   moveq   #$01,d6
+        bsr.s   L26A6
+        bsr     L2688
+        rts
+; 
+L2718   movea.l a0,a1
+        rts
+; 
+L271C   move.l  a2,-(a7)
+        moveq   #$00,d0
+        lea     L2718(pc),a2
+        moveq   #$09,d0         ; SD_EXTOP
+        trap    #$03
+        movea.l a1,a0
+        movea.l (a7)+,a2
+        tst.l   d0
+        rts
+; 
+L2730   subq.l  #$02,a1
+        move.w  $001E(a0),$00(a6,a1.l)
+        moveq   #$08,d0
+        movea.w $0000011C,a2    ; RI_EXEC
+        jsr     (a2)
+        moveq   #$0E,d0
+        movea.w $0000011C,a2    ; RI_EXEC
+        jsr     (a2)
+        subq.l  #$06,a1
+        move.l  $0056(a0),$00(a6,a1.l)
+        move.w  $005A(a0),$04(a6,a1.l)
+        moveq   #$10,d0
+        movea.w $0000011C,a2    ; RI_EXEC
+        jsr     (a2)
+        moveq   #$04,d0
+        movea.w $0000011C,a2    ; RI_EXEC
+        jsr     (a2)
+        rts
+; 
+L2768   movem.l d2-d7/a2-a5,-(a7)
+        move.l  a1,-(a7)
+        bsr.s   L271C
+        movea.l (a7)+,a1
+        subq.l  #$06,a1
+        move.l  $0050(a0),$00(a6,a1.l)
+        move.w  $0054(a0),$04(a6,a1.l)
+        moveq   #$0C,d0
+        movea.w $0000011C,a2    ; RI_EXEC
+        jsr     (a2)
+        subq.l  #$06,a1
+        move.l  #$08015666,$00(a6,a1.l)
+        move.w  #$6664,$04(a6,a1.l)
+        moveq   #$0E,d0
+        movea.w $0000011C,a2    ; RI_EXEC
+        jsr     (a2)
+        bsr.s   L2730
+        move.w  $00(a6,a1.l),d1
+        addq.l  #$02,a1
+        add.w   $0018(a0),d1
+        lea     L2808(pc),a2
+        move.w  d1,(a2)
+        subq.l  #$06,a1
+        move.l  $06(a6,a1.l),$00(a6,a1.l)
+        move.w  $0A(a6,a1.l),$04(a6,a1.l)
+        move.l  $0056(a0),$06(a6,a1.l)
+        move.w  $005A(a0),$0A(a6,a1.l)
+        moveq   #$0C,d0
+        movea.w $0000011C,a2    ; RI_EXEC
+        jsr     (a2)
+        subq.l  #$06,a1
+        move.l  $004A(a0),$00(a6,a1.l)
+        move.w  $004E(a0),$04(a6,a1.l)
+        moveq   #$0A,d0
+        movea.w $0000011C,a2    ; RI_EXEC
+        jsr     (a2)
+        bsr     L2730
+        move.w  $00(a6,a1.l),d1
+        addq.l  #$02,a1
+        add.w   $001A(a0),d1
+        lea     L280A(pc),a2
+        move.w  d1,(a2)
+        move.w  L2808(pc),d0
+        movem.l (a7)+,d2-d7/a2-a5
+        rts
+; 
+L2808   dc.w    $0000
+L280A   dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000
+L281E   movem.l d0-d1/a0,-(a7)
+        move.w  #$0100,d1
+        bsr     L26DA
+        movea.l a0,a3
+        movea.l a0,a4
+        adda.w  #$0100,a4
+        movem.l (a7)+,d0-d1/a0
+        rts
+; 
+L2838   moveq   #-$01,d3
+        moveq   #$25,d0         ; SD_FOUNT
+        trap    #$03
+        tst.l   d0
+        rts
+; 
+L2842   subq.w  #$01,d0
+        lea     $000280F0,a0    ; SV_MDDID
+        move.b  $00(a0,d0.w),d0
+        ext.w   d0
+        lea     $00028100,a0
+        movea.l $00(a0,d0.w),a0
+        move.w  $0020(a0),d0
+        rts
+; 
+L2860   bsr.s   L2842
+        cmpi.w  #$1267,d0
+          beq.s L286E
+        cmpi.w  #$1268,d0
+          bne.s L2872
+L286E   moveq   #$00,d0
+        bra.s   L2874
+L2872   moveq   #-$0F,d0        ; ERR_BP
+L2874   rts
+; 
+L2876   lea     L290E(pc),a1
+        movea.w $000000C8,a2    ; UT_SCR
+        jsr     (a2)
+          bne.s L28C2
+        moveq   #$02,d0         ; IO_CLOSE
+        trap    #$02
+        lea     L291A(pc),a1
+        movea.w $000000C8,a2    ; UT_SCR
+        jsr     (a2)
+        bsr     L28FC
+        lea     L2932(pc),a1
+        bsr     L2524
+        moveq   #$02,d0         ; IO_CLOSE
+        trap    #$02
+        lea     L2926(pc),a1
+        movea.w $000000C8,a2    ; UT_SCR
+        jsr     (a2)
+        bsr     L28FC
+        movea.l a0,a4
+        moveq   #$01,d0
+        bsr.s   L2860
+        tst.l   d0
+          beq.s L28CC
+        moveq   #$02,d0
+        bsr.s   L2860
+        tst.l   d0
+          beq.s L28CC
+        movea.l a4,a0
+L28C2   lea     L29C0(pc),a1
+        bsr     L2524
+        bra.s   L28D6
+L28CC   movea.l a4,a0
+        lea     L29A9(pc),a1
+        bsr     L2524
+L28D6   moveq   #$02,d0         ; IO_CLOSE
+        trap    #$02
+        suba.l  a0,a0
+        move.w  #$03E8,d3
+        moveq   #$01,d0         ; IO_FBYTE
+        trap    #$03
+        bsr     L26E4
+          beq.s L28F2
+        moveq   #$08,d0
+        bsr     L23FA
+        bra.s   L28F8
+L28F2   moveq   #$04,d0
+        bsr     L23EC
+L28F8   moveq   #$00,d0
+        rts
+; 
+L28FC   moveq   #$02,d1
+        moveq   #$00,d2
+        bsr     L266C
+        rts
+; 
+        dc.w    $0005
+        dc.b    'mdv1_',$00
+L290E   dc.b    $01,$05,$FF,$00,$02,$00,$01,$00,$00
+        dc.b    $00,$00,$00
+L291A   dc.b    $05,$02,$02,$07,$01,$90,$00,'d',$00
+        dc.b    '8',$00,'2'
+L2926   dc.b    $07,$02,$02,$07,$01,$90,$00,'"',$00
+        dc.b    '8'
+        dc.b    $00,$A5
+L2932   dc.b    $0A,'          GIGA-BASIC',$0A,$0A,' '
+        dc.b    '(c) 1985 by ABC-ELEKTRONIK',$0A,'  '
+        dc.b    '       '
+        dc.b    ' written by',$0A
+        dc.b    '        '
+        dc.b    'Andre Claa',$9C,'en',$0A
+        dc.b    '      & '
+        dc.b    'Gerd-Uwe Neukamp',$00
+L29A9   dc.b    $0A
+        dc.b    '        '
+        dc.b    'Press any key',$00
+L29C0   dc.b    $0A,' This isn',$27,'t the original '
+        dc.b    'version',$00,$00,$00
+L29E4   sf      $006D(a6)
+        move.w  #$0004,$008C(a6); SV_ARDEL
+        st      $008E(a6)       ; SV_ARFRQ
+        move.l  d0,d5
+        move.l  d1,d6
+        move.l  a0,-(a7)
+        move.w  #$02C0,d1
+        bsr     L26DA
+        movea.l a0,a5
+        move.l  (a7)+,(a5)
+        movea.l L0882(pc),a4
+        move.w  d6,$0016(a5)
+        move.l  d5,$000E(a5)
+        bsr     L2ADA
+        move.w  $0006(a5),d0
+        subq.w  #$01,d0
+        lea     $0040(a5),a1
+        bra.s   L2A22
+L2A20   clr.l   (a1)+
+L2A22   dbf     d0,L2A20
+        move.w  #$00FF,d0
+        divu.w  $0006(a5),d0
+        mulu.w  $0006(a5),d0
+        move.w  d0,$001E(a5)
+        move.w  d5,d1
+        bsr     L2C7C
+L2A3C   bsr.s   L2A74
+        bsr     L2ABE
+          bne.s L2A60
+        bsr     L3764
+        cmpi.b  #$1F,d1
+          bls.s L2A5A
+        cmpi.b  #$BF,d1
+          bhi.s L2A5A
+        bsr     L31F8
+        bra.s   L2A3C
+L2A5A   bsr     L2CC2
+        bra.s   L2A3C
+L2A60   rts
+; 
+L2A62   movem.l d1/d3/a0-a1,-(a4)
+        moveq   #-$01,d3
+        movea.l (a5),a0
+        trap    #$03
+        tst.w   d0
+        movem.l (a4)+,d1/d3/a0-a1
+        rts
+; 
+L2A74   move.l  d2,-(a4)
+        move.w  d6,d1
+        move.w  d7,d2
+        moveq   #$10,d0         ; SD_POS
+        bsr.s   L2A62
+        move.l  (a4)+,d2
+        rts
+; 
+L2A82   moveq   #$0E,d0         ; SD_CURE
+        bra.s   L2A62
+L2A86   moveq   #$0F,d0         ; SD_CURS
+        bra.s   L2A62
+L2A8A   movem.l d3/a0,-(a4)
+        movea.l (a5),a0
+        moveq   #-$01,d3
+        moveq   #$01,d0         ; IO_FBYTE
+        trap    #$03
+        movem.l (a4)+,d3/a0
+        tst.w   d0
+        rts
+; 
+L2A9E   moveq   #$07,d0         ; IO_SSTRG
+        bra.s   L2A62
+L2AA2   bsr.s   L2AC8
+        moveq   #$20,d0         ; SD_CLEAR
+        bra.s   L2A62
+L2AA8   moveq   #$18,d0         ; SD_SCROL
+        bra.s   L2A62
+L2AAC   move.w  d1,-(a4)
+        bsr.s   L2A74
+        move.w  (a4)+,d1
+        moveq   #$1A,d0         ; SD_SCRBT
+        bra.s   L2A62
+L2AB6   moveq   #$1F,d0         ; SD_PANRT
+        bra.s   L2A62
+        moveq   #$19,d0         ; SD_SCRTP
+        bra.s   L2A62
+L2ABE   bsr.s   L2A82
+        bsr.s   L2A8A
+        rts
+; 
+L2AC4   moveq   #$05,d0         ; IO_SBYTE
+        bra.s   L2A62
+L2AC8   movem.l d1/d3/a0-a1,-(a4)
+        movea.w #$0000,a0
+        moveq   #$20,d0         ; SD_CLEAR
+        trap    #$03
+        movem.l (a4)+,d1/d3/a0-a1
+        rts
+; 
+L2ADA   moveq   #$0B,d0         ; SD_CHENQ
+        lea     $0004(a5),a1
+        bsr.s   L2A62
+        move.w  $0004(a5),d0
+        move.w  $0006(a5),d1
+        mulu.w  d0,d1
+        move.w  d1,$0008(a5)
+        moveq   #$0A,d0         ; SD_PXENQ
+        lea     $000A(a5),a1
+        bsr     L2A62
+        moveq   #$00,d0
+        move.w  $000A(a5),d0
+        divu.w  $0004(a5),d0
+        move.w  d0,$000A(a5)
+        moveq   #$00,d0
+        move.w  $000C(a5),d0
+        divu.w  $0006(a5),d0
+        move.w  d0,$000C(a5)
+        rts
+; 
+L2B18   movem.l d2-d7/a0-a5,-(a4)
+        move.l  a4,-(a7)
+        movea.l $0010(a6),a1    ; SV_BASIC
+        moveq   #$00,d2
+        moveq   #$00,d3
+        moveq   #$00,d4
+        moveq   #$00,d5
+        moveq   #$00,d6
+        moveq   #$00,d7
+        bra.s   L2B3C
+L2B30   move.w  d3,d4
+        tst.w   d7
+          bne.s L2B38
+        move.w  d4,d7
+L2B38   move.w  $02(a6,a1.l),d3
+L2B3C   add.w   d5,d6
+        adda.l  d6,a1
+        move.w  $00(a6,a1.l),d5
+        addq.l  #$02,a1
+        cmpa.l  $0014(a6),a1    ; SV_TRNSP
+          bcc.s L2B64
+        tst.w   d0
+          bmi.s L2B58
+          bne.s L2B5E
+        cmp.w   d3,d1
+          bhi.s L2B30
+        bra.s   L2B86
+L2B58   cmp.w   d3,d1
+          bhi.s L2B30
+        bra.s   L2B74
+L2B5E   cmp.w   d3,d1
+          bcc.s L2B30
+        bra.s   L2B86
+L2B64   bset    #$01,d2
+        tst.w   d3
+          beq.s L2B86
+        cmp.w   d3,d1
+          bhi.s L2B86
+        tst.w   d0
+          bge.s L2B86
+L2B74   tst.w   d4
+          beq.s L2B86
+        move.w  d4,d3
+        bclr    #$01,d2
+        cmp.w   d4,d7
+          bne.s L2B86
+        bset    #$00,d2
+L2B86   move.w  d3,d1
+          bne.s L2B96
+        bset    #$02,d2
+        move.w  #$0007,d0
+        clr.w   d1
+        bra.s   L2BBA
+L2B96   tst.w   d4
+          bne.s L2B9E
+        bset    #$00,d2
+L2B9E   move.w  d1,-(a7)
+        move.w  d2,-(a7)
+        move.w  d3,d4
+        move.w  d3,d6
+        clr.w   d7
+        movea.l d7,a0
+        sf      $00AB(a6)
+        movea.w $00000138,a2
+        jsr     $4000(a2)
+        move.w  (a7)+,d0
+        move.w  (a7)+,d1
+L2BBA   movea.l (a7)+,a4
+        movem.l (a4)+,d2-d7/a0-a5
+        move.b  d0,$0014(a5)
+        rts
+; 
+L2BC6   moveq   #$0A,d0
+        moveq   #$00,d2
+        movea.l (a6),a1
+        adda.l  a6,a1
+        move.l  a1,-(a4)
+L2BD0   addq.w  #$01,d2
+        cmp.b   (a1)+,d0
+          bne.s L2BD0
+        movea.l (a4)+,a1
+        subq.w  #$02,d2
+        move.w  d2,d1
+        divu.w  $0004(a5),d1
+        addq.w  #$01,d2
+        rts
+; 
+L2BE4   bsr     L2B18
+        movem.l d0-d1,-(a4)
+        cmpi.b  #$07,d0
+          beq.s L2BF4
+        bsr.s   L2BC6
+L2BF4   move.l  d1,d3
+        movem.l (a4)+,d0-d1
+        rts
+; 
+L2BFC   movem.l d0/d3,-(a4)
+        moveq   #$00,d0
+L2C02   tst.w   d1
+          bne.s L2C08
+        moveq   #$00,d0
+L2C08   move.w  d1,(a2)+
+        move.w  d0,(a2)+
+        addq.w  #$01,d0
+        dbf     d3,L2C02
+        movem.l (a4)+,d0/d3
+        rts
+; 
+L2C18   bsr     L2AA2
+        lea     $0040(a5),a2
+        move.w  $0006(a5),d4
+        subq.w  #$01,d4
+        moveq   #$00,d0
+        bsr.s   L2BE4
+        btst    #$02,d0
+          bne.s L2C74
+        bra.s   L2C36
+L2C32   moveq   #$01,d0
+        bsr.s   L2BE4
+L2C36   bsr.s   L2BFC
+        addq.w  #$01,d3
+        sub.w   d3,d4
+          bmi.s L2C44
+        bsr     L3090
+        bra.s   L2C68
+L2C44   add.w   d3,d4
+        subq.w  #$01,d3
+        cmp.w   d4,d3
+          bne.s L2C52
+        bsr     L3090
+        bra.s   L2C64
+L2C52   move.w  d4,d3
+L2C54   move.w  $0004(a5),d2
+        bsr     L2A9E
+        adda.w  $0004(a5),a1
+        dbf     d4,L2C54
+L2C64   bsr.s   L2BFC
+        bra.s   L2C7A
+L2C68   tst.w   d4
+          bmi.s L2C7A
+        btst    #$01,$0014(a5)
+          beq.s L2C32
+L2C74   moveq   #$00,d1
+        move.w  d4,d3
+        bsr.s   L2BFC
+L2C7A   rts
+; 
+L2C7C   move.w  $0006(a5),d4
+        subq.w  #$01,d4
+        lsr.w   #$01,d4
+        bra.s   L2C8C
+L2C86   move.w  $0006(a5),d4
+        subq.w  #$02,d4
+L2C8C   bsr     L2A86
+        moveq   #$00,d6
+        moveq   #$00,d7
+        moveq   #$00,d0
+        bsr     L2B18
+L2C9A   btst    #$00,$0014(a5)
+          bne.s L2CB0
+        moveq   #-$01,d0        ; ERR_NC
+        bsr     L2BE4
+        addq.w  #$01,d3
+        add.w   d3,d7
+        sub.w   d3,d4
+          bpl.s L2C9A
+L2CB0   bsr     L2C18
+        bsr     L2FD6
+        move.w  d1,d5
+        moveq   #$00,d0
+        bsr     L2E9C
+        rts
+; 
+L2CC2   moveq   #-$01,d0        ; ERR_NC
+        lea     L30C2(pc),a0
+L2CC8   tst.b   (a0)
+          beq.s L2D02
+        addq.w  #$01,d0
+        cmp.b   (a0)+,d1
+          bne.s L2CC8
+        lsl.w   #$01,d0
+        move.w  L2CDC(pc,d0.w),d0
+        jmp     L2CDC(pc,d0.w)
+; 
+L2CDC   dc.w    $002E,$0044,$0062,$00A6,$01AA,$0100,$0132,$0142
+        dc.w    $018A,$0154,$0562,$07A8,$09BE,$09E0,$09CA,$0A98
+        dc.w    $0AAE,$0AD2,$0AEA
+L2D02   moveq   #-$0F,d0        ; ERR_BP
+        bsr     L3516
+        rts
+; 
+L2D0A   tst.w   d6
+          bne.s L2D1C
+        bsr     L2FD6
+        tst.w   d2
+          beq.s L2D1E
+        bsr.s   L2D3E
+        move.w  $0004(a5),d6
+L2D1C   subq.w  #$01,d6
+L2D1E   rts
+; 
+        move.w  $0004(a5),d0
+        subq.w  #$01,d0
+        cmp.w   d6,d0
+          bne.s L2D3A
+        bsr     L2FD6
+        cmp.w   $0012(a5),d2
+          beq.s L2D3C
+        bsr.s   L2D82
+        moveq   #$00,d6
+        bra.s   L2D3C
+L2D3A   addq.w  #$01,d6
+L2D3C   rts
+; 
+L2D3E   bsr     L371A
+        tst.b   $0015(a5)
+          beq.s L2D58
+        bsr     L2FD6
+        tst.w   d2
+          bne.s L2D58
+        moveq   #$00,d0
+        bsr     L34CC
+          bne.s L2D80
+L2D58   bsr     L2F26
+        btst    #$00,d0
+          beq.s L2D72
+        tst.w   d1
+          beq.s L2D80
+        bsr     L3064
+        bsr     L2FD6
+        move.w  d1,d5
+        bra.s   L2D80
+L2D72   subq.w  #$01,d7
+        bsr     L2FD6
+        moveq   #$00,d0
+        bsr     L2E9C
+        move.w  d1,d5
+L2D80   rts
+; 
+L2D82   bsr     L371A
+        tst.b   $0015(a5)
+          beq.s L2D9E
+        bsr     L2FD6
+        cmp.w   $0012(a5),d2
+          bne.s L2D9E
+        moveq   #$00,d0
+        bsr     L34CC
+          bne.s L2DDA
+L2D9E   bsr     L2F26
+        btst    #$01,d0
+          beq.s L2DBE
+        tst.w   d1
+          bne.s L2DB2
+        tst.b   $0015(a5)
+          beq.s L2DDA
+L2DB2   bsr     L302E
+        bsr     L2FD6
+        move.w  d1,d5
+        bra.s   L2DDA
+L2DBE   bsr     L2FD6
+        tst.w   d1
+          bne.s L2DCC
+        tst.b   $0015(a5)
+          beq.s L2DDA
+L2DCC   addq.w  #$01,d7
+        bsr     L2FD6
+        moveq   #$00,d0
+        bsr     L2E9C
+        move.w  d1,d5
+L2DDA   rts
+; 
+        move.w  d6,d4
+        ext.l   d4
+        divu.w  $0016(a5),d4
+        ext.l   d4
+        mulu.w  $0016(a5),d4
+        add.w   $0016(a5),d4
+        cmp.w   $0004(a5),d4
+          ble.s L2DF8
+        sub.w   $0016(a5),d4
+L2DF8   sub.w   d6,d4
+        bra.s   L2E06
+L2DFC   moveq   #$20,d1
+        move.w  d4,-(a4)
+        bsr     L31F8
+        move.w  (a4)+,d4
+L2E06   dbf     d4,L2DFC
+        moveq   #$00,d0
+        rts
+; 
+        moveq   #-$01,d0        ; ERR_NC
+        bsr     L34CC
+          bne.s L2E1C
+        moveq   #$01,d1
+        bsr     L2C7C
+L2E1C   rts
+; 
+        moveq   #-$01,d0        ; ERR_NC
+        bsr     L34CC
+          bne.s L2E2E
+        move.w  #$7FFE,d1
+        bsr     L2C7C
+L2E2E   rts
+; 
+        moveq   #-$01,d0        ; ERR_NC
+        bsr     L34CC
+          bne.s L2E64
+        move.w  d7,$001C(a5)
+        move.w  $0006(a5),d7
+        subq.w  #$01,d7
+        bsr     L2FD6
+        tst.w   d1
+          bne.s L2E50
+        move.w  $001C(a5),d7
+        bra.s   L2E64
+L2E50   bsr     L2A86
+        bsr     L2C18
+        moveq   #$00,d7
+        moveq   #$00,d6
+        clr.b   $0015(a5)
+        bsr     L2F18
+L2E64   rts
+; 
+        moveq   #-$01,d0        ; ERR_NC
+        bsr     L34CC
+          bne.s L2E84
+        moveq   #$00,d7
+        bsr     L2FD6
+        tst.w   d1
+          beq.s L2E84
+        bsr     L2C86
+        moveq   #$00,d7
+        moveq   #$00,d0
+        bsr     L2F18
+L2E84   rts
+; 
+        moveq   #$00,d0
+        bsr     L34CC
+        bsr     L2A86
+        movea.l a5,a0
+        moveq   #$19,d0         ; MT_RECHP
+        trap    #$01
+        moveq   #$00,d0
+        addq.l  #$04,a7
+        rts
+; 
+L2E9C   move.w  d0,d2
+        moveq   #$00,d0
+        bsr     L2B18
+        cmpi.b  #$07,d0
+          beq.s L2EBE
+        tst.w   d2
+          beq.s L2EC8
+          bmi.s L2EB8
+        btst    #$01,d0
+          beq.s L2EC8
+        bra.s   L2EBE
+L2EB8   btst    #$00,d0
+          beq.s L2EC8
+L2EBE   move.w  d2,d0
+        moveq   #$00,d2
+        moveq   #$00,d1
+        moveq   #$00,d3
+        bra.s   L2ECE
+L2EC8   move.w  d2,d0
+        bsr     L2BE4
+L2ECE   cmp.w   d1,d5
+          bne.s L2ED8
+        tst.b   $0015(a5)
+          bne.s L2EDE
+L2ED8   bsr.s   L2EE2
+        bsr     L30B4
+L2EDE   moveq   #$00,d0
+        rts
+; 
+L2EE2   movem.l d0-d3,-(a4)
+        lea     $00C0(a5),a0
+        cmp.w   $001E(a5),d2
+          bls.s L2EF4
+        move.w  $001E(a5),d2
+L2EF4   move.w  d2,-(a4)
+        bra.s   L2EFA
+L2EF8   move.b  (a1)+,(a0)+
+L2EFA   dbf     d2,L2EF8
+        move.w  (a4)+,d2
+        move.w  $001E(a5),d0
+        sub.w   d2,d0
+L2F06   move.b  #$20,(a0)+
+        dbf     d0,L2F06
+        movem.l (a4)+,d0-d3
+        move.w  d1,$000E(a5)
+        rts
+; 
+L2F18   bsr     L2FD6
+        move.w  d1,d5
+        moveq   #$00,d0
+        bsr     L2E9C
+        rts
+; 
+L2F26   move.l  a0,-(a4)
+        moveq   #$00,d0
+        tst.w   d7
+          bne.s L2F32
+        bset    #$00,d0
+L2F32   move.w  $0006(a5),d2
+        subq.w  #$01,d2
+        cmp.w   d7,d2
+          bhi.s L2F40
+        bset    #$01,d0
+L2F40   bsr     L2FD6
+        movea.l (a4)+,a0
+        rts
+; 
+L2F48   bsr     L2FD6
+        lea     $00C0(a5),a0
+        mulu.w  $0004(a5),d2
+        adda.w  d2,a0
+        adda.w  d6,a0
+        add.w   d6,d2
+        rts
+; 
+L2F5C   movem.w d3/d6,-(a4)
+        moveq   #$00,d6
+        bsr.s   L2F48
+        movea.l a0,a1
+        moveq   #$00,d2
+        moveq   #$0A,d3
+        move.w  $0004(a5),d1
+        bra.s   L2F74
+L2F70   addq.w  #$01,d2
+        cmp.b   (a0)+,d3
+L2F74   dbeq    d1,L2F70
+        bsr     L2A74
+        bsr     L2A9E
+        bsr     L2A74
+        movem.w (a4)+,d3/d6
+        rts
+; 
+L2F8A   lea     $0040(a5),a0
+        move.w  d0,-(a4)
+        lsl.w   #$02,d0
+        adda.w  d0,a0
+        move.w  $0006(a5),d0
+        sub.w   (a4)+,d0
+        subq.w  #$01,d0
+L2F9C   move.l  $0004(a0),(a0)+
+        dbf     d0,L2F9C
+        subq.l  #$04,a0
+        rts
+; 
+L2FA8   move.w  $0006(a5),d1
+        subq.w  #$01,d1
+        sub.w   d0,d1
+        lsl.w   #$02,d0
+        lea     $0040(a5),a0
+        adda.w  d0,a0
+        move.l  a0,-(a4)
+        lea     $0040(a5),a0
+        move.w  $0006(a5),d0
+        subq.w  #$01,d0
+        lsl.w   #$02,d0
+        adda.w  d0,a0
+L2FC8   move.l  (a0),$0004(a0)
+        subq.w  #$04,a0
+        dbf     d1,L2FC8
+        movea.l (a4)+,a0
+        rts
+; 
+L2FD6   lsl.l   #$02,d7
+        move.w  $40(a5,d7.w),d1
+        move.w  $42(a5,d7.w),d2
+        lsr.l   #$02,d7
+        rts
+; 
+L2FE4   move.w  d7,-(a4)
+        addq.w  #$01,d7
+        cmp.w   $0006(a5),d7
+          beq.s L2FF2
+        bsr.s   L2FD6
+        bra.s   L3008
+L2FF2   subq.w  #$01,d7
+        bsr.s   L2FD6
+        cmp.w   $0012(a5),d2
+          beq.s L3000
+        addq.w  #$01,d2
+        bra.s   L3008
+L3000   moveq   #$01,d0
+        bsr     L2E9C
+        moveq   #$00,d2
+L3008   move.w  (a4)+,d7
+        rts
+; 
+L300C   move.w  d7,-(a4)
+        tst.w   d7
+          beq.s L3018
+        subq.w  #$01,d7
+        bsr.s   L2FD6
+        bra.s   L302A
+L3018   bsr.s   L2FD6
+        tst.w   d2
+          beq.s L3022
+        subq.w  #$01,d2
+        bra.s   L302A
+L3022   moveq   #-$01,d0        ; ERR_NC
+        bsr     L2E9C
+        move.w  d3,d2
+L302A   move.w  (a4)+,d7
+        rts
+; 
+L302E   bsr     L2A86
+        movem.l d3/d6-d7,-(a4)
+        move.w  $000C(a5),d1
+        neg.w   d1
+        bsr     L2AA8
+        move.w  $0006(a5),d7
+        subq.w  #$01,d7
+        bsr.s   L2FE4
+        move.w  d2,-(a4)
+        move.w  d1,-(a4)
+        moveq   #$00,d0
+        bsr     L2F8A
+        move.l  (a4)+,(a0)+
+        move.w  $0006(a5),d7
+        subq.w  #$01,d7
+        bsr     L2F5C
+        movem.l (a4)+,d4/d6-d7
+        rts
+; 
+L3064   bsr     L2A86
+        movem.w d6-d7,-(a4)
+        move.w  $000C(a5),d1
+        bsr     L2AA8
+        moveq   #$00,d7
+        bsr.s   L300C
+        move.w  d2,-(a4)
+        move.w  d1,-(a4)
+        moveq   #$00,d0
+        bsr     L2FA8
+        move.l  (a4)+,(a0)
+        moveq   #$00,d7
+        bsr     L2F5C
+        movem.w (a4)+,d6-d7
+        rts
+; 
+L3090   movem.l d0/a0,-(a4)
+L3094   movea.l a1,a0
+        addq.w  #$01,d2
+        adda.w  d2,a0
+        move.b  -(a0),d0
+        cmpi.b  #$20,d0
+          bne.s L30AA
+        move.b  #$0A,(a0)
+        subq.w  #$01,d2
+        bra.s   L3094
+L30AA   bsr     L2A9E
+        movem.l (a4)+,d0/a0
+        rts
+; 
+L30B4   move.w  d1,$000E(a5)
+        move.w  d2,$0018(a5)
+        move.l  d3,$0010(a5)
+        rts
+; 
+L30C2   dc.b    $C0,$C8,$D0,$D8,$1B,$09,$D5,$DD,$D1,$D9,$CA,$0A
+        dc.b    $C2,$C3,$CB,$C1,$C9,$D4,$DC,$00
+L30D6   move.w  d3,-(a4)
+        move.w  d1,-(a4)
+        bsr     L2A74
+        move.w  $000A(a5),d1
+        bsr     L2AB6
+        move.w  (a4)+,d1
+        bsr     L2AC4
+        move.w  (a4)+,d3
+        rts
+; 
+L30F0   move.w  d1,-(a4)
+        bsr     L2F48
+        move.w  $0018(a5),d3
+        sub.w   d2,d3
+        move.l  a0,-(a4)
+        lea     $00C0(a5),a0
+        adda.w  $0018(a5),a0
+L3106   move.b  (a0)+,(a0)
+        subq.w  #$02,a0
+        dbf     d3,L3106
+        movea.l (a4)+,a0
+        move.w  (a4)+,d1
+        move.b  d1,(a0)
+        addq.w  #$01,$0018(a5)
+        moveq   #$00,d0
+        rts
+; 
+L311C   movem.w d1/d6-d7,-(a4)
+        bsr     L2F48
+        addq.w  #$01,d2
+        move.w  $0018(a5),d0
+        cmp.w   d0,d2
+          ble.s L3134
+        move.w  d2,$0018(a5)
+        bra.s   L3138
+L3134   move.w  $0018(a5),d2
+L3138   divu.w  $0004(a5),d2
+        cmp.w   $0012(a5),d2
+          bhi.s L3146
+        moveq   #$00,d0
+        bra.s   L3176
+L3146   move.w  d2,$0012(a5)
+        move.w  d2,d3
+        bsr     L2FD6
+        sub.w   d2,d3
+        add.w   d3,d7
+        cmp.w   $0006(a5),d7
+          bcc.s L3176
+        subq.w  #$01,d7
+        bsr     L2A74
+        move.w  $000C(a5),d1
+        bsr     L2AAC
+        addq.w  #$01,d7
+        move.w  d7,d0
+        bsr     L2FA8
+        move.w  d5,(a0)+
+        move.w  $0012(a5),(a0)+
+L3176   movem.w (a4)+,d1/d6-d7
+        rts
+; 
+L317C   movem.w d6-d7,-(a4)
+        bsr     L2A86
+        move.w  $0012(a5),d3
+        move.w  d1,-(a4)
+        bsr     L2FD6
+        move.w  (a4)+,d1
+        sub.w   d2,d3
+        bra.s   L319E
+L3194   moveq   #$00,d6
+        addq.w  #$01,d7
+        bsr     L2F48
+        move.b  (a0)+,d1
+L319E   bsr     L30D6
+        addq.w  #$01,d7
+        cmp.w   $0006(a5),d7
+          bcc.s L31B0
+        subq.w  #$01,d7
+        dbf     d3,L3194
+L31B0   movem.w (a4)+,d6-d7
+        rts
+; 
+L31B6   bsr     L2F26
+        btst    #$00,d0
+          bne.s L31CC
+        bsr     L300C
+        cmp.w   d1,d5
+          bne.s L31CC
+        subq.w  #$01,d7
+        bra.s   L31B6
+L31CC   bsr     L2FD6
+        rts
+; 
+L31D2   movem.w d3,-(a7)
+        bsr     L2FD6
+        move.w  $0012(a5),d3
+        sub.w   d2,d3
+        add.w   d3,d7
+        move.w  $0006(a5),d3
+        subq.w  #$01,d3
+        cmp.w   d7,d3
+          bcc.s L31EE
+        move.w  d3,d7
+L31EE   bsr     L2FD6
+        movem.w (a7)+,d3
+        rts
+; 
+L31F8   move.b  #-$01,$0015(a5)
+        move.w  $0018(a5),d2
+        cmp.w   $001E(a5),d2
+          bcc.s L323C
+        move.w  d1,-(a4)
+        bsr     L311C
+        bsr     L30F0
+        move.w  (a4)+,d1
+        bsr     L317C
+        move.w  $0004(a5),d1
+        subq.w  #$01,d1
+        cmp.w   d6,d1
+          bne.s L323A
+        move.w  $0006(a5),d1
+        subq.w  #$01,d1
+        cmp.w   d7,d1
+          beq.s L3232
+        addq.w  #$01,d7
+        moveq   #$00,d6
+        bra.s   L323C
+L3232   moveq   #$00,d6
+        bsr     L302E
+        bra.s   L323C
+L323A   addq.w  #$01,d6
+L323C   rts
+; 
+L323E   move.w  d4,-(a4)
+        move.b  #-$01,$0015(a5)
+        bsr     L2F48
+        cmp.w   $0018(a5),d2
+          bcc.s L3256
+        bsr.s   L325A
+        bsr.s   L327A
+        bsr.s   L32C8
+L3256   move.w  (a4)+,d4
+        rts
+; 
+L325A   bsr     L2F48
+        move.w  $0018(a5),d3
+        sub.w   d2,d3
+L3264   move.b  $0001(a0),(a0)+
+        dbf     d3,L3264
+        tst.w   $0018(a5)
+          beq.s L3276
+        subq.w  #$01,$0018(a5)
+L3276   moveq   #$00,d0
+        rts
+; 
+L327A   movem.w d6-d7,-(a4)
+        bsr     L2A86
+        move.w  $0012(a5),d3
+        bsr     L2FD6
+        sub.w   d2,d3
+        bra.s   L3292
+L328E   moveq   #$00,d6
+        addq.w  #$01,d7
+L3292   bsr     L2A74
+        move.w  $000A(a5),d1
+        neg.w   d1
+        bsr     L2AB6
+        move.w  $0004(a5),d6
+        subq.w  #$01,d6
+        bsr     L2A74
+        bsr     L2F48
+        move.b  (a0),d1
+        bsr     L2AC4
+        addq.w  #$01,d7
+        cmp.w   $0006(a5),d7
+          bcc.s L32C2
+        subq.w  #$01,d7
+        dbf     d3,L328E
+L32C2   movem.w (a4)+,d6-d7
+        rts
+; 
+L32C8   movem.w d6-d7,-(a4)
+        move.w  $0018(a5),d2
+        divu.w  $0004(a5),d2
+        cmp.w   $0012(a5),d2
+          beq.s L32FA
+        move.w  d2,$0012(a5)
+        move.w  d2,d3
+        bsr     L2FD6
+        sub.w   d2,d3
+        add.w   d3,d7
+        move.w  $0006(a5),d0
+        subq.w  #$01,d0
+        cmp.w   d0,d7
+          bcc.s L32FA
+        bsr.s   L3300
+        move.w  d7,d0
+        bsr.s   L3364
+        bsr.s   L3330
+L32FA   movem.w (a4)+,d6-d7
+        rts
+; 
+L3300   move.w  $000E(a5),$0020(a5)
+        move.w  $0018(a5),$0022(a5)
+        move.l  $0010(a5),$0024(a5)
+        move.w  d6,$001A(a5)
+        move.w  d7,$001C(a5)
+        move.w  $001E(a5),d0
+        lea     $00C0(a5),a0
+        lea     $01C0(a5),a1
+L3326   move.b  (a0)+,(a1)+
+        dbf     d0,L3326
+        moveq   #$00,d0
+        rts
+; 
+L3330   move.w  $0020(a5),$000E(a5)
+        move.w  $0022(a5),$0018(a5)
+        move.l  $0024(a5),$0010(a5)
+        move.w  $001A(a5),d6
+        move.w  $001C(a5),d7
+        move.w  $001E(a5),d0
+        lea     $00C0(a5),a0
+        lea     $01C0(a5),a1
+L3356   move.b  (a1)+,(a0)+
+        dbf     d0,L3356
+        move.w  $000E(a5),d0
+        moveq   #$00,d0
+        rts
+; 
+L3364   movem.l d6-d7,-(a4)
+        move.w  d0,d7
+        bsr     L2A86
+        move.w  $000C(a5),d1
+        neg.w   d1
+        bsr     L2AAC
+        move.w  d7,-(a4)
+        move.w  $0006(a5),d0
+        subq.w  #$02,d0
+        cmp.w   d7,d0
+          bhi.s L33A6
+        move.w  d0,d7
+        bsr     L2FD6
+        moveq   #$00,d0
+        bsr     L2BE4
+        bsr     L2FD6
+        cmp.w   d2,d3
+          beq.s L339C
+        addq.w  #$01,d2
+        bra.s   L33CE
+L339C   moveq   #$01,d0
+        bsr     L2E9C
+        moveq   #$00,d2
+        bra.s   L33CE
+L33A6   move.w  $0006(a5),d7
+        subq.w  #$01,d7
+        bsr     L2FD6
+        tst.w   d1
+          bne.s L33BC
+        moveq   #$00,d2
+        bsr     L2EE2
+        bra.s   L33CE
+L33BC   moveq   #$00,d0
+        bsr     L2BE4
+        bsr     L30B4
+        bsr     L2EE2
+        bsr     L2FE4
+L33CE   move.w  (a4)+,d0
+        move.w  d2,-(a4)
+        move.w  d1,-(a4)
+        addq.w  #$01,d0
+        bsr     L2F8A
+        move.l  (a4)+,(a0)+
+        move.w  $0006(a5),d7
+        subq.w  #$01,d7
+        bsr     L2FD6
+        tst.w   d1
+          beq.s L33EE
+        bsr     L2F5C
+L33EE   movem.l (a4)+,d6-d7
+        rts
+; 
+L33F4   movem.l d2-d7/a0-a5,-(a4)
+        move.l  a4,-(a7)
+        move.l  (a6),$0004(a6)  ; SV_CHEAP
+        move.w  $0018(a5),d1
+        movea.w $0000011A,a4    ; BV_CHRIX
+        jsr     $001C(a4)
+        move.w  $0018(a5),d1
+        movea.l (a6),a1
+        lea     $00C0(a5),a0
+        bra.s   L341C
+L3416   move.b  (a0)+,$00(a6,a1.l)
+        addq.l  #$01,a1
+L341C   dbf     d1,L3416
+        subq.l  #$01,a1
+L3422   cmpi.b  #$20,$00(a6,a1.l)
+          bne.s L3430
+        subq.l  #$01,a1
+        cmpa.l  (a6),a1
+          bne.s L3422
+L3430   addq.l  #$01,a1
+        move.b  #$0A,$00(a6,a1.l)
+        addq.l  #$01,a1
+        move.l  a1,$0004(a6)    ; SV_CHEAP
+        jsr     L3476(pc)
+        movea.w $0000012E,a2
+        adda.w  #$4000,a2
+        movea.w $0000012C,a4
+        jsr     $4000(a4)
+          blt.s L346A
+        movea.w $00000132,a4
+        jsr     $4000(a4)
+        movea.w $00000136,a4
+        jsr     $4000(a4)
+        bra.s   L346A
+        moveq   #$00,d0
+        bra.s   L346C
+L346A   moveq   #-$15,d0
+L346C   move.w  d2,d1
+        movea.l (a7)+,a4
+        movem.l (a4)+,d2-d7/a0-a5
+        rts
+; 
+L3476   dc.b    'N',$F9
+L3478   ori.b   #$EE,d0
+        moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+        moveq   #-$13,d0        ; ERR_NI
+        rts
+; 
+        bsr     L371A
+        bsr.s   L34CC
+          bne.s L34CA
+        tst.w   d5
+          beq.s L34C6
+        bsr     L31D2
+        move.w  d5,d4
+L3496   move.w  d4,-(a4)
+        bsr     L2D82
+        move.w  (a4)+,d4
+        cmp.w   d4,d5
+          beq.s L3496
+        tst.w   d5
+          beq.s L34C6
+        subq.w  #$01,d7
+        bsr     L2A74
+        move.w  $000C(a5),d1
+        bsr     L2AAC
+        addq.w  #$01,d7
+        move.w  d7,d0
+        bsr     L2FA8
+        move.l  #$00000000,(a0)
+        bsr     L36F8
+L34C6   moveq   #$00,d6
+        moveq   #$00,d0
+L34CA   rts
+; 
+L34CC   movem.l d1-d4,-(a4)
+        move.l  d0,d4
+        bsr     L2A86
+        tst.b   $0015(a5)
+          beq.s L3506
+        bsr     L33F4
+        tst.l   d0
+          beq.s L34E8
+        bsr.s   L3516
+        bra.s   L350E
+L34E8   swap    d1
+        tst.w   d1
+          beq.s L34FE
+        tst.w   d4
+          bne.s L3506
+        swap    d1
+        move.w  d1,d5
+        bsr     L3632
+        moveq   #$00,d0
+        bra.s   L3506
+L34FE   swap    d1
+        tst.w   d4
+          bne.s L3506
+        bsr.s   L3528
+L3506   moveq   #$00,d0
+        move.b  #$00,$0015(a5)
+L350E   movem.l (a4)+,d1-d4
+        tst.l   d0
+        rts
+; 
+L3516   move.l  d0,-(a4)
+        move.b  #-$01,$0028(a5)
+        movea.w $000000CA,a2    ; UT_ERR0
+        jsr     (a2)
+        move.l  (a4)+,d0
+        rts
+; 
+L3528   move.w  d5,$0020(a5)
+        cmp.w   d1,d5
+          beq.s L3544
+        move.w  d1,d5
+        bsr     L2FD6
+        tst.w   d1
+          beq.s L3544
+L353A   move.w  d5,d1
+        move.w  #-$0001,d5
+        bra     L2C7C
+; 
+L3544   move.l  $0010(a5),$0024(a5)
+        move.w  d5,d1
+        moveq   #$00,d0
+        bsr     L2BE4
+        bsr     L2EE2
+        bsr     L30B4
+        move.w  d7,$001C(a5)
+        move.w  d6,$001A(a5)
+        move.w  $0020(a5),d5
+        bsr     L31B6
+        move.w  $000E(a5),d5
+        tst.w   d2
+          bne.s L353A
+        move.w  $0012(a5),d3
+        addq.w  #$01,d3
+        add.w   d7,d3
+        cmp.w   $0006(a5),d3
+          bcc.s L353A
+        move.w  $0026(a5),d0
+        cmp.w   $0012(a5),d0
+          beq.s L35A2
+          ble.s L3594
+        move.w  $000E(a5),d1
+        bra     L2C7C
+; 
+L3594   move.w  d7,d0
+        bsr     L2FA8
+        move.w  $000C(a5),d1
+        bsr     L2AAC
+L35A2   move.w  d7,d0
+        lsl.w   #$02,d0
+        lea     $0040(a5),a2
+        adda.w  d0,a2
+        move.w  $0012(a5),d3
+        move.w  d5,d1
+        bsr     L2BFC
+        bsr.s   L35DE
+          bne.s L353A
+        moveq   #$00,d6
+        bsr     L2A74
+        bsr     L2F48
+        movea.l a0,a1
+        move.w  $0018(a5),d2
+        bsr     L2A9E
+        move.w  $001C(a5),d7
+        move.w  $001A(a5),d6
+        bsr     L2A74
+        moveq   #$00,d0
+        rts
+; 
+L35DE   move.w  d7,-(a4)
+        tst.w   d7
+          beq.s L3600
+        bsr     L2FD6
+        move.w  d2,d4
+        subq.w  #$01,d7
+        bsr     L2FD6
+        tst.w   d1
+          beq.s L3600
+        addq.w  #$01,d7
+        cmp.w   d1,d5
+          bhi.s L3600
+        cmp.w   d2,d4
+          bhi.s L3600
+        bra.s   L362A
+L3600   add.w   $0012(a5),d7
+        bsr     L2FD6
+        move.w  d2,d4
+        addq.w  #$01,d7
+        bsr     L2F26
+        btst    #$01,d0
+          bne.s L3626
+        tst.w   d1
+          beq.s L3626
+        cmp.w   d5,d1
+          bhi.s L3626
+        cmp.w   d4,d2
+          bhi.s L3626
+        tst.w   d1
+          bne.s L362A
+L3626   moveq   #$00,d0
+        bra.s   L362C
+L362A   moveq   #-$01,d0        ; ERR_NC
+L362C   move.w  (a4)+,d7
+        tst.w   d0
+        rts
+; 
+L3632   movem.l d6-d7,-(a4)
+        tst.w   d5
+          beq.s L364A
+        bsr.s   L35DE
+          beq.s L3652
+        move.w  d5,d1
+        move.w  #-$0001,d5
+        bsr     L2C7C
+        bra.s   L3686
+L364A   clr.b   $0015(a5)
+        clr.w   $0018(a5)
+L3652   bsr     L31D2
+        move.w  d2,d4
+        bsr     L31B6
+        sub.w   d2,d4
+        tst.w   d7
+          beq.s L3670
+        subq.w  #$01,d7
+L3664   move.w  d7,d0
+        bsr     L3364
+        dbf     d4,L3664
+        bra.s   L3686
+L3670   move.w  d4,-(a4)
+        move.w  $00000006,d7
+        subq.w  #$01,d7
+        bsr     L2F18
+        bsr     L302E
+        move.w  (a4)+,d4
+        dbf     d4,L3670
+L3686   movem.l (a4)+,d6-d7
+        bsr     L2FD6
+        moveq   #$00,d0
+        bsr     L2E9C
+        move.w  $000E(a5),d5
+        rts
+; 
+        bsr     L2D0A
+        bsr     L323E
+        moveq   #$00,d0
+        rts
+; 
+        bsr     L2F48
+        move.w  $0018(a5),d4
+        sub.w   d2,d4
+L36B0   bsr     L323E
+        dbf     d4,L36B0
+        moveq   #$00,d0
+        rts
+; 
+        bsr     L2FD6
+        tst.w   d1
+          beq.s L36EC
+        movea.l $0058(a6),a1    ; SV_BTBAS
+        subq.l  #$02,a1
+        move.w  d1,$00(a6,a1.l)
+        movea.l (a6),a0
+        movea.w $000000F2,a2    ; CN_ITOD
+        jsr     (a2)
+        suba.l  (a6),a0
+        move.w  a0,$0018(a5)
+        move.w  a0,d2
+        movea.l (a6),a1
+        lea     $00(a6,a1.l),a1
+        bsr     L2EE2
+        bsr     L33F4
+L36EC   move.w  d1,d5
+        bsr     L3632
+        moveq   #$00,d6
+        moveq   #$00,d0
+        rts
+; 
+L36F8   move.w  $001E(a5),d0
+        lea     $00C0(a5),a0
+L3700   move.b  #$20,(a0)+
+        dbf     d0,L3700
+        moveq   #$00,d0
+        move.w  d0,$0018(a5)
+        move.l  d0,$0010(a5)
+        moveq   #$00,d5
+        move.w  d5,$000E(a5)
+        rts
+; 
+L371A   move.w  d7,-(a4)
+        tst.w   d5
+          bne.s L375E
+        cmpi.w  #$0001,$0018(a5)
+          bhi.s L375E
+        clr.w   $0018(a5)
+        clr.b   $0015(a5)
+        tst.w   d7
+          bne.s L3752
+        move.w  $0006(a5),d7
+        subq.w  #$01,d7
+        bsr     L2FD6
+        moveq   #$00,d0
+        bsr     L2BE4
+        bsr     L2EE2
+        bsr     L30B4
+        bsr     L302E
+        bra.s   L375E
+L3752   move.w  d7,d0
+        subq.w  #$01,d0
+        bsr     L3364
+        bsr     L2F18
+L375E   moveq   #$00,d0
+        move.w  (a4)+,d7
+        rts
+; 
+L3764   tst.b   $0028(a5)
+          beq.s L3772
+        clr.b   $0028(a5)
+        bsr     L2AC8
+L3772   rts
+; 
+        bsr     L31B6
+L3778   bsr     L2FD6
+        tst.w   d2
+          beq.s L3786
+        bsr     L2D3E
+        bra.s   L3778
+L3786   moveq   #$00,d6
+        rts
+; 
+        bsr     L31D2
+L378E   bsr     L2FD6
+        cmp.w   $0012(a5),d2
+          beq.s L379E
+        bsr     L2D82
+        bra.s   L378E
+L379E   move.w  $0018(a5),d6
+        subq.w  #$01,d6
+        divu.w  $0004(a5),d6
+        swap    d6
+        ext.l   d6
+        rts
+; 
+        moveq   #$00,d0
+        bsr     L34CC
+          bne.s L37C4
+        moveq   #$00,d6
+        moveq   #$00,d7
+        bsr     L2F18
+        move.w  $000E(a5),d5
+        moveq   #$00,d0
+L37C4   rts
+; 
+        moveq   #$00,d0
+        bsr     L34CC
+          bne.s L37EA
+        moveq   #$00,d6
+        move.w  $0006(a5),d7
+L37D4   subq.w  #$01,d7
+          beq.s L37E0
+        bsr     L2FD6
+        tst.w   d1
+          beq.s L37D4
+L37E0   bsr     L2F18
+        move.w  $000E(a5),d5
+        moveq   #$00,d0
+L37EA   rts
+; 
+L37EC   moveq   #$00,d0         ; MT_INF
+; 
+        trap    #$01
+        lea     L3478(pc),a1
+        movea.w #$4000,a2
+        cmpi.l  #'1.03',d2
+          bls.s L3806
+        adda.w  $0000013A,a2
+        bra.s   L380E
+L3806   adda.w  $0000012C,a2
+        adda.w  #$0138,a2
+L380E   move.l  a2,(a1)
+        rts
+; 
+L3812   move.l  a0,-(a7)
+        lea     L419E(pc),a0
+        tst.l   (a0)
+          beq.s L3826
+        movea.l L419E(pc),a5
+        move.w  #$0004,ccr
+        bra.s   L3828
+L3826   moveq   #$03,d0
+L3828   movea.l (a7)+,a0
+        rts
+; 
+L382C   tst.l   d0
+          beq.s L3854
+          bmi.s L3854
+        moveq   #$00,d7
+        cmpi.w  #$0009,d0
+          bhi.s L3852
+        subq.w  #$01,d0
+        lsl.w   #$01,d0
+        move.w  L3856(pc,d0.w),d0
+        lea     L3856(pc,d0.w),a1
+        movea.w #$0000,a0
+        bsr     L2524
+        moveq   #-$01,d0        ; ERR_NC
+        bra.s   L3854
+L3852   moveq   #-$0F,d0        ; ERR_BP
+L3854   rts
+; 
+L3856   dc.w    $094C,$0963,$097A,$0997,$09AA,$09C0,$09D9,$09EC
+        dc.w    $0A04
+L3868   move.w  d0,-(a7)
+        move.w  d1,-(a7)
+        move.w  d2,-(a7)
+        bsr     L3BAC
+        moveq   #$28,d1
+        addi.l  #$00000100,d1
+        moveq   #$28,d2
+        mulu.w  (a7),d2
+        move.w  d2,d3
+        add.w   d2,d1
+        moveq   #$08,d2
+        mulu.w  $0002(a7),d2
+        move.w  d2,d6
+        add.w   d2,d1
+        move.l  #$000000A0,d2
+        mulu.w  $0004(a7),d2
+        move.w  d2,d5
+        add.w   d2,d1
+        ext.l   d1
+        moveq   #$00,d2
+        moveq   #$18,d0         ; MT_ALCHP
+        trap    #$01
+        tst.l   d0
+          bne.s L38DA
+        movea.l a0,a5
+        move.w  (a7)+,$0018(a5)
+        move.w  (a7)+,$0016(a5)
+        move.w  (a7)+,$0014(a5)
+        lea     L419E(pc),a1
+        move.l  a0,(a1)
+        moveq   #$28,d1
+        add.l   a5,d1
+        move.l  d1,$0004(a5)
+        addi.l  #$00000100,d1
+        move.l  d1,(a5)
+        add.l   d5,d1
+        move.l  d1,$0008(a5)
+        add.l   d6,d1
+        move.l  d1,$000C(a5)
+        moveq   #$00,d0
+        rts
+; 
+L38DA   addq.l  #$06,a7
+        bra     L382C
+; 
+L38E0   movem.w d0-d1,-(a7)
+        lsl.w   #$07,d1
+        movea.w d1,a3
+        adda.l  #$00020000,a3
+        move.b  d0,d3
+        andi.b  #$06,d3
+        lsr.w   #$03,d0
+        lsl.w   #$01,d0
+        adda.w  d0,a3
+        movem.w (a7)+,d0-d1
+        rts
+; 
+L3900   movem.l d0-d4/a0,-(a7)
+        bsr     L39A0
+        bsr.s   L38E0
+        move.l  a3,$0010(a5)
+        movea.l $0004(a5),a1
+        moveq   #$13,d4
+L3914   move.l  (a3)+,(a1)+
+        move.l  (a3)+,(a1)+
+        move.w  (a3)+,(a1)+
+        adda.w  #$0076,a3
+        dbf     d4,L3914
+        movea.l $0004(a5),a1
+        movea.l $0010(a5),a3
+        moveq   #$13,d4
+L392C   move.l  (a2),d1
+        lsr.l   d3,d1
+        movep.l $0000(a1),d2
+        eor.l   d1,d2
+        movep.l d2,$0000(a1)
+        move.b  $0003(a2),d1
+        lsl.w   #$08,d1
+        lsr.w   d3,d1
+        move.b  $0008(a1),d2
+        eor.b   d1,d2
+        move.b  d2,$0008(a1)
+        move.l  $0004(a2),d1
+        lsr.l   d3,d1
+        movep.l $0001(a1),d2
+        eor.l   d1,d2
+        movep.l d2,$0001(a1)
+        move.b  $0007(a2),d1
+        lsl.w   #$08,d1
+        lsr.w   d3,d1
+        move.b  $0009(a1),d2
+        eor.b   d1,d2
+        move.b  d2,$0009(a1)
+        addq.w  #$08,a2
+        adda.w  #$000A,a1
+        dbf     d4,L392C
+        movem.l (a7)+,d0-d4/a0
+        rts
+; 
+L397E   movem.l a1/a3,-(a7)
+        movea.l $0004(a5),a1
+        movea.l $0010(a5),a3
+        moveq   #$13,d4
+L398C   move.l  (a1)+,(a3)+
+        move.l  (a1)+,(a3)+
+        move.w  (a1)+,(a3)+
+        adda.w  #$0076,a3
+        dbf     d4,L398C
+        movem.l (a7)+,a1/a3
+        rts
+; 
+L39A0   ext.l   d2
+        mulu.w  #$00A0,d2
+        movea.l (a5),a2
+        adda.l  d2,a2
+        rts
+; 
+L39AC   bsr     L3900
+        bsr.s   L397E
+        rts
+; 
+L39B4   bsr     L3812
+          bne   L382C
+        bsr.s   L39CE
+          bne   L382C
+        bsr.s   L3A0A
+          bne   L382C
+        bsr.s   L39AC
+        moveq   #$00,d0
+        rts
+; 
+L39CE   movem.w d0-d2,-(a7)
+        bsr     L271C
+          bmi.s L3A06
+        movem.w (a7)+,d0-d2
+        move.w  $001C(a1),d3
+        subi.w  #$0020,d3
+        cmp.w   d3,d0
+          bcc.s L3A02
+        move.w  $001E(a1),d3
+        subi.w  #$0014,d3
+        cmp.w   d3,d1
+          bcc.s L3A02
+        add.w   $0018(a1),d0
+        add.w   $001A(a1),d1
+        move.w  #$0004,ccr
+        rts
+; 
+L3A02   moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+L3A06   addq.l  #$06,a7
+        rts
+; 
+L3A0A   cmp.w   $0014(a5),d2
+          bls.s L3A14
+        moveq   #$04,d0
+        rts
+; 
+L3A14   move.w  #$0004,ccr
+        rts
+; 
+L3A1A   cmpi.w  #$0000,d0
+          blt.s L3A34
+        cmpi.w  #$01DF,d0
+          bgt.s L3A38
+        cmpi.w  #$0000,d1
+          blt.s L3A3E
+        cmpi.w  #$00EB,d1
+          bgt.s L3A42
+        rts
+; 
+L3A34   moveq   #$00,d0
+        bra.s   L3A1A
+L3A38   move.w  #$01DF,d0
+        bra.s   L3A1A
+L3A3E   moveq   #$00,d1
+        bra.s   L3A1A
+L3A42   move.w  #$00EB,d1
+        bra.s   L3A1A
+L3A48   bsr     L3812
+          bne   L382C
+        move.w  d0,d2
+        bsr.s   L3A0A
+          bne   L382C
+        move.w  d0,$001A(a5)
+        movea.l (a5),a0
+        ext.l   d0
+        mulu.w  #$00A0,d0
+        adda.l  d0,a0
+        move.w  #$009F,d0
+L3A6A   move.b  #$00,(a0)+
+        dbf     d0,L3A6A
+        move.w  #$0000,$001C(a5)
+        moveq   #$00,d0
+        rts
+; 
+L3A7C   bsr     L3812
+          bne   L382C
+        moveq   #$20,d0
+        bsr     L3B78
+        moveq   #$00,d0
+L3A8C   move.b  (a1)+,d1
+        cmpi.b  #$31,d1
+          bne.s L3A98
+        bsr     L3B64
+L3A98   cmpi.b  #$32,d1
+          bne.s L3AA2
+        bsr     L3B54
+L3AA2   cmpi.b  #$33,d1
+          bne.s L3AB0
+        bsr     L3B54
+        bsr     L3B64
+L3AB0   cmpi.b  #$23,d1
+          bne.s L3ABE
+        bsr     L3B54
+        bsr     L3B64
+L3ABE   addq.w  #$01,d0
+        cmpi.w  #$0020,d0
+          bne.s L3A8C
+        moveq   #$00,d0
+        rts
+; 
+L3ACA   bsr     L3812
+          bne   L382C
+        moveq   #$10,d0
+        bsr     L3B78
+        moveq   #$00,d0
+L3ADA   move.b  (a1)+,d1
+        cmpi.b  #$31,d1
+          beq.s L3B18
+        cmpi.b  #$32,d1
+          beq.s L3B20
+        cmpi.b  #$33,d1
+          beq.s L3B26
+        cmpi.b  #$34,d1
+          beq.s L3B30
+        cmpi.b  #$35,d1
+          beq.s L3B36
+        cmpi.b  #$36,d1
+          beq.s L3B40
+        cmpi.b  #$37,d1
+          beq.s L3B48
+        cmpi.b  #$23,d1
+          beq.s L3B48
+        addq.w  #$02,d0
+L3B0E   cmpi.w  #$0020,d0
+          ble.s L3ADA
+        moveq   #$00,d0
+        rts
+; 
+L3B18   addq.w  #$01,d0
+        bsr.s   L3B64
+        addq.w  #$01,d0
+        bra.s   L3B0E
+L3B20   bsr.s   L3B64
+        addq.w  #$02,d0
+        bra.s   L3B0E
+L3B26   bsr.s   L3B64
+        addq.w  #$01,d0
+        bsr.s   L3B64
+        addq.w  #$01,d0
+        bra.s   L3B0E
+L3B30   bsr.s   L3B54
+        addq.w  #$02,d0
+        bra.s   L3B0E
+L3B36   bsr.s   L3B54
+        addq.w  #$01,d0
+        bsr.s   L3B64
+        addq.w  #$01,d0
+        bra.s   L3B0E
+L3B40   bsr.s   L3B54
+        bsr.s   L3B64
+        addq.w  #$02,d0
+        bra.s   L3B0E
+L3B48   bsr.s   L3B54
+        bsr.s   L3B64
+        addq.w  #$01,d0
+        bsr.s   L3B64
+        addq.w  #$01,d0
+        bra.s   L3B0E
+L3B54   move.w  d3,-(a7)
+        move.l  (a2),d2
+        moveq   #$1F,d3
+        sub.w   d0,d3
+        bset    d3,d2
+        move.l  d2,(a2)
+        move.w  (a7)+,d3
+        rts
+; 
+L3B64   move.w  d3,-(a7)
+        moveq   #$1F,d3
+        sub.w   d0,d3
+        move.l  $0004(a2),d2
+        bset    d3,d2
+        move.l  d2,$0004(a2)
+        move.w  (a7)+,d3
+        rts
+; 
+L3B78   cmp.w   (a1)+,d0
+          bne.s L3BA2
+        move.w  $001C(a5),d0
+        cmpi.w  #$0014,d0
+          beq.s L3BA6
+        addq.w  #$01,$001C(a5)
+        move.w  d0,d4
+        movea.l (a5),a2
+        mulu.w  #$0008,d0
+        adda.w  d0,a2
+        move.w  $001A(a5),d0
+        ext.l   d0
+        mulu.w  #$00A0,d0
+        adda.l  d0,a2
+        rts
+; 
+L3BA2   moveq   #-$0F,d0        ; ERR_BP
+        bra.s   L3BA8
+L3BA6   moveq   #$06,d0
+L3BA8   addq.l  #$04,a7
+        rts
+; 
+L3BAC   bsr     L3812
+          bne.s L3BB8
+        movea.l a5,a0
+        moveq   #$19,d0         ; MT_RECHP
+        trap    #$01
+L3BB8   moveq   #$00,d0
+        lea     L419E(pc),a0
+        clr.l   (a0)
+        rts
+; 
+L3BC2   bsr     L3812
+          bne   L382C
+        bsr.s   L3C3E
+          bne   L382C
+        move.w  d1,d2
+        bsr     L3A0A
+          bne   L382C
+        bsr.s   L3C1A
+          beq.s L3BF0
+        move.b  #-$01,(a0)
+        move.b  #-$01,$0001(a0)
+        move.w  d1,$0002(a0)
+        moveq   #$00,d0
+        rts
+; 
+L3BF0   moveq   #$02,d0
+        bra     L382C
+; 
+L3BF6   bsr     L3812
+          bne   L382C
+        bsr.s   L3C3E
+          bne   L382C
+        bsr.s   L3C1A
+          bne   L382C
+        clr.b   (a0)
+        tst.b   $0001(a0)
+          bne.s L3C16
+        bsr     L39AC
+L3C16   moveq   #$00,d0
+        rts
+; 
+L3C1A   mulu.w  #$0008,d0
+        movea.l $0008(a5),a0
+        adda.w  d0,a0
+        tst.b   (a0)
+          bne.s L3C2C
+        moveq   #$01,d0
+        rts
+; 
+L3C2C   move.w  $0002(a0),d2
+        move.w  $0004(a0),d0
+        move.w  $0006(a0),d1
+        move.w  #$0004,ccr
+        rts
+; 
+L3C3E   cmp.w   $0016(a5),d0
+          bcc.s L3C4A
+        move.w  #$0004,ccr
+        rts
+; 
+L3C4A   moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+L3C4E   bsr     L3812
+          bne   L382C
+        move.w  d0,$001E(a5)
+        move.w  d1,$0022(a5)
+        move.w  d2,$0024(a5)
+        move.w  d3,$0020(a5)
+        bsr.s   L3C3E
+          bne   L382C
+        move.w  d3,d2
+        cmpi.w  #$FFFF,d2
+          beq.s L3C7C
+        bsr     L3A0A
+          bne   L382C
+L3C7C   bsr.s   L3C1A
+          bne   L382C
+        tst.b   $0001(a0)
+          beq.s L3C96
+        clr.b   $0001(a0)
+        bsr     L3D68
+        bsr     L39AC
+        bra.s   L3CA0
+L3C96   bsr     L3900
+        bsr     L3D68
+        bsr.s   L3CA4
+L3CA0   moveq   #$00,d0
+        rts
+; 
+L3CA4   movem.l d0-d2/a4-a5,-(a7)
+        bsr     L39A0
+        bsr     L38E0
+        andi.w  #$FFF8,d4
+        move.w  d4,d6
+        move.w  d5,d7
+        addi.w  #$0028,d6
+        addi.w  #$0014,d7
+        movea.l $0004(a5),a1
+        move.w  d0,d2
+        sub.w   d4,d2
+        lsr.w   #$03,d2
+        lsl.w   #$01,d2
+        ext.w   d2
+        adda.w  d2,a1
+        move.w  d1,d2
+        sub.w   d5,d2
+        muls.w  #$000A,d2
+        adda.w  d2,a1
+        suba.l  a5,a5
+L3CDC   suba.l  a4,a4
+        bsr.s   L3D50
+        move.b  (a2),d2
+        lsr.b   d3,d2
+        eor.b   d2,(a0)+
+        move.b  $0004(a2),d2
+        lsr.b   d3,d2
+        eor.b   d2,(a0)
+        addq.w  #$08,d0
+        addq.l  #$02,a1
+        addq.l  #$02,a3
+L3CF4   bsr.s   L3D50
+        cmpa.w  #$0003,a4
+          beq.s L3D1E
+        move.b  (a2)+,d2
+        lsl.w   #$08,d2
+        move.b  (a2),d2
+        lsr.w   d3,d2
+        eor.b   d2,(a0)+
+        move.b  $0003(a2),d2
+        lsl.w   #$08,d2
+        move.b  $0004(a2),d2
+        lsr.w   d3,d2
+        eor.b   d2,(a0)
+        addq.w  #$08,d0
+        addq.l  #$02,a1
+        addq.l  #$02,a3
+        addq.l  #$01,a4
+        bra.s   L3CF4
+L3D1E   move.b  (a2),d2
+        lsl.w   #$08,d2
+        lsr.w   d3,d2
+        eor.b   d2,(a0)+
+        move.b  $0004(a2),d2
+        lsl.w   #$08,d2
+        lsr.w   d3,d2
+        eor.b   d2,(a0)
+        adda.w  #$0078,a3
+        subi.w  #$0020,d0
+        addq.w  #$01,d1
+        addq.w  #$05,a2
+        addq.w  #$02,a1
+        addq.l  #$01,a5
+        cmpa.w  #$0014,a5
+          bne.s L3CDC
+        movem.l (a7)+,d0-d2/a4-a5
+        bsr     L397E
+        rts
+; 
+L3D50   cmp.w   d0,d4
+          bhi.s L3D64
+        cmp.w   d1,d5
+          bhi.s L3D64
+        cmp.w   d0,d6
+          bls.s L3D64
+        cmp.w   d1,d7
+          bls.s L3D64
+        movea.l a1,a0
+        rts
+; 
+L3D64   movea.l a3,a0
+        rts
+; 
+L3D68   move.w  $0020(a5),d2
+        cmpi.w  #$FFFF,d2
+          bne.s L3D78
+        move.w  $0002(a0),d2
+        bra.s   L3D7C
+L3D78   move.w  d2,$0002(a0)
+L3D7C   move.w  $0022(a5),d0
+        move.w  $0024(a5),d1
+        bsr     L3A1A
+        move.w  $0004(a0),d4
+        move.w  d0,$0004(a0)
+        move.w  $0006(a0),d5
+        move.w  d1,$0006(a0)
+        rts
+; 
+L3D9A   bsr     L3812
+          bne   L382C
+        moveq   #$00,d3
+        moveq   #$08,d4
+        movea.l $0008(a5),a0
+L3DAA   cmp.w   $0016(a5),d3
+          beq.s L3DD4
+        cmpi.w  #$FF00,(a0)
+          bne.s L3DCE
+        move.w  $0002(a0),d2
+        move.w  $0004(a0),d0
+        move.w  $0006(a0),d1
+        movem.l d4/a0,-(a7)
+        bsr     L39AC
+        movem.l (a7)+,d4/a0
+L3DCE   adda.l  d4,a0
+        addq.w  #$01,d3
+        bra.s   L3DAA
+L3DD4   moveq   #$00,d0
+        rts
+; 
+L3DD8   bsr     L3812
+          bne   L382C
+        bsr     L3C3E
+          bne   L382C
+        bsr     L3C1A
+          bne   L382C
+        tst.b   $0001(a0)
+          bne.s L3DFE
+        bsr     L39AC
+        moveq   #$00,d0
+        rts
+; 
+L3DFE   moveq   #$09,d0
+        bra     L382C
+; 
+L3E04   movea.l a0,a1
+        bsr     L3812
+          bne   L382C
+        cmpi.w  #$000E,d1
+          bhi.s L3E42
+        bsr     L3C3E
+          bne   L382C
+        move.w  d0,d3
+        move.w  d1,d4
+        bsr     L3C1A
+          bne   L382C
+        move.w  d0,-(a7)
+        bsr.s   L3E6C
+        move.w  (a7)+,d0
+        bsr.s   L3E4A
+          bne   L382C
+        move.w  d3,(a2)
+        move.b  d4,$0004(a2)
+        lea     $000C(a2),a3
+        bra.s   L3E42
+L3E40   move.w  (a1)+,(a3)+
+L3E42   dbf     d4,L3E40
+        moveq   #$00,d0
+        rts
+; 
+L3E4A   movem.l d1,-(a7)
+        move.w  $0026(a5),d1
+        cmp.w   $0018(a5),d1
+          beq.s L3E64
+        addq.w  #$01,d1
+        move.w  d1,$0026(a5)
+        move.w  #$0004,ccr
+        bra.s   L3E66
+L3E64   moveq   #$07,d0
+L3E66   movem.l (a7)+,d1
+        rts
+; 
+L3E6C   moveq   #$00,d5
+        movea.l $000C(a5),a2
+L3E72   cmp.w   $0026(a5),d5
+          beq.s L3E84
+        cmp.w   (a2),d3
+          beq.s L3E86
+        adda.w  #$0028,a2
+        addq.w  #$01,d5
+        bra.s   L3E72
+L3E84   moveq   #$08,d0
+L3E86   rts
+; 
+L3E88   bsr     L3812
+          bne   L382C
+        moveq   #$00,d4
+        movea.l $000C(a5),a2
+L3E96   cmp.w   $0026(a5),d4
+          beq.s L3EA6
+        bsr.s   L3EAA
+        addq.w  #$01,d4
+        adda.w  #$0028,a2
+        bra.s   L3E96
+L3EA6   moveq   #$00,d0
+        rts
+; 
+L3EAA   move.w  (a2),d0
+        bsr     L3C1A
+          bne.s L3EBA
+        tst.b   $0001(a0)
+          beq.s L3EC0
+        moveq   #$09,d0
+L3EBA   addq.l  #$04,a7
+        bra     L382C
+; 
+L3EC0   add.w   $0008(a2),d0
+        add.w   $000A(a2),d1
+        cmpi.w  #$0000,d0
+          blt.s L3F18
+        cmpi.w  #$01DF,d0
+          bgt.s L3F18
+        cmpi.w  #$0000,d1
+          blt.s L3F1E
+        cmpi.w  #$00EB,d1
+          bgt.s L3F1E
+        movem.l d4/a2,-(a7)
+        lea     $000C(a2),a3
+        move.w  $0002(a2),d4
+        lsl.w   #$01,d4
+        adda.w  d4,a3
+        lsr.w   #$01,d4
+        addq.w  #$01,d4
+        cmp.b   $0004(a2),d4
+          bne.s L3EFE
+        move.w  #$0000,d4
+L3EFE   move.w  d4,$0002(a2)
+        move.w  (a3),d3
+        move.w  d1,d2
+        move.w  d0,d1
+        move.w  (a2),d0
+        bsr     L3C4E
+        movem.l (a7)+,d4/a2
+        tst.l   d0
+          bne.s L3EBA
+        bra.s   L3F22
+L3F18   bsr.s   L3F26
+          bne.s L3EC0
+        bra.s   L3F22
+L3F1E   bsr.s   L3F84
+          bne.s L3EC0
+L3F22   moveq   #$00,d0
+        rts
+; 
+L3F26   movem.l d3,-(a7)
+        move.b  $0006(a2),d3
+        cmpi.b  #$00,d3
+          beq.s L3F4A
+        cmpi.b  #$01,d3
+          beq.s L3F68
+        cmpi.w  #$0000,d0
+          bgt.s L3F46
+        move.w  #$01DF,d0
+        bra.s   L3F74
+L3F46   moveq   #$00,d0
+        bra.s   L3F74
+L3F4A   move.l  a2,-(a7)
+        move.l  d4,-(a7)
+        move.w  (a2),d0
+        bsr     L3BF6
+        move.l  (a7)+,d4
+        movea.l (a7),a2
+        move.w  d4,d5
+        bsr     L4072
+        movea.l (a7)+,a2
+        suba.w  #$0028,a2
+        subq.w  #$01,d4
+        bra.s   L3F7A
+L3F68   neg.w   $0008(a2)
+        move.w  $0004(a0),d0
+        move.w  $0006(a0),d1
+L3F74   move.w  #$0000,ccr
+        bra.s   L3F7E
+L3F7A   move.w  #$0004,ccr
+L3F7E   movem.l (a7)+,d3
+        rts
+; 
+L3F84   movem.l d3,-(a7)
+        move.b  $0007(a2),d3
+        cmpi.b  #$00,d3
+          beq.s L3FA8
+        cmpi.b  #$01,d3
+          beq.s L3FC4
+        cmpi.w  #$0000,d1
+          bgt.s L3FA4
+        move.w  #$00EB,d1
+        bra.s   L3FD0
+L3FA4   moveq   #$00,d1
+        bra.s   L3FD0
+L3FA8   move.l  a2,-(a7)
+        move.l  d4,-(a7)
+        move.w  (a2),d0
+        bsr     L3BF6
+        move.l  (a7)+,d4
+        move.w  d4,d5
+        bsr     L4072
+        movea.l (a7)+,a2
+        suba.w  #$0028,a2
+        subq.w  #$01,d4
+        bra.s   L3FD6
+L3FC4   neg.w   $000A(a2)
+        move.w  $0004(a0),d0
+        move.w  $0006(a0),d1
+L3FD0   move.w  #$0000,ccr
+        bra.s   L3FDA
+L3FD6   move.w  #$0004,ccr
+L3FDA   movem.l (a7)+,d3
+        rts
+; 
+L3FE0   bsr     L3812
+          bne   L382C
+        lsl.w   #$08,d3
+        add.w   d4,d3
+        move.w  d3,d4
+        move.w  d0,d3
+        bsr     L3E6C
+          bne   L382C
+        move.w  d1,$0008(a2)
+        move.w  d2,$000A(a2)
+        move.w  d4,$0006(a2)
+        moveq   #$00,d0
+        rts
+; 
+L4008   bsr     L3812
+          bne   L382C
+        bsr     L3C3E
+          bne   L382C
+        bsr     L3C1A
+          bne   L382C
+        move.w  d2,d3
+        move.w  d1,d2
+        move.w  d0,d1
+        tst.b   $0001(a0)
+          beq.s L4030
+        moveq   #-$01,d1
+        moveq   #-$01,d2
+L4030   moveq   #$00,d0
+        rts
+; 
+L4034   bsr     L3812
+          bne   L382C
+        move.w  d0,d2
+        bsr     L3A0A
+          bne   L382C
+        movea.l (a5),a0
+        ext.l   d2
+        mulu.w  #$00A0,d2
+        adda.l  d2,a0
+        moveq   #$00,d0
+        rts
+; 
+L4054   bsr     L3812
+          bne   L382C
+        bsr     L3C3E
+          bne   L382C
+        move.w  d0,d3
+        bsr     L3E6C
+          bne.s L406E
+        bsr.s   L4072
+L406E   moveq   #$00,d0
+        rts
+; 
+L4072   movem.l d3-d4/a1,-(a7)
+        move.w  $0026(a5),d4
+        sub.w   d5,d4
+L407C   cmpi.w  #$0000,d4
+          beq.s L4094
+        moveq   #$27,d3
+        movea.l a2,a1
+        adda.w  #$0028,a1
+L408A   move.b  (a1)+,(a2)+
+        dbf     d3,L408A
+        subq.w  #$01,d4
+        bra.s   L407C
+L4094   subq.w  #$01,$0026(a5)
+        movem.l (a7)+,d3-d4/a1
+        rts
+; 
+L409E   bsr     L3812
+          bne   L382C
+        bsr     L3C3E
+          bne   L382C
+        move.w  d0,d6
+        bsr     L3C1A
+          bne   L382C
+        movea.l $0008(a5),a1
+        moveq   #$00,d7
+L40BE   cmp.w   d6,d7
+          beq.s L40F4
+        cmpi.w  #$FF00,(a1)
+          bne.s L40F4
+        move.w  d0,d2
+        move.w  d1,d3
+        move.w  $0004(a1),d4
+        move.w  $0006(a1),d5
+        cmp.w   d2,d4
+          bgt.s L40DA
+        exg     d2,d4
+L40DA   cmp.w   d3,d5
+          bgt.s L40E0
+        exg     d3,d5
+L40E0   sub.w   d2,d4
+        sub.w   d3,d5
+        cmpi.w  #$001F,d4
+          bhi.s L40F4
+        cmpi.w  #$0013,d5
+          bhi.s L40F4
+        move.w  d7,d1
+        bra.s   L4100
+L40F4   addq.w  #$08,a1
+        addq.w  #$01,d7
+        cmp.w   $0016(a5),d7
+          bne.s L40BE
+        moveq   #-$01,d1
+L4100   moveq   #$00,d0
+        rts
+; 
+L4104   bsr     L3812
+          bne   L382C
+        moveq   #-$01,d1
+        moveq   #$02,d3
+        moveq   #$01,d0         ; IO_OPEN
+        trap    #$02
+        tst.l   d0
+          bne   L382C
+        bsr.s   L4174
+        moveq   #-$01,d3
+        moveq   #$49,d0         ; FS_SAVE
+        trap    #$03
+        move.l  d0,d1
+        moveq   #$02,d0         ; IO_CLOSE
+        trap    #$02
+        move.l  d1,d0
+        rts
+; 
+L412C   bsr     L3812
+          bne   L382C
+        moveq   #$01,d0         ; IO_OPEN
+        moveq   #-$01,d1
+        moveq   #$01,d3
+        trap    #$02
+        tst.l   d0
+          bne   L382C
+        movea.l $0004(a5),a1
+        moveq   #$0E,d2
+        moveq   #-$01,d3
+        moveq   #$47,d0         ; FS_HEADR
+        trap    #$03
+        move.l  d0,d1
+        tst.l   d1
+          bne.s L4168
+        movea.l $0004(a5),a1
+        move.l  (a1),d1
+        bsr.s   L4174
+        cmp.l   d2,d1
+          bhi.s L4170
+        move.l  d1,d2
+        moveq   #$48,d0         ; FS_LOAD
+        trap    #$03
+        move.l  d0,d1
+L4168   moveq   #$02,d0         ; IO_CLOSE
+        trap    #$02
+        move.l  d1,d0
+        rts
+; 
+L4170   moveq   #-$03,d0        ; ERR_OM
+        rts
+; 
+L4174   move.l  $0008(a5),d2
+        sub.l   (a5),d2
+        movea.l (a5),a1
+        rts
+; 
+L417E   bsr     L3812
+          bne   L382C
+        bsr     L3C3E
+          bne   L382C
+        bsr     L3C1A
+          bne.s L4198
+        moveq   #$01,d1
+        bra.s   L419A
+L4198   moveq   #$00,d1
+L419A   moveq   #$00,d0
+        rts
+; 
+L419E   dc.w    $0000,$0000
+        dc.b    'SPRITE DOESN',$27,'T EXISTS',$0A
+        dc.b    $00,'SPRITE ALREADY EXISTS',$0A,$00
+        dc.b    'SPRITE MEMORY NOT ALLOCATED',$0A
+        dc.b    $00,'ILLEGAL DATABLOCK',$0A,$00
+        dc.b    'ILLEGAL SPRITENUMBER',$0A,$00
+        dc.b    'SPRITEBLOCK IS COMPLETE',$0A
+        dc.b    $00,'TOO MANY ANIMATES',$0A,$00
+        dc.b    'ANIMATE DOESN',$27,'T EXISTS',$0A,$00
+        dc.b    'UNKNOWN SPRITE-POSITION',$0A
+        dc.b    $00,$00,$00,$00
+L4276   tst.l   d0
+          beq.s L42AC
+          bmi.s L42AE
+        subi.l  #$00000010,d0
+          bmi.s L42AC
+        lea     L4E26(pc),a5
+        tst.w   (a5)
+          bne.s L42AC
+        cmpi.w  #$0004,d0
+          bhi.s L42A8
+        lsl.w   #$01,d0
+        move.w  L42B4(pc,d0.w),d0
+        lea     L42B4(pc,d0.w),a1
+        movea.w #$0000,a0
+        bsr     L2524
+        moveq   #-$01,d0        ; ERR_NC
+        bra.s   L42AE
+L42A8   moveq   #-$0F,d0        ; ERR_BP
+        bra.s   L42AE
+L42AC   moveq   #$00,d0
+L42AE   movem.l (a7)+,d6-d7/a3-a5
+        rts
+; 
+L42B4   dc.w    $0B7C,$0B97,$0BA8,$0BB9,$0BCA
+L42BE   lea     L4E22(pc),a5
+        tst.l   (a5)
+          beq.s L42D0
+        movea.l L4E22(pc),a5
+        move.w  #$0004,ccr
+        rts
+; 
+L42D0   moveq   #$10,d0
+        addq.l  #$04,a7
+        bra.s   L4276
+L42D6   cmp.w   $0014(a5),d0
+          bhi.s L42EA
+        mulu.w  #$0010,d0
+        movea.w d0,a3
+        divu.w  #$0010,d0
+        adda.l  (a5),a3
+        rts
+; 
+L42EA   moveq   #-$0F,d0        ; ERR_BP
+        addq.l  #$04,a7
+        bra.s   L4276
+L42F0   movem.l d1-d3/a0-a3,-(a7)
+        lea     L4E22(pc),a3
+        tst.l   (a3)
+          beq.s L430E
+        movea.l (a3),a5
+        bsr     L4AC0
+        movea.l a5,a0
+        moveq   #$19,d0         ; MT_RECHP
+        trap    #$01
+        lea     L4E22(pc),a3
+        clr.l   (a3)
+L430E   movem.l (a7)+,d1-d3/a0-a3
+        moveq   #$00,d0
+        rts
+; 
+L4316   movem.l d6-d7/a3-a5,-(a7)
+        lea     L4E26(pc),a2
+        move.w  d1,(a2)
+        move.w  d0,-(a7)
+        bsr.s   L42F0
+        move.w  (a7)+,d0
+        bsr.s   L43A6
+        ext.l   d0
+        move.l  d0,d4
+        mulu.w  #$0010,d0
+        addi.l  #$000005A0,d0
+        addi.l  #$0000005A,d0
+        addi.l  #$00000040,d0
+        move.l  d0,d1
+        moveq   #$18,d0         ; MT_ALCHP
+        moveq   #-$01,d2
+        trap    #$01
+        tst.l   d0
+          bne   L4276
+        lea     L4E22(pc),a3
+        move.l  a0,(a3)
+        movea.l a0,a5
+        adda.w  #$005A,a0
+        move.l  a0,$0004(a5)
+        adda.w  #$05A0,a0
+        move.l  a0,$0008(a5)
+        adda.w  #$0040,a0
+        move.l  a0,(a5)
+        move.w  d4,$0014(a5)
+        move.w  #-$0001,$003A(a5)
+        move.w  #$0100,$003C(a5)
+        move.w  #$0064,$003E(a5)
+        move.w  #$0004,$0044(a5)
+        move.w  #$0002,$0046(a5)
+        move.w  #$0032,$0048(a5)
+        move.w  #$0000,$004A(a5)
+        bsr     L4852
+        moveq   #$00,d0
+        bra     L4276
+; 
+L43A6   move.w  d0,-(a7)
+        moveq   #$00,d0
+        bsr     L4034
+        tst.l   d0
+          bne.s L43DC
+        move.w  #$009F,d1
+        lea     L4E94(pc),a1
+L43BA   move.b  (a1)+,(a0)+
+        dbf     d1,L43BA
+        moveq   #$01,d0
+        bsr     L4034
+        tst.l   d0
+          bne.s L43DC
+        move.w  #$009F,d1
+        lea     L4F34(pc),a1
+L43D2   move.b  (a1)+,(a0)+
+        dbf     d1,L43D2
+        move.w  (a7)+,d0
+        rts
+; 
+L43DC   addq.w  #$06,a7
+        bra     L4276
+; 
+L43E2   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        bsr     L42D6
+        move.l  a0,$0002(a3)
+        andi.w  #$FFFE,d1
+        move.w  d1,$0006(a3)
+        move.w  d2,$0008(a3)
+        move.w  d3,$000A(a3)
+        move.w  d4,$000C(a3)
+        move.b  #$00,$000E(a3)
+        move.b  #$00,$0001(a3)
+        move.b  #$00,(a3)
+        bsr.s   L4422
+        move.b  #-$01,(a3)
+        moveq   #$00,d0
+        bra     L4276
+; 
+L4422   add.w   d3,d1
+        add.w   d4,d2
+        movem.w d1-d2,-(a7)
+        bsr     L271C
+        move.w  $001C(a0),d3
+        move.w  $001E(a0),d4
+        movem.w (a7)+,d1-d2
+        cmp.w   d3,d1
+          bhi.s L4448
+        cmp.w   d4,d2
+          bhi.s L4448
+        move.w  #$0004,ccr
+        rts
+; 
+L4448   moveq   #-$04,d0        ; ERR_OR
+        addq.l  #$04,a7
+        bra     L4276
+; 
+L4450   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        bsr     L42D6
+        tst.b   (a3)
+          beq.s L44A8
+        movea.l $0002(a3),a0
+        bsr     L271C
+        tst.l   d0
+          bmi.s L449E
+        move.b  $0042(a0),$004C(a5)
+        move.l  a0,-(a7)
+        movea.l $0002(a3),a0
+        moveq   #-$01,d1
+        moveq   #-$01,d3
+        moveq   #$2C,d0         ; SD_SETMD
+        trap    #$03
+        lea     $0006(a3),a1
+        moveq   #$07,d1
+        moveq   #-$01,d3
+        moveq   #$2E,d0         ; SD_FILL
+        trap    #$03
+        movea.l (a7)+,a0
+        move.b  $004C(a5),$0042(a0)
+        eori.b  #$FF,$000E(a3)
+        bra     L4276
+; 
+L449E   moveq   #-$06,d0        ; ERR_NO
+        move.b  #$00,(a3)
+        bra     L4276
+; 
+L44A8   moveq   #$12,d0
+        bra     L4276
+; 
+L44AE   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        bsr     L42D6
+        move.l  d0,d7
+        moveq   #$00,d5
+        move.w  d1,d2
+        movea.l a1,a2
+        movea.l a1,a3
+        movea.w d1,a4
+        bra.s   L44D0
+L44C8   cmpi.b  #$0A,(a2)+
+          beq.s L44D4
+        addq.w  #$01,d5
+L44D0   dbf     d2,L44C8
+L44D4   move.l  a0,-(a7)
+        bsr     L271C
+        movea.l (a7)+,a0
+        tst.l   d0
+          bmi   L4276
+        tst.b   $0048(a1)
+          bpl.s L450C
+        movea.l a1,a2
+        moveq   #-$01,d3
+        lea     $004C(a5),a1
+        moveq   #$0B,d0         ; SD_CHENQ
+        trap    #$03
+        movea.l a2,a1
+        move.w  $004E(a5),d6
+        cmp.w   $0052(a5),d6
+          bne.s L450C
+        clr.w   d3
+        move.w  $0028(a1),d4
+        add.w   $0024(a1),d4
+        bra.s   L4514
+L450C   move.w  $0022(a1),d3
+        move.w  $0024(a1),d4
+L4514   move.w  $0028(a1),d2
+        move.w  d5,d1
+        mulu.w  $0026(a1),d1
+        move.l  d7,d0
+        move.l  a0,d6
+        bsr     L43E2
+        movea.l d6,a0
+        tst.l   d0
+          bne   L4276
+        moveq   #-$01,d3
+        movea.l a3,a1
+        move.w  a4,d2
+        moveq   #$07,d0         ; IO_SSTRG
+        trap    #$03
+        bra     L4276
+; 
+L453C   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        bsr     L42D6
+        move.b  #$00,(a3)
+        moveq   #$00,d0
+        bra     L4276
+; 
+L4552   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        bsr     L42D6
+        move.b  #-$01,$0001(a3)
+        moveq   #$00,d0
+        bra     L4276
+; 
+L456A   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        bsr     L42D6
+        move.b  #$00,$0001(a3)
+        moveq   #$00,d0
+        bra     L4276
+; 
+L4582   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        bsr     L42D6
+        move.l  a0,$0002(a3)
+        move.w  d2,$000A(a3)
+        move.w  d3,$000C(a3)
+        move.w  #$0020,$0006(a3)
+        move.w  #$0014,$0008(a3)
+        move.b  #$00,$000E(a3)
+        move.b  #$00,$0001(a3)
+        move.w  d1,d4
+        move.w  d2,d0
+        move.w  d3,d1
+        move.w  d4,d2
+        movem.l a3/a5,-(a7)
+        bsr     L39B4
+        movem.l (a7)+,a3/a5
+        tst.l   d0
+          bne.s L45D2
+        move.b  #-$01,(a3)
+        bra     L4276
+; 
+L45D2   move.b  #$00,(a3)
+        bra     L4276
+; 
+L45DA   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        movem.w d1-d2,-(a7)
+        moveq   #$10,d0         ; MT_DMODE
+        moveq   #-$01,d1
+        moveq   #-$01,d2
+        trap    #$01
+        ext.w   d1
+        tst.w   d1
+          beq.s L45F6
+        moveq   #$01,d1
+L45F6   moveq   #$00,d0
+        move.l  a5,-(a7)
+        bsr     L3BC2
+        movea.l (a7)+,a5
+        movem.w (a7)+,d1-d2
+        tst.l   d0
+          bne   L4276
+        move.w  $003A(a5),d7
+        cmpi.w  #$0007,d7
+          bls.s L4616
+        moveq   #-$01,d7
+L4616   moveq   #$00,d0
+        moveq   #-$01,d3
+        movem.w d1-d2/d7,-(a7)
+        move.l  a5,-(a7)
+        bsr     L3C4E
+        movea.l (a7)+,a5
+        movem.w (a7)+,d1-d2/d7
+        bsr     L4672
+          bne.s L4636
+        bsr     L47C2
+          beq.s L4616
+L4636   move.w  d1,$003C(a5)
+        move.w  d2,$003E(a5)
+        movem.w d1-d2/d7,-(a7)
+        move.w  d7,$003A(a5)
+        moveq   #$00,d0
+        bsr     L3BF6
+        movem.w (a7)+,d1-d2/d7
+        move.w  d7,d3
+        bsr     L483A
+        bra     L4276
+; 
+L465A   movem.w d1-d2/d7,-(a7)
+        lea     L4E28(pc),a3
+        move.b  d0,$0006(a3)
+        moveq   #$11,d0         ; MT_IPCOM
+        trap    #$01
+        move.b  d1,d4
+        movem.w (a7)+,d1-d2/d7
+        rts
+; 
+L4672   movem.w d1-d2,-(a7)
+        moveq   #$00,d6
+        movea.l (a5),a3
+L467A   tst.b   (a3)
+          beq.s L46CC
+        tst.b   $0001(a3)
+          bne.s L46CC
+        movea.l $0002(a3),a0
+        bsr     L271C
+        move.w  $000A(a3),d3
+        add.w   $0018(a1),d3
+        cmp.w   d1,d3
+          bhi.s L46CC
+        add.w   $0006(a3),d3
+        cmp.w   d1,d3
+          ble.s L46CC
+        move.w  $000C(a3),d3
+        add.w   $001A(a1),d3
+        cmp.w   d2,d3
+          bhi.s L46CC
+        add.w   $0008(a3),d3
+        cmp.w   d2,d3
+          ble.s L46CC
+        cmp.w   d6,d7
+          beq.s L46DA
+        cmpi.w  #$0007,d6
+          bhi.s L46C4
+        cmp.w   $003A(a5),d6
+          beq.s L46DA
+L46C4   move.w  d6,d0
+        bsr     L4450
+        bra.s   L46DA
+L46CC   adda.w  #$0010,a3
+        addq.w  #$01,d6
+        cmp.w   $0014(a5),d6
+          bne.s L467A
+        moveq   #-$01,d6
+L46DA   cmp.w   d6,d7
+          beq.s L46F2
+        move.w  d7,d0
+        move.w  d6,d7
+        cmpi.w  #$FFFF,d0       ; ERR_NC
+          beq.s L46F2
+        cmpi.w  #$0007,d0
+          bls.s L46F2
+        bsr     L4450
+L46F2   cmpi.w  #$0007,d7
+          bhi.s L46FE
+        cmp.w   $003A(a5),d7
+          bne.s L4702
+L46FE   move.w  #$0004,ccr
+L4702   movem.w (a7)+,d1-d2
+        rts
+; 
+L4708   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        move.w  $003C(a5),d1
+        move.w  $003E(a5),d2
+        moveq   #$00,d0
+        bra     L4276
+; 
+L471E   move.l  d6,-(a7)
+        ext.l   d1
+        ext.l   d2
+        divu.w  $0044(a5),d1
+        divu.w  $0046(a5),d2
+        move.w  $0048(a5),d5
+        moveq   #$00,d6
+L4732   moveq   #$01,d0
+        bsr     L465A
+        btst    #$01,d6
+          bne.s L4746
+        btst    #$01,d4
+          beq.s L4746
+        subq.l  #$01,d1
+L4746   btst    #$04,d6
+          bne.s L4754
+        btst    #$04,d4
+          beq.s L4754
+        addq.l  #$01,d1
+L4754   btst    #$02,d6
+          bne.s L4762
+        btst    #$02,d4
+          beq.s L4762
+        subq.l  #$01,d2
+L4762   btst    #$07,d6
+          bne.s L4770
+        btst    #$07,d4
+          beq.s L4770
+        addq.l  #$01,d2
+L4770   move.b  d4,d6
+        dbf     d5,L4732
+        moveq   #$00,d0
+        btst    #$06,d4
+          beq.s L4780
+        moveq   #-$01,d0        ; ERR_NC
+L4780   mulu.w  $0044(a5),d1
+        mulu.w  $0046(a5),d2
+        move.l  (a7)+,d6
+        tst.l   d0
+        rts
+; 
+L478E   moveq   #$01,d0
+        bsr     L465A
+        btst    #$02,d4
+          beq.s L479E
+        sub.w   $0046(a5),d2
+L479E   btst    #$07,d4
+          beq.s L47A8
+        add.w   $0046(a5),d2
+L47A8   btst    #$01,d4
+          beq.s L47B2
+        sub.w   $0044(a5),d1
+L47B2   btst    #$04,d4
+          beq.s L47BC
+        add.w   $0044(a5),d1
+L47BC   btst    #$06,d4
+        rts
+; 
+L47C2   tst.w   $004A(a5)
+          bne.s L47CC
+        bsr.s   L478E
+        bra.s   L47D0
+L47CC   bsr     L471E
+L47D0     bne.s L47D6
+        moveq   #$00,d3
+        bra.s   L47D8
+L47D6   moveq   #-$01,d3
+L47D8   cmpi.w  #$0000,d1
+          bgt.s L47E0
+        moveq   #$00,d1
+L47E0   cmpi.w  #$01DF,d1
+          ble.s L47EA
+        move.w  #$01DF,d1
+L47EA   cmpi.w  #$0000,d2
+          bgt.s L47F2
+        moveq   #$00,d2
+L47F2   cmpi.w  #$00EB,d2
+          ble.s L47FC
+        move.w  #$00EB,d2
+L47FC   moveq   #$00,d0
+        tst.b   d3
+        rts
+; 
+        movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        bsr.s   L47C2
+        moveq   #$00,d0
+        bra     L4276
+; 
+        movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        move.w  d1,$0044(a5)
+        move.w  d2,$0046(a5)
+        moveq   #$00,d0
+        bra     L4276
+; 
+L4828   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        move.w  d1,$004A(a5)
+        moveq   #$00,d0
+        bra     L4276
+; 
+L483A   movem.l d0-d2/a0,-(a7)
+        moveq   #$00,d0         ; MT_INF
+        trap    #$01
+        movea.l $004C(a0),a0    ; SV_KEYQ
+        move.l  $000C(a0),$0008(a0)
+        movem.l (a7)+,d0-d2/a0
+        rts
+; 
+L4852   moveq   #$4F,d0
+        movea.l $0004(a5),a0
+L4858   move.w  #$0000,(a0)+
+        moveq   #$0F,d1
+L485E   move.b  #$20,(a0)+
+        dbf     d1,L485E
+        dbf     d0,L4858
+        moveq   #$07,d0
+L486C   moveq   #$07,d1
+L486E   move.b  #$00,(a0)+
+        dbf     d1,L486E
+        dbf     d0,L486C
+        move.w  #$0000,$0016(a5)
+        move.w  #$0000,$0018(a5)
+        move.w  #-$0001,$0038(a5)
+        move.w  #-$0001,$0036(a5)
+        moveq   #$00,d0
+        rts
+; 
+L4896   bsr.s   L48CA
+          bne.s L48C6
+        move.w  d2,(a1)+
+        moveq   #$0F,d3
+        move.l  a1,-(a7)
+L48A0   move.b  #$20,(a1)+
+        dbf     d3,L48A0
+        movea.l (a7)+,a1
+        addq.w  #$01,a1
+        move.w  (a0)+,d3
+        cmpi.w  #$000E,d3
+          bhi.s L48C6
+        move.w  d3,d4
+        bra.s   L48BA
+L48B8   move.b  (a0)+,(a1)+
+L48BA   dbf     d4,L48B8
+        addq.w  #$02,d3
+        move.w  #$0004,ccr
+        rts
+; 
+L48C6   moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+L48CA   cmpi.w  #$0009,d0
+          bhi.s L48FC
+        cmpi.w  #$0007,d1
+          bhi.s L48FC
+        movem.w d0-d1,-(a7)
+        movea.l $0004(a5),a1
+        ext.l   d0
+        ext.l   d1
+        mulu.w  #$0008,d0
+        mulu.w  #$0012,d0
+        adda.w  d0,a1
+        mulu.w  #$0012,d1
+        adda.w  d1,a1
+        movem.w (a7)+,d0-d1
+        move.w  #$0004,ccr
+        rts
+; 
+L48FC   moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+L4900   movea.l $0008(a5),a2
+        cmpi.w  #$0007,d1
+          bhi.s L491A
+        move.w  d1,-(a7)
+        mulu.w  #$0008,d1
+        adda.w  d1,a2
+        move.w  (a7)+,d1
+        move.w  #$0004,ccr
+        rts
+; 
+L491A   moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+L491E   bsr.s   L4900
+          bne.s L493A
+        move.w  d3,$0004(a2)
+        move.b  #-$01,(a2)
+        move.b  #$00,$0001(a2)
+        move.w  $0018(a5),$0006(a2)
+        move.w  #$0004,ccr
+L493A   rts
+; 
+L493C   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+          bne   L4276
+        tst.w   d0
+          bne.s L497C
+        cmp.w   $0016(a5),d1
+          bne.s L4976
+        bsr     L4896
+          bne   L4276
+        bsr.s   L491E
+          bne   L4276
+        addq.w  #$01,$0016(a5)
+        move.w  $0018(a5),d0
+        add.w   $0004(a2),d0
+        move.w  d0,$0018(a5)
+        moveq   #$00,d0
+L4972   bra     L4276
+; 
+L4976   moveq   #-$0F,d0        ; ERR_BP
+        bra     L4276
+; 
+L497C   cmp.w   $0016(a5),d1
+          bcc.s L4972
+        bsr     L4900
+          bne   L4276
+        cmp.b   $0001(a2),d0
+          bls.s L4994
+        move.b  d0,$0001(a2)
+L4994   bsr     L4896
+          bne   L4276
+        cmp.w   $0002(a2),d3
+          bls.s L49A6
+        move.w  d3,$0002(a2)
+L49A6   moveq   #$00,d0
+        bra     L4276
+; 
+L49AC   move.w  d0,$0028(a5)
+        move.w  d1,$002A(a5)
+        move.w  d2,$002C(a5)
+        move.w  d3,$002E(a5)
+        lea     $0024(a5),a1
+        movea.w $000000C8,a2    ; UT_SCR
+        jsr     (a2)
+        rts
+; 
+L49C8   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        move.b  d1,$0026(a5)
+        move.b  d2,$0027(a5)
+        move.w  d2,$0030(a5)
+        move.w  d3,$0032(a5)
+        eori.b  #$07,d1
+        move.b  d1,$0024(a5)
+        move.b  #$01,$0025(a5)
+        bsr     L4DF2
+          bne   L4ABC
+        move.w  d0,-(a7)
+        moveq   #-$01,d1
+        moveq   #$02,d3
+        lea     L4FD4(pc),a0
+        moveq   #$01,d0         ; IO_OPEN
+        trap    #$02
+        move.w  (a7)+,d1
+        moveq   #-$01,d3
+        moveq   #$27,d0         ; SD_SETPA
+        trap    #$03
+        moveq   #$20,d0         ; SD_CLEAR
+        trap    #$03
+        moveq   #$02,d0         ; IO_CLOSE
+        trap    #$02
+        bsr     L4AC0
+        move.w  #$01E0,d0
+        move.w  #$000C,d1
+        move.w  #$0010,d2
+        move.w  #$000B,d3
+        bsr.s   L49AC
+          bne   L4276
+        move.l  a0,$001A(a5)
+        move.w  $0016(a5),d1
+        subq.w  #$01,d1
+        bsr     L4900
+        move.w  $0004(a2),d1
+        add.w   $0006(a2),d1
+        move.w  d1,-(a7)
+        bsr     L271C
+        move.w  (a7)+,d1
+        mulu.w  $0026(a1),d1
+        cmp.w   $001C(a1),d1
+          bhi.s L4ABA
+        move.b  #-$01,$0034(a5)
+        moveq   #$00,d6
+        movea.l $0004(a5),a3
+L4A62   move.w  d6,d1
+        bsr     L4900
+        tst.b   (a2)
+          beq.s L4AB6
+        movea.l $001A(a5),a0
+        tst.w   (a3)
+          beq.s L4A7A
+        move.w  $0030(a5),d1
+        bra.s   L4A7E
+L4A7A   move.w  $0032(a5),d1
+L4A7E   moveq   #$29,d0         ; SD_SETIN
+        moveq   #-$01,d3
+        trap    #$03
+        lea     $0002(a3),a1
+        movea.l $001A(a5),a0
+        tst.w   (a3)
+          beq.s L4AA4
+        move.w  $0004(a2),d1
+        move.w  d6,d0
+        bsr     L44AE
+          bne.s L4AB6
+        move.w  d6,d0
+        bsr     L4552
+        bra.s   L4AAE
+L4AA4   move.w  $0004(a2),d2
+        moveq   #$07,d0         ; IO_SSTRG
+        moveq   #-$01,d3
+        trap    #$03
+L4AAE   addq.w  #$01,d6
+        adda.w  #$0012,a3
+        bra.s   L4A62
+L4AB6   moveq   #$00,d0
+        bra.s   L4ABC
+L4ABA   moveq   #-$0F,d0        ; ERR_BP
+L4ABC   bra     L4276
+; 
+L4AC0   tst.l   $001A(a5)
+          beq.s L4AD2
+        movea.l $001A(a5),a0
+        moveq   #$02,d0         ; IO_CLOSE
+        trap    #$02
+        clr.l   $001A(a5)
+L4AD2   rts
+; 
+L4AD4   move.w  $0014(a5),d1
+        moveq   #-$01,d2
+        moveq   #$18,d0         ; MT_ALCHP
+        trap    #$01
+        tst.l   d0
+          bne.s L4B02
+        move.l  a0,$000C(a5)
+        movea.l (a5),a1
+        lea     $0001(a1),a1
+        move.w  $0014(a5),d0
+        bra.s   L4AFC
+L4AF2   move.b  (a1),(a0)+
+        move.b  $000000FF,(a1)
+        adda.w  #$0010,a1
+L4AFC   dbf     d0,L4AF2
+        moveq   #$00,d0
+L4B02   rts
+; 
+L4B04   move.w  $0016(a5),d6
+        subq.w  #$01,d1
+L4B0A   moveq   #$00,d0
+        move.w  d6,d1
+        bsr     L48CA
+        move.w  d6,d0
+        tst.w   (a1)
+          bne.s L4B1E
+        bsr     L4552
+        bra.s   L4B22
+L4B1E   bsr     L456A
+L4B22   dbf     d6,L4B0A
+        rts
+; 
+L4B28   movem.w d0-d1,-(a7)
+        move.w  d2,d0
+        move.w  d3,d1
+        bsr     L38E0
+        movem.w (a7)+,d0-d1
+        move.w  d1,d2
+        move.w  d0,d1
+        lsr.w   #$02,d1
+        addq.w  #$01,d1
+        rts
+; 
+L4B42   movem.w d1-d3,-(a7)
+        move.w  $0022(a5),d0
+          bmi.s L4BB8
+        cmp.w   d0,d3
+          beq.s L4BB8
+        move.w  d0,$0038(a5)
+        bsr     L4450
+        move.w  $0022(a5),d1
+        bsr     L4900
+        move.b  $0001(a2),d6
+        subq.w  #$01,d6
+L4B66   move.w  d6,d0
+        addq.w  #$08,d0
+        bsr     L453C
+        dbf     d6,L4B66
+        movea.l $001E(a5),a0
+        moveq   #$02,d0         ; IO_CLOSE
+        trap    #$02
+        move.w  $002C(a5),d2
+        move.w  $002E(a5),d3
+        move.w  $0028(a5),d0
+        move.w  $002A(a5),d1
+        bsr.s   L4B28
+        movea.l $0010(a5),a2
+        moveq   #$00,d7
+L4B92   moveq   #$00,d6
+L4B94   move.w  (a2)+,(a3)+
+        addq.w  #$01,d6
+        cmp.w   d6,d1
+          bne.s L4B94
+        adda.w  #$0080,a3
+        suba.w  d1,a3
+        suba.w  d1,a3
+        addq.w  #$01,d7
+        cmp.w   d7,d2
+          bne.s L4B92
+        move.w  #-$0001,$0022(a5)
+        movea.l $0010(a5),a0
+        moveq   #$19,d0         ; MT_RECHP
+        trap    #$01
+L4BB8   moveq   #$00,d0
+        movem.w (a7)+,d1-d3
+        rts
+; 
+L4BC0   move.l  a1,-(a7)
+        tst.w   d1
+          beq.s L4BCC
+        move.w  $0030(a5),d1
+        bra.s   L4BD0
+L4BCC   move.w  $0032(a5),d1
+L4BD0   moveq   #-$01,d3
+        moveq   #$29,d0         ; SD_SETIN
+        trap    #$03
+        movea.l (a7)+,a1
+        rts
+; 
+L4BDA   movem.w d1-d2,-(a7)
+        tst.w   d3
+          bmi   L4CEC
+        cmp.w   $0022(a5),d3
+          beq   L4CEC
+        move.w  d3,$0022(a5)
+        move.w  d3,-(a7)
+        movea.l $001A(a5),a0
+        bsr     L271C
+        move.w  (a7)+,d1
+        bsr     L4900
+        move.w  $0006(a2),d2
+        mulu.w  $0026(a1),d2
+        add.w   $0018(a1),d2
+        subq.w  #$01,d2
+        move.w  $001A(a1),d3
+        add.w   $001E(a1),d3
+        move.w  $0026(a1),d0
+        mulu.w  $0002(a2),d0
+        addq.w  #$04,d0
+        move.w  $0028(a1),d1
+        move.b  $0001(a2),d4
+        ext.w   d4
+        mulu.w  d4,d1
+        addq.w  #$02,d1
+        move.w  d0,d4
+        add.w   d2,d4
+        cmpi.w  #$01FF,d4
+          bls.s L4C3E
+        move.w  #$01FF,d2
+        sub.w   d0,d2
+L4C3E   movem.w d0-d3,-(a7)
+        bsr     L4B28
+        movem.w d1-d2,-(a7)
+        lsl.w   #$01,d1
+        mulu.w  d2,d1
+        moveq   #-$01,d2
+        moveq   #$18,d0         ; MT_ALCHP
+        move.l  a3,-(a7)
+        trap    #$01
+        movea.l (a7)+,a3
+        tst.l   d0
+          beq.s L4C6E
+        adda.w  #$000C,a7
+        move.w  $003A(a5),d0
+        bsr     L4450
+        moveq   #-$03,d0        ; ERR_OM
+        bra     L4CEE
+; 
+L4C6E   move.l  a0,$0010(a5)
+        movem.w (a7)+,d1-d2
+        bra.s   L4C8A
+L4C78   move.w  d1,d4
+        bra.s   L4C7E
+L4C7C   move.w  (a3)+,(a0)+
+L4C7E   dbf     d4,L4C7C
+        adda.w  #$0080,a3
+        suba.w  d1,a3
+        suba.w  d1,a3
+L4C8A   dbf     d2,L4C78
+        movem.w (a7)+,d0-d3
+        bsr     L49AC
+        move.l  a0,$001E(a5)
+        moveq   #$07,d6
+        move.w  $0022(a5),d1
+        bsr     L4900
+        moveq   #$07,d7
+        add.b   $0001(a2),d7
+        movea.l a2,a3
+L4CAC   addq.w  #$01,d6
+        move.w  d6,d0
+        subq.w  #$07,d0
+        move.w  $0022(a5),d1
+        bsr     L48CA
+        move.w  (a1),d1
+        bsr     L4BC0
+        move.w  $0002(a3),d1
+        move.w  d6,d0
+        tst.w   (a1)+
+          beq.s L4CD0
+        bsr     L44AE
+        bra.s   L4CD8
+L4CD0   move.w  d1,d2
+        moveq   #-$01,d3
+        moveq   #$07,d0         ; IO_SSTRG
+        trap    #$03
+L4CD8   moveq   #$00,d1
+        move.w  d6,d2
+        subq.w  #$07,d2
+        moveq   #-$01,d3
+        movea.l $001E(a5),a0
+        moveq   #$10,d0         ; SD_POS
+        trap    #$03
+        cmp.b   d6,d7
+          bne.s L4CAC
+L4CEC   moveq   #$00,d0
+L4CEE   movem.w (a7)+,d1-d2
+        rts
+; 
+L4CF4   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        adda.w  #$0014,a7
+        move.w  d0,$003C(a5)
+        move.w  d1,$003E(a5)
+        tst.b   $0034(a5)
+          beq.s L4D66
+        move.w  #-$0001,$0022(a5)
+        bsr     L4AD4
+        bsr     L4B04
+        move.w  $003C(a5),d1
+        move.w  $003E(a5),d2
+L4D24   bsr     L45DA
+        bsr     L4B42
+        cmpi.w  #$0007,d3
+          bhi.s L4D3C
+        bsr     L4BDA
+        tst.l   d0
+          beq.s L4D24
+        moveq   #-$01,d3
+L4D3C   move.l  d0,-(a7)
+        cmpi.w  #$FFFF,d3
+          bne.s L4D46
+        moveq   #$07,d3
+L4D46   subq.w  #$07,d3
+        move.w  d3,$0036(a5)
+        moveq   #$07,d6
+L4D4E   move.w  d6,d0
+        bsr     L4552
+        dbf     d6,L4D4E
+        bsr.s   L4D6A
+        move.w  $003C(a5),d1
+        move.w  $003E(a5),d2
+        move.l  (a7)+,d0
+        rts
+; 
+L4D66   moveq   #-$0F,d0        ; ERR_BP
+        rts
+; 
+L4D6A   movea.l $000C(a5),a0
+        movea.l (a5),a1
+        move.w  $0014(a5),d1
+        lea     $0001(a1),a1
+        bra.s   L4D80
+L4D7A   move.b  (a0)+,(a1)
+        adda.w  #$0010,a1
+L4D80   dbf     d1,L4D7A
+        movea.l $000C(a5),a0
+        moveq   #$19,d0         ; MT_RECHP
+        trap    #$01
+        clr.l   $000C(a5)
+        rts
+; 
+L4D92   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        move.w  $0038(a5),d1
+        move.w  $0036(a5),d2
+        moveq   #$00,d0
+        bra     L4276
+; 
+L4DA8   movem.l d6-d7/a3-a5,-(a7)
+        bsr     L42BE
+        bsr     L48CA
+        move.w  d2,(a1)
+        tst.w   d0
+          bne.s L4DEC
+        move.w  d1,d6
+        bsr     L4900
+        movea.l $001A(a5),a0
+        move.w  d2,d1
+        bsr     L4BC0
+        move.w  $0006(a2),d1
+        moveq   #$00,d2
+        moveq   #-$01,d3
+        moveq   #$10,d0         ; SD_POS
+        move.l  a1,-(a7)
+        trap    #$03
+        movea.l (a7)+,a1
+        addq.w  #$02,a1
+        move.w  $0004(a2),d1
+        move.w  d6,d0
+        bsr     L44AE
+        move.w  d6,d0
+        bsr     L4552
+L4DEC   moveq   #$00,d0
+        bra     L4276
+; 
+L4DF2   movem.w d1,-(a7)
+        move.w  $0016(a5),d6
+          beq.s L4E16
+        bra.s   L4E0C
+L4DFE   move.w  d6,d1
+        bsr     L4900
+          bne.s L4E1C
+        tst.b   $0001(a2)
+          beq.s L4E1A
+L4E0C   dbf     d6,L4DFE
+        move.w  #$0004,ccr
+        bra.s   L4E1C
+L4E16   moveq   #$13,d0
+        bra.s   L4E1C
+L4E1A   moveq   #$14,d0
+L4E1C   movem.w (a7)+,d1
+        rts
+; 
+L4E22   dc.b    $00,$00,$00,$00
+L4E26   dc.b    $00,$00
+L4E28   dc.b    $09,$01,$FF,$FF,$FF,$FC,$00,$02
+        dc.b    'MENU-MEMORY NOT ALLOCATED',$0A
+        dc.b    $00,'STRING TOO LONG'
+        dc.b    $0A,$00,'NO ITEM DEFINED',$0A
+        dc.b    $00,'NO MENU DEFINED'
+        dc.b    $0A,$00,'NO SUBMENU DEFINED',$0A,$00
+        dc.b    $00,$00
+L4E94   dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$08,$00
+        dc.b    $00,$00,$08,$00,$00,$00,$0C,$00,$00
+        dc.b    $00,$0C,$00,$00,$00,$0E,$00,$00,$00
+        dc.b    $0E,$00,$00,$00,$0F,$00,$00,$00,$0F,$00
+        dc.b    $00,$00,$0F,$80,$00,$00,$0F,$80,$00
+        dc.b    $00,$0F,$C0,$00,$00,$0F,$C0,$00,$00
+        dc.b    $0F,$E0,$00,$00,$0F,$E0,$00,$00,$0F,$F0,$00
+        dc.b    $00,$0F,$F0,$00,$00,$0F,$F8,$00,$00
+        dc.b    $0F,$F8,$00,$00,$0F,$C0,$00,$00,$0F,$C0,$00
+        dc.b    $00,$0D,$E0,$00,$00,$0D,$E0,$00,$00
+        dc.b    $08,$E0,$00,$00,$08,$E0,$00,$00,$00
+        dc.b    $F0,$00,$00,$00,$F0,$00,$00,$00,'p',$00
+        dc.b    $00,$00,'p',$00,$00,$00,'x',$00,$00
+        dc.b    $00,'x',$00,$00,$00,'0',$00,$00,$00
+        dc.b    '0',$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00
+L4F34   dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$08,$00
+        dc.b    $00,$00,$0C,$00,$00,$00,$08,$00,$00
+        dc.b    $00,$0C,$00,$00,$00,$0A,$00,$00,$00
+        dc.b    $0F,$00,$00,$00,$0A,$00,$00,$00,$0F,$00
+        dc.b    $00,$00,$0A,$80,$00,$00,$0F,$C0,$00
+        dc.b    $00,$0A,$80,$00,$00,$0F,$C0,$00,$00
+        dc.b    $0A,$A0,$00,$00,$0F,$F0,$00,$00,$0A
+        dc.b    $A0,$00,$00,$0F,$F0,$00,$00,$0A,$A8,$00
+        dc.b    $00,$0F,$FC,$00,$00,$0A,$80,$00,$00
+        dc.b    $0F,$C0,$00,$00,$08,$A0,$00,$00,$0C,$F0,$00
+        dc.b    $00,$08,$A0,$00,$00,$0C,$F0,$00,$00
+        dc.b    $00,' ',$00,$00,$00,'0',$00,$00,$00
+        dc.b    '(',$00,$00,$00,'<',$00,$00,$00,'(',$00
+        dc.b    $00,$00,'<',$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00,$00,$00,$00,$00,$00,$00,$00
+        dc.b    $00,$00
+L4FD4   dc.w    $000F
+        dc.b    'scr_512x256a0x0',$00
+L4FE6   cmpi.w  #$FFFF,d7
+          bne.s L4FF0
+        move.w  d6,(a2)+
+        rts
+; 
+L4FF0   and.w   d7,d6
+        not.w   d7
+        and.w   d7,(a2)
+        or.w    d6,(a2)+
+        rts
+; 
+L4FFA   lsl.w   #$01,d1
+        lea     L51C2(pc),a3
+        move.w  $00(a3,d1.w),d7
+        lsr.w   #$01,d1
+        rts
+; 
+L5008   lsl.w   #$01,d4
+        lea     L51CC(pc),a3
+        and.w   $00(a3,d4.w),d7
+        lsr.w   #$01,d4
+        rts
+; 
+L5016   movem.l d5-d6/a3,-(a7)
+        add.w   d1,d2
+        move.w  #$0100,d0
+        sub.w   d2,d0
+        lsr.w   #$02,d0
+        lsl.w   #$01,d0
+        moveq   #$00,d7
+        moveq   #$00,d5
+L502A   moveq   #$00,d4
+        cmp.w   d3,d5
+          beq.s L5064
+L5030   move.w  (a1)+,d6
+        move.w  #-$0001,d7
+        tst.w   d4
+          bne.s L503C
+        bsr.s   L4FFA
+L503C   addq.w  #$04,d4
+        cmp.w   d2,d4
+          bcc.s L5046
+        bsr.s   L4FE6
+        bra.s   L5030
+L5046   sub.w   d2,d4
+        bsr.s   L5008
+        bsr.s   L4FE6
+        cmpa.l  #$00028000,a1
+          bhi.s L5056
+        adda.w  d0,a1
+L5056   cmpa.l  #$00028000,a2
+          bhi.s L5060
+        adda.w  d0,a2
+L5060   addq.w  #$01,d5
+        bra.s   L502A
+L5064   moveq   #$00,d0
+        bra.s   L506A
+        moveq   #-$0F,d0        ; ERR_BP
+L506A   movem.l (a7)+,d5-d6/a3
+        rts
+; 
+L5070   movem.l d1-d3/a0-a1/a3,-(a7)
+        lsr.w   #$01,d2
+        addq.w  #$04,d2
+        mulu.w  d3,d2
+        move.l  d2,d1
+        moveq   #-$01,d2
+        moveq   #$18,d0         ; MT_ALCHP
+        trap    #$01
+        movea.l a0,a2
+        movem.l (a7)+,d1-d3/a0-a1/a3
+        tst.l   d0
+        rts
+; 
+L508C   movem.l d0/d5/a4-a5,-(a7)
+        lea     $00020000,a4
+        move.l  d1,-(a7)
+        move.l  d2,-(a7)
+        move.l  d3,d0
+        move.l  d4,d1
+        moveq   #-$01,d5
+        bsr     L24CE
+        ext.w   d3
+        ext.l   d3
+        lsr.w   #$01,d3
+        moveq   #$03,d1
+        sub.b   d3,d1
+        movea.l a5,a1
+        move.l  (a7)+,d3
+        move.l  (a7)+,d2
+        movem.l (a7)+,d0/d5/a4-a5
+        rts
+; 
+L50BA   ext.w   d0
+        cmpi.w  #$0010,d0
+          bcc.s L50D0
+        mulu.w  #$000E,d0
+        lea     L51D6(pc),a0
+        adda.w  d0,a0
+        moveq   #$00,d0
+        bra.s   L50D2
+L50D0   moveq   #-$04,d0        ; ERR_OR
+L50D2   rts
+; 
+L50D4   movem.l d0-d4/a0-a4,-(a7)
+        bsr.s   L50BA
+        movea.l $0004(a0),a1
+        tst.l   (a0)
+          beq.s L50EE
+        move.l  #$00000000,(a0)
+        movea.l a1,a0
+        moveq   #$19,d0         ; MT_RECHP
+        trap    #$01
+L50EE   movem.l (a7)+,d0-d4/a0-a4
+        rts
+; 
+        movem.l d0/a0,-(a7)
+        moveq   #$10,d0
+        lea     L51D6(pc),a0
+L50FE   move.l  #$00000000,(a0)
+        move.l  #$00000000,$0004(a0)
+        adda.w  #$000E,a0
+        dbf     d0,L50FE
+        movem.l (a7)+,d0/a0
+        rts
+; 
+L511A   bsr.s   L50BA
+          bne.s L5138
+        bsr     L5070
+          bne.s L5138
+        move.l  a1,(a0)
+        move.l  a2,$0004(a0)
+        move.w  d1,$0008(a0)
+        move.w  d2,$000A(a0)
+        move.w  d3,$000C(a0)
+        moveq   #$00,d0
+L5138   tst.l   d0
+        rts
+; 
+L513C   bsr     L50BA
+          bne.s L515E
+        tst.l   (a0)
+          bne.s L514A
+        moveq   #-$0F,d0        ; ERR_BP
+        bra.s   L515E
+L514A   movea.l (a0),a1
+        movea.l $0004(a0),a2
+        move.w  $0008(a0),d1
+        move.w  $000A(a0),d2
+        move.w  $000C(a0),d3
+        moveq   #$00,d0
+L515E   tst.l   d0
+        rts
+; 
+L5162   bsr.s   L5190
+          bne.s L5178
+        bsr     L50D4
+        bsr     L508C
+        bsr.s   L511A
+          bne.s L5178
+        bsr     L5016
+        moveq   #$00,d0
+L5178   rts
+; 
+L517A   bsr.s   L513C
+          bne.s L5186
+        exg     a1,a2
+        bsr     L5016
+        moveq   #$00,d0
+L5186   rts
+; 
+L5188   bsr     L50D4
+        moveq   #$00,d0
+        rts
+; 
+L5190   movem.l d5,-(a7)
+        lsr.w   #$01,d3
+        lsr.w   #$01,d1
+        move.w  d1,d5
+        add.w   d3,d5
+        cmpi.w  #$00FF,d5
+          bhi.s L51BA
+        move.w  d2,d5
+        add.w   d4,d5
+        cmpi.w  #$00FF,d5
+          bhi.s L51BA
+        tst.w   d1
+          beq.s L51BA
+        tst.w   d2
+          beq.s L51BA
+        move.w  #$0004,ccr
+        bra.s   L51BC
+L51BA   moveq   #-$0F,d0        ; ERR_BP
+L51BC   movem.l (a7)+,d5
+        rts
+; 
+L51C2   dc.w    $FFFF,$3F3F,$0F0F,$0303,$0000
+L51CC   dc.w    $FFFF,$FCFC,$F0F0,$C0C0,$0000
+L51D6   dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+        dc.w    $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000
+L5316   equ     *
+        end

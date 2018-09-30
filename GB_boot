@@ -1,0 +1,2 @@
+1 a=RESPR(22000):LBYTES mdv1_blink_bin,a
+2 POKE a+10342,96:CALL a:NEW
